@@ -62,15 +62,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
-            <com.devspark.robototextview.widget.RobotoTextView
-                android:id="@+id/discuss_button"
-                android:drawableTop="@drawable/icon_discourse"
-                android:text="@string/forum"
-                style="@style/Theme.Butter.AboutButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <com.devspark.robototextview.widget.RobotoTextView
+			<com.devspark.robototextview.widget.RobotoTextView
                 android:id="@+id/blog_button"
                 android:drawableTop="@drawable/icon_blog"
                 android:text="@string/blog"
@@ -102,15 +94,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
-            <com.devspark.robototextview.widget.RobotoTextView
-                android:id="@+id/git_button"
-                android:drawableTop="@drawable/icon_git"
-                android:text="@string/git"
-                android:layout_marginBottom="64dp"
-                style="@style/Theme.Butter.AboutButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+		</LinearLayout>
 
 	</RelativeLayout>
 

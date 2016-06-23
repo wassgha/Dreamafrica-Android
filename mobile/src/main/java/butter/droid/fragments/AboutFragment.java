@@ -40,14 +40,10 @@ public class AboutFragment extends Fragment {
     ImageView mLogoImageView;
     @Bind(R.id.facebook_button)
     TextView mFacebookButton;
-    @Bind(R.id.git_button)
-    TextView mGitButton;
     @Bind(R.id.blog_button)
     TextView mBlogButton;
     @Bind(R.id.butter_button)
     TextView mButterButton;
-    @Bind(R.id.discuss_button)
-    TextView mDiscussButton;
     @Bind(R.id.twitter_button)
     TextView mTwitterButton;
 
@@ -107,11 +103,6 @@ public class AboutFragment extends Fragment {
         startActivity(IntentUtils.getBrowserIntent(getActivity(), Constants.FB_URL));
     }
 
-    @OnClick(R.id.git_button)
-    void onGitClick() {
-        startActivity(IntentUtils.getBrowserIntent(getActivity(), Constants.GIT_URL));
-    }
-
     @OnClick(R.id.blog_button)
     void onBlogClick() {
         startActivity(IntentUtils.getBrowserIntent(getActivity(), Constants.BLOG_URL));
@@ -120,11 +111,6 @@ public class AboutFragment extends Fragment {
     @OnClick(R.id.butter_button)
     void onButterClick() {
         startActivity(IntentUtils.getBrowserIntent(getActivity(), Constants.BUTTER_URL));
-    }
-
-    @OnClick(R.id.discuss_button)
-    void onDiscussClick() {
-        startActivity(IntentUtils.getBrowserIntent(getActivity(), Constants.DISCUSS_URL));
     }
 
     @OnClick(R.id.twitter_button)
