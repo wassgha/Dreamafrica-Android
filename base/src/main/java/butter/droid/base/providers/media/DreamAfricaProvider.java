@@ -53,16 +53,13 @@ public class DreamAfricaProvider extends MediaProvider {
 
     private static final DreamAfricaProvider sMediaProvider = new DreamAfricaProvider();
     private static Integer CURRENT_API = 0;
-    private Integer page_count=10;
     private static final String[] API_URLS = {
-            "http://www.wedreamafrica.com"
+            "http://www.wedreamafrica.com/api/"
     };
     public static String CURRENT_URL = API_URLS[CURRENT_API];
 
     private static Filters sFilters = new Filters();
-    private int totalPages = 0;
-    private int page = 0;
-    ArrayList<Media> currentList = new ArrayList<Media>();
+    private Integer totalPages = 0;
 
     @Override
     protected Call enqueue(Request request, com.squareup.okhttp.Callback requestCallback) {
@@ -82,20 +79,28 @@ public class DreamAfricaProvider extends MediaProvider {
     @Override
     public Call getList(final ArrayList<Media> existingList, Filters filters, final Callback callback) {
         sFilters = filters;
+        final ArrayList<Media> currentList;
+        if (existingList == null) {
+            currentList = new ArrayList<>();
+        } else {
+            currentList = (ArrayList<Media>) existingList.clone();
+        }
         ArrayList<NameValuePair> params = new ArrayList<>();
         params.add(new NameValuePair("json", "get_posts"));
         params.add(new NameValuePair("post_type", "torrent"));
-        params.add(new NameValuePair("count", "1"));
+        params.add(new NameValuePair("count", "5"));
         params.add(new NameValuePair("include", "title,content,date,custom_fields"));
         params.add(new NameValuePair("custom_fields", "sponsor_logo,sponsor_message,category,synopsis,cover_image"));
-        params.add(new NameValuePair("page", Integer.toString(page)));
+        if (filters.page != null) {
+            params.add(new NameValuePair("page", Integer.toString(filters.page)));
+        }
 
         if (filters == null) {
             filters = new Filters();
         }
 
         if (filters.keywords != null) {
-            params.add(new NameValuePair("search", filters.keywords));
+            params.add(new NameValuePair("s", filters.keywords));
         }
 
         if (filters.genre != null) {
@@ -136,7 +141,7 @@ public class DreamAfricaProvider extends MediaProvider {
                 break;
         }
 
-        params.add(new NameValuePair("order_by", sort));
+        params.add(new NameValuePair("orderby", sort));
         String query = "?" + buildQuery(params);
         Request.Builder requestBuilder = new Request.Builder()
                 .url(CURRENT_URL + query);
@@ -153,49 +158,50 @@ public class DreamAfricaProvider extends MediaProvider {
 
                         JSONObject obj = new JSONObject(response.body().string());
                         JSONArray arr = obj.getJSONArray("posts");
-                        JSONObject post = arr.getJSONObject(0);
+                        for(int i = 0; i<arr.length(); i++) {
+                            JSONObject post = arr.getJSONObject(i);
+                            Movie movie = new Movie(sMediaProvider, null);
+                            movie.imdbId = (String) post.getString("id");
+                            movie.videoId = (String) post.getString("id");
+                            if(isInResults(currentList, movie.videoId)==-1) {
+                                movie.title = Html.fromHtml((String) post.getString("title")).toString();
+                                try {
 
-                        Movie movie = new Movie(sMediaProvider, null);
-                        movie.imdbId = (String) post.getString("id");
-                        movie.videoId = (String) post.getString("id");
-                        movie.title = Html.fromHtml((String) post.getString("title")).toString();
-                        try {
+                                    SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                                    String yearStr = Integer.toString(formatter.parse((String) post.getString("date")).getYear());
+                                    Double year = Double.parseDouble(yearStr);
+                                    movie.year = Integer.toString(year.intValue());
+                                } catch (ParseException e) {
+                                    System.out.println(e.getMessage());   // Rethrow the exception.
+                                }
+                                movie.rating = "";
+                                JSONObject customFields = post.getJSONObject("custom_fields");
+                                movie.genre = StringUtils.uppercaseFirst(customFields.getJSONArray("category").getString(0));
+                                movie.image = (String) customFields.getJSONArray("cover_image").getString(0);
+                                movie.headerImage = (String) customFields.getJSONArray("cover_image").getString(0);
+                                movie.trailer = null;
+                                String runtimeStr = "0";
+                                Double runtime = 0d;
+                                if (!runtimeStr.isEmpty())
+                                    runtime = Double.parseDouble(runtimeStr);
+                                movie.runtime = Integer.toString(runtime.intValue());
+                                movie.synopsis = Html.fromHtml((String) customFields.getJSONArray("synopsis").getString(0)).toString();
+                                movie.certification = null;
+                                movie.fullImage = movie.image;
 
-                            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                            String yearStr = Integer.toString(formatter.parse((String) post.getString("date")).getYear());
-                            Double year = Double.parseDouble(yearStr);
-                            movie.year = Integer.toString(year.intValue());
-                        } catch (ParseException e) {
-                            System.out.println(e.getMessage());   // Rethrow the exception.
+                                Media.Torrent torrent = new Media.Torrent();
+                                torrent.seeds = 0;
+                                torrent.peers = 0;
+                                torrent.hash = null;
+                                torrent.url = post.getString("content");
+                                movie.torrents.put("hd", torrent);
+                                currentList.add(movie);
+                            }
                         }
-                        movie.rating = "";
-                        JSONObject customFields = post.getJSONObject("custom_fields");
-                        movie.genre = StringUtils.uppercaseFirst(customFields.getJSONArray("category").getString(0));
-                        movie.image = (String) customFields.getJSONArray("cover_image").getString(0);
-                        movie.headerImage = (String) customFields.getJSONArray("cover_image").getString(0);
-                        movie.trailer = null;
-                        String runtimeStr = "0";
-                        Double runtime = 0d;
-                        if (!runtimeStr.isEmpty())
-                            runtime = Double.parseDouble(runtimeStr);
-                        movie.runtime = Integer.toString(runtime.intValue());
-                        movie.synopsis = Html.fromHtml((String) customFields.getJSONArray("synopsis").getString(0)).toString();
-                        movie.certification = null;
-                        movie.fullImage = movie.image;
-
-                        Media.Torrent torrent = new Media.Torrent();
-                        torrent.seeds = 0;
-                        torrent.peers = 0;
-                        torrent.hash = null;
-                        torrent.url = post.getString("content");
-                        movie.torrents.put("hd", torrent);
-                        currentList.add(movie);
-
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
                     totalPages = 5;
-                    page++;
                     callback.onSuccess(sFilters, currentList, true);
                     return;
                 }
@@ -221,12 +227,23 @@ public class DreamAfricaProvider extends MediaProvider {
     public List<NavInfo> getNavigation() {
         List<NavInfo> tabs = new ArrayList<>();
         tabs.add(new NavInfo(R.id.yts_filter_a_to_z,Filters.Sort.ALPHABET, Filters.Order.ASC, ButterApplication.getAppContext().getString(R.string.a_to_z),R.drawable.yts_filter_a_to_z));
+        tabs.add(new NavInfo(R.id.yts_filter_release_date,Filters.Sort.DATE, Filters.Order.DESC, ButterApplication.getAppContext().getString(R.string.release_date),R.drawable.yts_filter_release_date));
+        tabs.add(new NavInfo(R.id.yts_filter_popular_now,Filters.Sort.POPULARITY, Filters.Order.DESC, ButterApplication.getAppContext().getString(R.string.popular),R.drawable.yts_filter_popular_now));
         return tabs;
     }
 
     @Override
     public List<Genre> getGenres() {
         return null;
+    }
+
+    private int isInResults(ArrayList<Media> results, String id) {
+        int i = 0;
+        for (Media item : results) {
+            if (item.videoId.equals(id)) return i;
+            i++;
+        }
+        return -1;
     }
 
 }

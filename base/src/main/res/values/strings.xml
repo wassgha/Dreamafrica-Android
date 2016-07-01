@@ -28,11 +28,11 @@
     <string name="update_available">New update available</string>
     <string name="wrong_abi">Uhoh! You\'re using the wrong version of DreamAfrica for Android. The right version is being downloaded right now, if possible. If the installer is not started within a minute then your device is not supported or your internet connection is broken, which means you should try again later. If the installer fails then you must install the right version manually.</string>
     <string name="press_install">Press to install</string>
-	<string name="movies_error" translatable="false">No movies found</string>
+	<string name="movies_error" translatable="false">No stories found</string>
     <string name="loading_data">Loading data…</string>
     <string name="loading_details">Loading details…</string>
 	<string name="loading_shows">Loading shows…</string>
-	<string name="loading_movies">Loading movies…</string>
+	<string name="loading_movies">Loading stories…</string>
     <string name="loading_subs">Loading subs…</string>
 	<string name="error_files">Error: Couldn\'t write files</string>
     <string name="overview_not_available">Sorry! There is no overview available.</string>
@@ -50,7 +50,7 @@
     <string name="searching">Searching…</string>
     <string name="no_data_found">No data found</string>
     <string name="title_shows">Shows</string>
-    <string name="title_movies">Movies</string>
+    <string name="title_movies">Stories</string>
     <string name="title_anime">Anime</string>
 
     <string name="signature_invalid">App signature invalid</string>
@@ -237,7 +237,7 @@ You understand that by using \'DreamAfrica\' you may encounter material that you
 DISCLAIMERS\n\n
 YOU EXPRESSLY AGREE THAT YOUR USE OF \'DreamAfrica\' IS AT YOUR SOLE RISK. \'DreamAfrica\' AND ALL PRODUCTS ARE PROVIDED TO YOU \'AS IS\' WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. \'DreamAfrica\' MAKES ABSOLUTELY NO WARRANTIES WHATSOEVER, EXPRESS OR IMPLIED. TO THE FULLEST EXTENT POSSIBLE UNDER APPLICABLE LAWS, YIFY DISCLAIMS ALL WARRANTIES, EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR OTHER VIOLATIONS OF RIGHTS.\n\n
 LIMITATION OF LIABILITY\n\n
-\'DreamAfrica\' IS NOT RESPONSIBLE FOR ANY PROBLEMS OR TECHNICAL MALFUNCTION OF ANY WEBSITE, NETWORK, COMPUTER SYSTEMS, SERVERS, PROVIDERS, COMPUTER EQUIPMENT, OR SOFTWARE, OR FOR ANY FAILURE DUE TO TECHNICAL PROBLEMS OR TRAFFIC CONGESTION ON THE INTERNET OR \'DreamAfrica\' OR COMBINATION THEREOF, INCLUDING ANY INJURY OR DAMAGE TO USERS OR TO ANY COMPUTER OR OTHER DEVICE ON OR THROUGH WHICH \'DreamAfrica\' IS PROVIDED. UNDER NO CIRCUMSTANCES WILL \'DreamAfrica\' BE LIABLE FOR ANY LOSS OR DAMAGE, INCLUDING PERSONAL INJURY OR DEATH, RESULTING FROM YOUR USE OF \'BUTTER\'.\n\nSOURCE MATERIAL\n\nALL MOVIES ARE NOT HOSTED IN ANY SERVER AND ARE STREAMED USING THE P2P BIT TORRENT PROTOCOL. ALL MOVIES ARE PULLED IN FROM THE OPEN PUBLIC APIS. BY WATCHING A MOVIE WITH THIS APPLICATION YOU MIGHT BE COMMITING COPYRIGHT VIOLATIONS DEPENDING ON YOUR COUNTRY\'S LAWS. WE DO NOT TAKE ANY RESPONSABILITIES.\n\n
+\'DreamAfrica\' IS NOT RESPONSIBLE FOR ANY PROBLEMS OR TECHNICAL MALFUNCTION OF ANY WEBSITE, NETWORK, COMPUTER SYSTEMS, SERVERS, PROVIDERS, COMPUTER EQUIPMENT, OR SOFTWARE, OR FOR ANY FAILURE DUE TO TECHNICAL PROBLEMS OR TRAFFIC CONGESTION ON THE INTERNET OR \'DreamAfrica\' OR COMBINATION THEREOF, INCLUDING ANY INJURY OR DAMAGE TO USERS OR TO ANY COMPUTER OR OTHER DEVICE ON OR THROUGH WHICH \'DreamAfrica\' IS PROVIDED. UNDER NO CIRCUMSTANCES WILL \'DreamAfrica\' BE LIABLE FOR ANY LOSS OR DAMAGE, INCLUDING PERSONAL INJURY OR DEATH, RESULTING FROM YOUR USE OF \'BUTTER\'.\n\nSOURCE MATERIAL\n\nALL STORIES ARE NOT HOSTED IN ANY SERVER AND ARE STREAMED USING THE P2P BIT TORRENT PROTOCOL.\n\n
 Ability to Accept Terms of Service\n\n
 By using \'DreamAfrica\' or accessing this site you affirm that you are either more than 18 years of age, or an emancipated minor, or possess legal parental or guardian consent, and are fully able and competent to enter into the terms, conditions, obligations, affirmations, representations, and warranties set forth in these Terms of Service, and to abide by and comply with these Terms of Service. In any case, you affirm that you are over the age of 13, as the Service is not intended for children under 13. If you are under 13 years of age, then please do not use the Service. There are lots of other great web sites for you. Talk to your parents about what sites are appropriate for you.</string>
     <string name="accept">Accept</string>
@@ -302,7 +302,7 @@ By using \'DreamAfrica\' or accessing this site you affirm that you are either m
     <string name="related_movies">Related Videos</string>
 
     <!-- Main screen -->
-    <string name="top_movies">Top Movies</string>
+    <string name="top_movies">Top Stories</string>
     <string name="top_shows">Top TV Series</string>
     <string name="latest_shows">Latest TV Series</string>
     <string name="browse">Browse</string>
@@ -348,7 +348,7 @@ By using \'DreamAfrica\' or accessing this site you affirm that you are either m
     <string name="network_message">Check your internet connection</string>
 
     <string name="choose_quality">Choose quality</string>
-    <string name="more_movies">More Movies</string>
+    <string name="more_movies">More Stories</string>
     <string name="more_shows">More Shows</string>
     <string name="terms_and_conditions">Terms and Conditions</string>
     <string name="view_terms">View terms</string>
