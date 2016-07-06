@@ -45,7 +45,7 @@ import butter.droid.base.utils.LocaleUtils;
 import butter.droid.base.utils.StringUtils;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.Calendar;
 import org.json.*;
 import android.text.Html;
 
@@ -54,7 +54,7 @@ public class DreamAfricaProvider extends MediaProvider {
     private static final DreamAfricaProvider sMediaProvider = new DreamAfricaProvider();
     private static Integer CURRENT_API = 0;
     private static final String[] API_URLS = {
-            "http://www.wedreamafrica.com/api/"
+            "http://www.wedreamafrica.com/api.php"
     };
     public static String CURRENT_URL = API_URLS[CURRENT_API];
 
@@ -86,11 +86,7 @@ public class DreamAfricaProvider extends MediaProvider {
             currentList = (ArrayList<Media>) existingList.clone();
         }
         ArrayList<NameValuePair> params = new ArrayList<>();
-        params.add(new NameValuePair("json", "get_posts"));
-        params.add(new NameValuePair("post_type", "torrent"));
-        params.add(new NameValuePair("count", "5"));
-        params.add(new NameValuePair("include", "title,content,date,custom_fields"));
-        params.add(new NameValuePair("custom_fields", "sponsor_logo,sponsor_message,category,synopsis,cover_image"));
+        params.add(new NameValuePair("count", "15"));
         if (filters.page != null) {
             params.add(new NameValuePair("page", Integer.toString(filters.page)));
         }
@@ -100,12 +96,11 @@ public class DreamAfricaProvider extends MediaProvider {
         }
 
         if (filters.keywords != null) {
-            params.add(new NameValuePair("s", filters.keywords));
+            params.add(new NameValuePair("search", filters.keywords));
         }
 
         if (filters.genre != null) {
-            params.add(new NameValuePair("meta_key", "category"));
-            params.add(new NameValuePair("meta_value", filters.genre));
+            params.add(new NameValuePair("category", filters.genre));
         }
 
         if (filters.order == Filters.Order.ASC) {
@@ -122,7 +117,7 @@ public class DreamAfricaProvider extends MediaProvider {
         switch (filters.sort) {
             default:
             case POPULARITY:
-                sort = "comment_count";
+                sort = "popularity";
                 break;
             case YEAR:
                 sort = "date";
@@ -131,13 +126,13 @@ public class DreamAfricaProvider extends MediaProvider {
                 sort = "date";
                 break;
             case RATING:
-                sort = "comment_count";
+                sort = "popularity";
                 break;
             case ALPHABET:
                 sort = "title";
                 break;
             case TRENDING:
-                sort = "comment_count";
+                sort = "popularitys";
                 break;
         }
 
@@ -165,27 +160,20 @@ public class DreamAfricaProvider extends MediaProvider {
                             movie.videoId = (String) post.getString("id");
                             if(isInResults(currentList, movie.videoId)==-1) {
                                 movie.title = Html.fromHtml((String) post.getString("title")).toString();
-                                try {
-
-                                    SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                                    String yearStr = Integer.toString(formatter.parse((String) post.getString("date")).getYear());
-                                    Double year = Double.parseDouble(yearStr);
-                                    movie.year = Integer.toString(year.intValue());
-                                } catch (ParseException e) {
-                                    System.out.println(e.getMessage());   // Rethrow the exception.
-                                }
-                                movie.rating = "";
-                                JSONObject customFields = post.getJSONObject("custom_fields");
-                                movie.genre = StringUtils.uppercaseFirst(customFields.getJSONArray("category").getString(0));
-                                movie.image = (String) customFields.getJSONArray("cover_image").getString(0);
-                                movie.headerImage = (String) customFields.getJSONArray("cover_image").getString(0);
+                                String yearStr = (String) post.getString("year").toString();
+                                Double year = Double.parseDouble(yearStr);
+                                movie.year = Integer.toString(year.intValue());
+                                movie.rating = "-1";
+                                movie.genre = (String) post.getString("category").toString();
+                                movie.image = (String) post.getString("cover_image").toString();
+                                movie.headerImage = (String) post.getString("cover_image").toString();
                                 movie.trailer = null;
                                 String runtimeStr = "0";
                                 Double runtime = 0d;
                                 if (!runtimeStr.isEmpty())
                                     runtime = Double.parseDouble(runtimeStr);
                                 movie.runtime = Integer.toString(runtime.intValue());
-                                movie.synopsis = Html.fromHtml((String) customFields.getJSONArray("synopsis").getString(0)).toString();
+                                movie.synopsis = Html.fromHtml((String) post.getString("synopsis").toString()).toString();
                                 movie.certification = null;
                                 movie.fullImage = movie.image;
 
@@ -193,8 +181,8 @@ public class DreamAfricaProvider extends MediaProvider {
                                 torrent.seeds = 0;
                                 torrent.peers = 0;
                                 torrent.hash = null;
-                                torrent.url = post.getString("content");
-                                movie.torrents.put("hd", torrent);
+                                torrent.url = (String) post.getString("torrent");
+                                movie.torrents.put("720p", torrent);
                                 currentList.add(movie);
                             }
                         }
@@ -226,7 +214,7 @@ public class DreamAfricaProvider extends MediaProvider {
     @Override
     public List<NavInfo> getNavigation() {
         List<NavInfo> tabs = new ArrayList<>();
-        tabs.add(new NavInfo(R.id.yts_filter_a_to_z,Filters.Sort.ALPHABET, Filters.Order.ASC, ButterApplication.getAppContext().getString(R.string.a_to_z),R.drawable.yts_filter_a_to_z));
+        //tabs.add(new NavInfo(R.id.yts_filter_a_to_z,Filters.Sort.ALPHABET, Filters.Order.ASC, ButterApplication.getAppContext().getString(R.string.a_to_z),R.drawable.yts_filter_a_to_z));
         tabs.add(new NavInfo(R.id.yts_filter_release_date,Filters.Sort.DATE, Filters.Order.DESC, ButterApplication.getAppContext().getString(R.string.release_date),R.drawable.yts_filter_release_date));
         tabs.add(new NavInfo(R.id.yts_filter_popular_now,Filters.Sort.POPULARITY, Filters.Order.DESC, ButterApplication.getAppContext().getString(R.string.popular),R.drawable.yts_filter_popular_now));
         return tabs;
@@ -245,5 +233,16 @@ public class DreamAfricaProvider extends MediaProvider {
         }
         return -1;
     }
+
+    public static int getIndexOf(String str, char c, int n)
+    {
+        int pos = str.indexOf(c, 0);
+        while (n-- > 0 && pos != -1)
+        {
+            pos = str.indexOf(c, pos + 1);
+        }
+        return pos;
+    }
+
 
 }
