@@ -49,7 +49,7 @@ public class NavigationAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         mItems = items;
         mCallback = callback;
         mNormalColor = context.getResources().getColor(R.color.nav_drawer_deselected);
-        mCheckedColor = context.getResources().getColor(R.color.primary);
+        mCheckedColor = context.getResources().getColor(R.color.nav_drawer_deselected);
         mNormalBackgroundRes = R.drawable.selectable_nav_background;
         mCheckedBackgroundRes = R.color.nav_drawer_selected_bg;
     }
@@ -205,10 +205,6 @@ public class NavigationAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         ImageView mBackgroundImageView;
         @Bind(R.id.dreamAfricaLogo)
         ImageView dreamAfricaLogo;
-        @Bind(R.id.title_textview)
-        TextView mTitleTextView;
-        @Bind(R.id.subtitle_textview)
-        TextView mSubtitleTextView;
 
         public HeaderHolder(View itemView) {
             super(itemView);
