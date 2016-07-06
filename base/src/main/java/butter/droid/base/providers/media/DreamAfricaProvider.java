@@ -168,8 +168,8 @@ public class DreamAfricaProvider extends MediaProvider {
                                 movie.image = (String) post.getString("cover_image").toString();
                                 movie.headerImage = (String) post.getString("cover_image").toString();
                                 movie.trailer = null;
-                                String runtimeStr = "0";
-                                Double runtime = 0d;
+                                String runtimeStr = "7";
+                                Double runtime = 7d;
                                 if (!runtimeStr.isEmpty())
                                     runtime = Double.parseDouble(runtimeStr);
                                 movie.runtime = Integer.toString(runtime.intValue());
@@ -214,7 +214,7 @@ public class DreamAfricaProvider extends MediaProvider {
     @Override
     public List<NavInfo> getNavigation() {
         List<NavInfo> tabs = new ArrayList<>();
-        //tabs.add(new NavInfo(R.id.yts_filter_a_to_z,Filters.Sort.ALPHABET, Filters.Order.ASC, ButterApplication.getAppContext().getString(R.string.a_to_z),R.drawable.yts_filter_a_to_z));
+        tabs.add(new NavInfo(R.id.yts_filter_a_to_z,Filters.Sort.ALPHABET, Filters.Order.ASC, ButterApplication.getAppContext().getString(R.string.a_to_z),R.drawable.yts_filter_a_to_z));
         tabs.add(new NavInfo(R.id.yts_filter_release_date,Filters.Sort.DATE, Filters.Order.DESC, ButterApplication.getAppContext().getString(R.string.release_date),R.drawable.yts_filter_release_date));
         tabs.add(new NavInfo(R.id.yts_filter_popular_now,Filters.Sort.POPULARITY, Filters.Order.DESC, ButterApplication.getAppContext().getString(R.string.popular),R.drawable.yts_filter_popular_now));
         return tabs;

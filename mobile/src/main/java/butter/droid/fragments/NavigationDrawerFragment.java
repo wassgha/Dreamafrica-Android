@@ -138,7 +138,7 @@ public class NavigationDrawerFragment extends Fragment implements NavigationAdap
         //todo: make list items dynamic
         List<NavDrawerItem> navItems = new ArrayList<>();
         navItems.add(new NavDrawerItem(true));
-        navItems.add(new NavDrawerItem(getString(R.string.title_movies), R.drawable.ic_nav_movies, new DreamAfricaProvider()));
+        navItems.add(new NavDrawerItem(getString(R.string.title_movies), R.drawable.ic_nav_story, new DreamAfricaProvider()));
         navItems.add(new NavDrawerItem(getString(R.string.preferences), R.drawable.ic_nav_settings, mOnSettingsClickListener));
 
         if(mAdapter != null)
