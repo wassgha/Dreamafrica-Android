@@ -353,8 +353,13 @@ By using \'DreamAfrica\' or accessing this site you affirm that you are either m
     <string name="terms_and_conditions">Terms and Conditions</string>
     <string name="view_terms">View terms</string>
     <string name="episode_number_format">Episode %d</string>
+    <string name="logout">Logout</string>
 
     <!-- PTVSettingsFragment -->
     <string name="version_pref">Version</string>
+
+    <!-- Facebook Login -->
+    <string name="facebook_app_id">1734253766849852</string>
+
 
 </resources>

@@ -39,6 +39,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
+import com.facebook.FacebookSdk;
+
+import com.facebook.appevents.AppEventsLogger;
 import com.squareup.okhttp.Callback;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
@@ -95,8 +98,15 @@ public class MainActivity extends ButterBaseActivity implements NavigationDrawer
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState, R.layout.activity_main);
 
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        AppEventsLogger.activateApp(this);
+
         if (!PrefUtils.contains(this, TermsActivity.TERMS_ACCEPTED)) {
             startActivity(new Intent(this, TermsActivity.class));
+        }
+
+        if (!PrefUtils.contains(this, FacebookLogin.LOGGED_IN)) {
+            startActivity(new Intent(this, FacebookLogin.class));
         }
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {

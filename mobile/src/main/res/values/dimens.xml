@@ -75,7 +75,7 @@
     <dimen name="griditem_title_textsize">14sp</dimen>
     <dimen name="griditem_year_textsize">12sp</dimen>
 
-	<!-- Per the design guidelines, navigation drawers should be between 240dp and 320dp:
+    <!-- Per the design guidelines, navigation drawers should be between 240dp and 320dp:
      https://developer.android.com/design/patterns/navigation-drawer.html -->
-	<dimen name="nav_drawer_width">304dp</dimen>
+    <dimen name="nav_drawer_width">304dp</dimen>
 </resources>

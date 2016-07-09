@@ -18,6 +18,7 @@
 package butter.droid.fragments;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -33,10 +34,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.facebook.login.LoginManager;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import butter.droid.R;
+import butter.droid.activities.FacebookLogin;
+import butter.droid.activities.MainActivity;
 import butter.droid.activities.PreferencesActivity;
 import butter.droid.adapters.NavigationAdapter;
 import butter.droid.adapters.decorators.OneShotDividerDecorator;
@@ -139,6 +144,7 @@ public class NavigationDrawerFragment extends Fragment implements NavigationAdap
         List<NavDrawerItem> navItems = new ArrayList<>();
         navItems.add(new NavDrawerItem(true));
         navItems.add(new NavDrawerItem(getString(R.string.title_movies), R.drawable.ic_nav_story, new DreamAfricaProvider()));
+        navItems.add(new NavDrawerItem(getString(R.string.logout), R.drawable.ic_nav_logout, mLogoutClickListener));
         navItems.add(new NavDrawerItem(getString(R.string.preferences), R.drawable.ic_nav_settings, mOnSettingsClickListener));
 
         if(mAdapter != null)
@@ -151,6 +157,18 @@ public class NavigationDrawerFragment extends Fragment implements NavigationAdap
         @Override
         public void onClick(View v, NavigationAdapter.ItemRowHolder rowHolder, int position) {
             PreferencesActivity.startActivity(getActivity());
+            mDrawerLayout.closeDrawer(mNavigationDrawerContainer);
+        }
+    };
+
+    private NavDrawerItem.OnClickListener mLogoutClickListener = new NavDrawerItem.OnClickListener() {
+        @Override
+        public void onClick(View v, NavigationAdapter.ItemRowHolder rowHolder, int position) {
+            PrefUtils.remove(getActivity(), FacebookLogin.LOGGED_IN);
+            PrefUtils.remove(getActivity(), FacebookLogin.FB_ID);
+            PrefUtils.remove(getActivity(), FacebookLogin.FB_TOKEN);
+            LoginManager.getInstance().logOut();
+            startActivity(new Intent(getActivity(), MainActivity.class));
             mDrawerLayout.closeDrawer(mNavigationDrawerContainer);
         }
     };
