@@ -59,35 +59,35 @@ public interface PreferencesHandler {
 
             prefItems.add(PrefItem.newBuilder(context).setTitleResource(R.string.general).build());
 
-            final String[] items = { context.getString(R.string.title_movies), context.getString(R.string.title_shows), context.getString(R.string.title_anime) };
+            final String[] items = { context.getString(R.string.title_movies) };
             final String[] hwItems = { context.getString(R.string.hw_automatic), context.getString(R.string.disabled), context.getString(R.string.hw_decoding), context.getString(R.string.hw_full) };
             final String[] qualities = context.getResources().getStringArray(R.array.video_qualities);
             final String[] pixelFormats = { context.getString(R.string.rgb16), context.getString(R.string.rgb32), context.getString(R.string.yuv) };
 
-            if(!isTV)
-            prefItems.add(PrefItem.newBuilder(context)
-                    .setIconResource(R.drawable.ic_prefs_default_view)
-                    .setTitleResource(R.string.default_view)
-                    .setPreferenceKey(Prefs.DEFAULT_VIEW)
-                    .setDefaultValue(0)
-                    .setOnClickListener(new PrefItem.OnClickListener() {
-                        @Override
-                        public void onClick(final PrefItem item) {
-                            handler.openListSelection(item.getTitle(), items, SelectionMode.SIMPLE_CHOICE, (int) item.getValue(), 0, 0, new OnSelectionListener() {
-                                @Override
-                                public void onSelection(int position, Object value) {
-                                    item.saveValue(position);
-                                }
-                            });
-                        }
-                    })
-                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
-                        @Override
-                        public String get(PrefItem item) {
-                            return items[(Integer) item.getValue()];
-                        }
-                    })
-                    .build());
+//            if(!isTV)
+//            prefItems.add(PrefItem.newBuilder(context)
+//                    .setIconResource(R.drawable.ic_prefs_default_view)
+//                    .setTitleResource(R.string.default_view)
+//                    .setPreferenceKey(Prefs.DEFAULT_VIEW)
+//                    .setDefaultValue(0)
+//                    .setOnClickListener(new PrefItem.OnClickListener() {
+//                        @Override
+//                        public void onClick(final PrefItem item) {
+//                            handler.openListSelection(item.getTitle(), items, SelectionMode.SIMPLE_CHOICE, (int) item.getValue(), 0, 0, new OnSelectionListener() {
+//                                @Override
+//                                public void onSelection(int position, Object value) {
+//                                    item.saveValue(position);
+//                                }
+//                            });
+//                        }
+//                    })
+//                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
+//                        @Override
+//                        public String get(PrefItem item) {
+//                            return items[(Integer) item.getValue()];
+//                        }
+//                    })
+//                    .build());
 
             if(!isTV)
             prefItems.add(PrefItem.newBuilder(context)
@@ -136,82 +136,82 @@ public interface PreferencesHandler {
                     })
                     .build());
 
-            prefItems.add(PrefItem.newBuilder(context)
-                    .setIconResource(R.drawable.ic_action_quality)
-                    .setTitleResource(R.string.quality)
-                    .setPreferenceKey(Prefs.QUALITY_DEFAULT)
-                    .hasNext(true)
-                    .setDefaultValue("720p")
-                    .setOnClickListener(new PrefItem.OnClickListener() {
-                        @Override
-                        public void onClick(final PrefItem item) {
-                            handler.openListSelection(item.getTitle(), qualities, SelectionMode.SIMPLE_CHOICE, Arrays.asList(qualities).indexOf(item.getValue()), 0, 0, new OnSelectionListener() {
-                                @Override
-                                public void onSelection(int position, Object value) {
-                                    item.saveValue(qualities[position]);
-                                }
-                            });
-                        }
-                    })
-                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
-                        @Override
-                        public String get(PrefItem item) {
-                            return (String) item.getValue();
-                        }
-                    })
-                    .build());
-
-            prefItems.add(PrefItem.newBuilder(context)
-                    .setIconResource(R.drawable.ic_prefs_app_language)
-                    .setTitleResource(R.string.i18n_language)
-                    .setPreferenceKey(Prefs.LOCALE)
-                    .hasNext(true)
-                    .setDefaultValue("")
-                    .setOnClickListener(new PrefItem.OnClickListener() {
-                        @Override
-                        public void onClick(final PrefItem item) {
-                            int currentPosition = 0;
-                            String currentValue = item.getValue().toString();
-
-                            final String[] languages = context.getResources().getStringArray(R.array.translation_languages);
-                            Arrays.sort(languages);
-
-                            String[] items = new String[languages.length + 1];
-                            items[0] = context.getString(R.string.device_language);
-                            for (int i = 0; i < languages.length; i++) {
-                                Locale locale = LocaleUtils.toLocale(languages[i]);
-                                items[i + 1] = locale.getDisplayName(locale);
-                                if (languages[i].equals(currentValue)) {
-                                    currentPosition = i + 1;
-                                }
-                            }
-
-                            handler.openListSelection(item.getTitle(), items, SelectionMode.ADVANCED_CHOICE, currentPosition, 0, 0, new OnSelectionListener() {
-                                @Override
-                                public void onSelection(int position, Object value) {
-                                    if (position == 0) {
-                                        item.clearValue();
-                                    } else {
-                                        item.saveValue(languages[position - 1]);
-                                    }
-
-                                    handler.showMessage(context.getString(R.string.restart_effect));
-                                }
-                            });
-                        }
-                    })
-                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
-                        @Override
-                        public String get(PrefItem item) {
-                            String langCode = item.getValue().toString();
-                            if (langCode.isEmpty())
-                                return context.getString(R.string.device_language);
-
-                            Locale locale = LocaleUtils.toLocale(langCode);
-                            return locale.getDisplayName(locale);
-                        }
-                    })
-                    .build());
+//            prefItems.add(PrefItem.newBuilder(context)
+//                    .setIconResource(R.drawable.ic_action_quality)
+//                    .setTitleResource(R.string.quality)
+//                    .setPreferenceKey(Prefs.QUALITY_DEFAULT)
+//                    .hasNext(true)
+//                    .setDefaultValue("720p")
+//                    .setOnClickListener(new PrefItem.OnClickListener() {
+//                        @Override
+//                        public void onClick(final PrefItem item) {
+//                            handler.openListSelection(item.getTitle(), qualities, SelectionMode.SIMPLE_CHOICE, Arrays.asList(qualities).indexOf(item.getValue()), 0, 0, new OnSelectionListener() {
+//                                @Override
+//                                public void onSelection(int position, Object value) {
+//                                    item.saveValue(qualities[position]);
+//                                }
+//                            });
+//                        }
+//                    })
+//                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
+//                        @Override
+//                        public String get(PrefItem item) {
+//                            return (String) item.getValue();
+//                        }
+//                    })
+//                    .build());
+//
+//            prefItems.add(PrefItem.newBuilder(context)
+//                    .setIconResource(R.drawable.ic_prefs_app_language)
+//                    .setTitleResource(R.string.i18n_language)
+//                    .setPreferenceKey(Prefs.LOCALE)
+//                    .hasNext(true)
+//                    .setDefaultValue("")
+//                    .setOnClickListener(new PrefItem.OnClickListener() {
+//                        @Override
+//                        public void onClick(final PrefItem item) {
+//                            int currentPosition = 0;
+//                            String currentValue = item.getValue().toString();
+//
+//                            final String[] languages = context.getResources().getStringArray(R.array.translation_languages);
+//                            Arrays.sort(languages);
+//
+//                            String[] items = new String[languages.length + 1];
+//                            items[0] = context.getString(R.string.device_language);
+//                            for (int i = 0; i < languages.length; i++) {
+//                                Locale locale = LocaleUtils.toLocale(languages[i]);
+//                                items[i + 1] = locale.getDisplayName(locale);
+//                                if (languages[i].equals(currentValue)) {
+//                                    currentPosition = i + 1;
+//                                }
+//                            }
+//
+//                            handler.openListSelection(item.getTitle(), items, SelectionMode.ADVANCED_CHOICE, currentPosition, 0, 0, new OnSelectionListener() {
+//                                @Override
+//                                public void onSelection(int position, Object value) {
+//                                    if (position == 0) {
+//                                        item.clearValue();
+//                                    } else {
+//                                        item.saveValue(languages[position - 1]);
+//                                    }
+//
+//                                    handler.showMessage(context.getString(R.string.restart_effect));
+//                                }
+//                            });
+//                        }
+//                    })
+//                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
+//                        @Override
+//                        public String get(PrefItem item) {
+//                            String langCode = item.getValue().toString();
+//                            if (langCode.isEmpty())
+//                                return context.getString(R.string.device_language);
+//
+//                            Locale locale = LocaleUtils.toLocale(langCode);
+//                            return locale.getDisplayName(locale);
+//                        }
+//                    })
+//                    .build());
 
             if(!isTV)
             prefItems.add(PrefItem.newBuilder(context)
@@ -234,155 +234,155 @@ public interface PreferencesHandler {
                     })
                     .build());
 
-            prefItems.add(PrefItem.newBuilder(context).setTitleResource(R.string.subtitles).build());
-
-            prefItems.add(PrefItem.newBuilder(context)
-                    .setIconResource(R.drawable.ic_prefs_subtitle_color)
-                    .setTitleResource(R.string.subtitle_color)
-                    .setPreferenceKey(Prefs.SUBTITLE_COLOR)
-                    .hasNext(true)
-                    .setDefaultValue(Color.WHITE)
-                    .setOnClickListener(new PrefItem.OnClickListener() {
-                        @Override
-                        public void onClick(final PrefItem item) {
-                            handler.openListSelection(item.getTitle(), null, SelectionMode.COLOR, item.getValue(), 0, 0, new OnSelectionListener() {
-                                @Override
-                                public void onSelection(int position, Object value) {
-                                    item.saveValue(value);
-                                }
-                            });
-                        }
-                    })
-                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
-                        @Override
-                        public String get(PrefItem item) {
-                            return String.format("#%06X", 0xFFFFFF & (int) item.getValue());
-                        }
-                    })
-                    .build());
-
-            prefItems.add(PrefItem.newBuilder(context)
-                    .setIconResource(R.drawable.ic_prefs_subtitle_size)
-                    .setTitleResource(R.string.subtitle_size)
-                    .setPreferenceKey(Prefs.SUBTITLE_SIZE)
-                    .hasNext(true)
-                    .setDefaultValue(context.getResources().getInteger(R.integer.player_subtitles_default_text_size))
-                    .setOnClickListener(new PrefItem.OnClickListener() {
-                        @Override
-                        public void onClick(final PrefItem item) {
-                            handler.openListSelection(item.getTitle(), items, SelectionMode.NUMBER, (Integer) item.getValue(), 10, 60, new OnSelectionListener() {
-                                @Override
-                                public void onSelection(int position, Object value) {
-                                    item.saveValue(value);
-                                }
-                            });
-                        }
-                    })
-                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
-                        @Override
-                        public String get(PrefItem item) {
-                            return Integer.toString((int) item.getValue());
-                        }
-                    })
-                    .build());
-
-            prefItems.add(PrefItem.newBuilder(context)
-                    .setIconResource(R.drawable.ic_prefs_subtitle_stroke_color)
-                    .setTitleResource(R.string.subtitle_stroke_color)
-                    .setPreferenceKey(Prefs.SUBTITLE_STROKE_COLOR)
-                    .hasNext(true)
-                    .setDefaultValue(Color.BLACK)
-                    .setOnClickListener(new PrefItem.OnClickListener() {
-                        @Override
-                        public void onClick(final PrefItem item) {
-                            handler.openListSelection(item.getTitle(), null, SelectionMode.COLOR, (Integer) item.getValue(), 0, 0, new OnSelectionListener() {
-                                @Override
-                                public void onSelection(int position, Object value) {
-                                    item.saveValue(value);
-                                }
-                            });
-                        }
-                    })
-                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
-                        @Override
-                        public String get(PrefItem item) {
-                            return String.format("#%06X", 0xFFFFFF & (int) item.getValue());
-                        }
-                    })
-                    .build());
-
-            prefItems.add(PrefItem.newBuilder(context)
-                    .setIconResource(R.drawable.ic_prefs_subtitle_stroke_width)
-                    .setTitleResource(R.string.subtitle_stroke_width)
-                    .setPreferenceKey(Prefs.SUBTITLE_STROKE_WIDTH)
-                    .hasNext(true)
-                    .setDefaultValue(2)
-                    .setOnClickListener(new PrefItem.OnClickListener() {
-                        @Override
-                        public void onClick(final PrefItem item) {
-                            handler.openListSelection(item.getTitle(), items, SelectionMode.NUMBER, (Integer) item.getValue(), 0, 5, new OnSelectionListener() {
-                                @Override
-                                public void onSelection(int position, Object value) {
-                                    item.saveValue(value);
-                                }
-                            });
-                        }
-                    })
-                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
-                        @Override
-                        public String get(PrefItem item) {
-                            return Integer.toString((int) item.getValue());
-                        }
-                    })
-                    .build());
-
-            prefItems.add(PrefItem.newBuilder(context)
-                    .setIconResource(R.drawable.ic_prefs_subtitle_lang)
-                    .setTitleResource(R.string.default_subtitle_language)
-                    .setPreferenceKey(Prefs.SUBTITLE_DEFAULT)
-                    .hasNext(true)
-                    .setDefaultValue("")
-                    .setOnClickListener(new PrefItem.OnClickListener() {
-                        @Override
-                        public void onClick(final PrefItem item) {
-                            int currentPosition = 0;
-                            String currentValue = item.getValue().toString();
-
-                            final String[] languages = context.getResources().getStringArray(R.array.subtitle_languages);
-                            String[] items = new String[languages.length + 1];
-                            items[0] = context.getString(R.string.no_default_set);
-                            for (int i = 0; i < languages.length; i++) {
-                                Locale locale = LocaleUtils.toLocale(languages[i]);
-                                items[i + 1] = locale.getDisplayName(locale);
-                                if (languages[i].equals(currentValue)) {
-                                    currentPosition = i + 1;
-                                }
-                            }
-
-                            handler.openListSelection(item.getTitle(), items, SelectionMode.ADVANCED_CHOICE, currentPosition, 0, 0, new OnSelectionListener() {
-                                @Override
-                                public void onSelection(int position, Object value) {
-                                    if (position == 0) {
-                                        item.clearValue();
-                                    } else {
-                                        item.saveValue(languages[position - 1]);
-                                    }
-                                }
-                            });
-                        }
-                    })
-                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
-                        @Override
-                        public String get(PrefItem item) {
-                            String langCode = item.getValue().toString();
-                            if (langCode.isEmpty())
-                                return context.getString(R.string.no_default_set);
-
-                            Locale locale = LocaleUtils.toLocale(langCode);
-                            return locale.getDisplayName(locale);
-                        }
-                    })
-                    .build());
+//            prefItems.add(PrefItem.newBuilder(context).setTitleResource(R.string.subtitles).build());
+//
+//            prefItems.add(PrefItem.newBuilder(context)
+//                    .setIconResource(R.drawable.ic_prefs_subtitle_color)
+//                    .setTitleResource(R.string.subtitle_color)
+//                    .setPreferenceKey(Prefs.SUBTITLE_COLOR)
+//                    .hasNext(true)
+//                    .setDefaultValue(Color.WHITE)
+//                    .setOnClickListener(new PrefItem.OnClickListener() {
+//                        @Override
+//                        public void onClick(final PrefItem item) {
+//                            handler.openListSelection(item.getTitle(), null, SelectionMode.COLOR, item.getValue(), 0, 0, new OnSelectionListener() {
+//                                @Override
+//                                public void onSelection(int position, Object value) {
+//                                    item.saveValue(value);
+//                                }
+//                            });
+//                        }
+//                    })
+//                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
+//                        @Override
+//                        public String get(PrefItem item) {
+//                            return String.format("#%06X", 0xFFFFFF & (int) item.getValue());
+//                        }
+//                    })
+//                    .build());
+//
+//            prefItems.add(PrefItem.newBuilder(context)
+//                    .setIconResource(R.drawable.ic_prefs_subtitle_size)
+//                    .setTitleResource(R.string.subtitle_size)
+//                    .setPreferenceKey(Prefs.SUBTITLE_SIZE)
+//                    .hasNext(true)
+//                    .setDefaultValue(context.getResources().getInteger(R.integer.player_subtitles_default_text_size))
+//                    .setOnClickListener(new PrefItem.OnClickListener() {
+//                        @Override
+//                        public void onClick(final PrefItem item) {
+//                            handler.openListSelection(item.getTitle(), items, SelectionMode.NUMBER, (Integer) item.getValue(), 10, 60, new OnSelectionListener() {
+//                                @Override
+//                                public void onSelection(int position, Object value) {
+//                                    item.saveValue(value);
+//                                }
+//                            });
+//                        }
+//                    })
+//                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
+//                        @Override
+//                        public String get(PrefItem item) {
+//                            return Integer.toString((int) item.getValue());
+//                        }
+//                    })
+//                    .build());
+//
+//            prefItems.add(PrefItem.newBuilder(context)
+//                    .setIconResource(R.drawable.ic_prefs_subtitle_stroke_color)
+//                    .setTitleResource(R.string.subtitle_stroke_color)
+//                    .setPreferenceKey(Prefs.SUBTITLE_STROKE_COLOR)
+//                    .hasNext(true)
+//                    .setDefaultValue(Color.BLACK)
+//                    .setOnClickListener(new PrefItem.OnClickListener() {
+//                        @Override
+//                        public void onClick(final PrefItem item) {
+//                            handler.openListSelection(item.getTitle(), null, SelectionMode.COLOR, (Integer) item.getValue(), 0, 0, new OnSelectionListener() {
+//                                @Override
+//                                public void onSelection(int position, Object value) {
+//                                    item.saveValue(value);
+//                                }
+//                            });
+//                        }
+//                    })
+//                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
+//                        @Override
+//                        public String get(PrefItem item) {
+//                            return String.format("#%06X", 0xFFFFFF & (int) item.getValue());
+//                        }
+//                    })
+//                    .build());
+//
+//            prefItems.add(PrefItem.newBuilder(context)
+//                    .setIconResource(R.drawable.ic_prefs_subtitle_stroke_width)
+//                    .setTitleResource(R.string.subtitle_stroke_width)
+//                    .setPreferenceKey(Prefs.SUBTITLE_STROKE_WIDTH)
+//                    .hasNext(true)
+//                    .setDefaultValue(2)
+//                    .setOnClickListener(new PrefItem.OnClickListener() {
+//                        @Override
+//                        public void onClick(final PrefItem item) {
+//                            handler.openListSelection(item.getTitle(), items, SelectionMode.NUMBER, (Integer) item.getValue(), 0, 5, new OnSelectionListener() {
+//                                @Override
+//                                public void onSelection(int position, Object value) {
+//                                    item.saveValue(value);
+//                                }
+//                            });
+//                        }
+//                    })
+//                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
+//                        @Override
+//                        public String get(PrefItem item) {
+//                            return Integer.toString((int) item.getValue());
+//                        }
+//                    })
+//                    .build());
+//
+//            prefItems.add(PrefItem.newBuilder(context)
+//                    .setIconResource(R.drawable.ic_prefs_subtitle_lang)
+//                    .setTitleResource(R.string.default_subtitle_language)
+//                    .setPreferenceKey(Prefs.SUBTITLE_DEFAULT)
+//                    .hasNext(true)
+//                    .setDefaultValue("")
+//                    .setOnClickListener(new PrefItem.OnClickListener() {
+//                        @Override
+//                        public void onClick(final PrefItem item) {
+//                            int currentPosition = 0;
+//                            String currentValue = item.getValue().toString();
+//
+//                            final String[] languages = context.getResources().getStringArray(R.array.subtitle_languages);
+//                            String[] items = new String[languages.length + 1];
+//                            items[0] = context.getString(R.string.no_default_set);
+//                            for (int i = 0; i < languages.length; i++) {
+//                                Locale locale = LocaleUtils.toLocale(languages[i]);
+//                                items[i + 1] = locale.getDisplayName(locale);
+//                                if (languages[i].equals(currentValue)) {
+//                                    currentPosition = i + 1;
+//                                }
+//                            }
+//
+//                            handler.openListSelection(item.getTitle(), items, SelectionMode.ADVANCED_CHOICE, currentPosition, 0, 0, new OnSelectionListener() {
+//                                @Override
+//                                public void onSelection(int position, Object value) {
+//                                    if (position == 0) {
+//                                        item.clearValue();
+//                                    } else {
+//                                        item.saveValue(languages[position - 1]);
+//                                    }
+//                                }
+//                            });
+//                        }
+//                    })
+//                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
+//                        @Override
+//                        public String get(PrefItem item) {
+//                            String langCode = item.getValue().toString();
+//                            if (langCode.isEmpty())
+//                                return context.getString(R.string.no_default_set);
+//
+//                            Locale locale = LocaleUtils.toLocale(langCode);
+//                            return locale.getDisplayName(locale);
+//                        }
+//                    })
+//                    .build());
 
             prefItems.add(PrefItem.newBuilder(context).setTitleResource(R.string.torrents).build());
 
@@ -472,35 +472,35 @@ public interface PreferencesHandler {
                     })
                     .build());
 
-            if(!isTV)
-            prefItems.add(PrefItem.newBuilder(context)
-                    .setIconResource(R.drawable.ic_prefs_storage_location)
-                    .setTitleResource(R.string.storage_location)
-                    .setPreferenceKey(Prefs.STORAGE_LOCATION)
-                    .hasNext(true)
-                    .setDefaultValue(StorageUtils.getIdealCacheDirectory(context))
-                    .setOnClickListener(new PrefItem.OnClickListener() {
-                        @Override
-                        public void onClick(final PrefItem item) {
-                            handler.openListSelection(item.getTitle(), null, SelectionMode.DIRECTORY, item.getValue(), 0, 0, new OnSelectionListener() {
-                                @Override
-                                public void onSelection(int position, Object value) {
-                                    if(value != null) {
-                                        item.saveValue(value);
-                                    } else {
-                                        item.clearValue();
-                                    }
-                                }
-                            });
-                        }
-                    })
-                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
-                        @Override
-                        public String get(PrefItem item) {
-                            return item.getValue().toString();
-                        }
-                    })
-                    .build());
+//            if(!isTV)
+//                prefItems.add(PrefItem.newBuilder(context)
+//                        .setIconResource(R.drawable.ic_prefs_storage_location)
+//                        .setTitleResource(R.string.storage_location)
+//                        .setPreferenceKey(Prefs.STORAGE_LOCATION)
+//                        .hasNext(true)
+//                        .setDefaultValue(StorageUtils.getIdealCacheDirectory(context))
+//                        .setOnClickListener(new PrefItem.OnClickListener() {
+//                            @Override
+//                            public void onClick(final PrefItem item) {
+//                                handler.openListSelection(item.getTitle(), null, SelectionMode.DIRECTORY, item.getValue(), 0, 0, new OnSelectionListener() {
+//                                    @Override
+//                                    public void onSelection(int position, Object value) {
+//                                        if(value != null) {
+//                                            item.saveValue(value);
+//                                        } else {
+//                                            item.clearValue();
+//                                        }
+//                                    }
+//                                });
+//                            }
+//                        })
+//                        .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
+//                            @Override
+//                            public String get(PrefItem item) {
+//                                return item.getValue().toString();
+//                            }
+//                        })
+//                        .build());
 
             prefItems.add(PrefItem.newBuilder(context)
                     .setIconResource(R.drawable.ic_prefs_remove_cache)
@@ -623,117 +623,117 @@ public interface PreferencesHandler {
                     })
                     .build());
 
-            prefItems.add(PrefItem.newBuilder(context).setTitleResource(R.string.updates).build());
-
-            prefItems.add(PrefItem.newBuilder(context)
-                    .setIconResource(R.drawable.ic_prefs_auto_update)
-                    .setTitleResource(R.string.auto_updates)
-                    .setPreferenceKey(Prefs.AUTOMATIC_UPDATES)
-                    .setDefaultValue(true)
-                    .setOnClickListener(new PrefItem.OnClickListener() {
-                        @Override
-                        public void onClick(final PrefItem item) {
-                            item.saveValue(!(boolean) item.getValue());
-                        }
-                    })
-                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
-                        @Override
-                        public String get(PrefItem item) {
-                            boolean enabled = (boolean) item.getValue();
-                            return enabled ? context.getString(R.string.enabled) : context.getString(R.string.disabled);
-                        }
-                    })
-                    .build());
-
-            prefItems.add(PrefItem.newBuilder(context)
-                    .setIconResource(R.drawable.ic_prefs_check_update)
-                    .setTitleResource(R.string.check_for_updates)
-                    .setPreferenceKey(ButterUpdater.LAST_UPDATE_CHECK)
-                    .setDefaultValue(1)
-                    .setOnClickListener(new PrefItem.OnClickListener() {
-                        @Override
-                        public void onClick(final PrefItem item) {
-                            ButterUpdater.getInstance(context).checkUpdatesManually();
-                        }
-                    })
-                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
-                        @Override
-                        public String get(PrefItem item) {
-                            long timeStamp = Long.parseLong(PrefUtils.get(context, ButterUpdater.LAST_UPDATE_CHECK, "0"));
-                            Calendar cal = Calendar.getInstance(Locale.getDefault());
-                            cal.setTimeInMillis(timeStamp);
-                            String time = SimpleDateFormat.getTimeInstance(SimpleDateFormat.MEDIUM, Locale.getDefault()).format(timeStamp);
-                            String date = DateFormat.format("dd-MM-yyy", cal).toString();
-                            return context.getString(R.string.last_check) + ": " + date + " " + time;
-                        }
-                    })
-                    .build());
+//            prefItems.add(PrefItem.newBuilder(context).setTitleResource(R.string.updates).build());
+//
+//            prefItems.add(PrefItem.newBuilder(context)
+//                    .setIconResource(R.drawable.ic_prefs_auto_update)
+//                    .setTitleResource(R.string.auto_updates)
+//                    .setPreferenceKey(Prefs.AUTOMATIC_UPDATES)
+//                    .setDefaultValue(true)
+//                    .setOnClickListener(new PrefItem.OnClickListener() {
+//                        @Override
+//                        public void onClick(final PrefItem item) {
+//                            item.saveValue(!(boolean) item.getValue());
+//                        }
+//                    })
+//                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
+//                        @Override
+//                        public String get(PrefItem item) {
+//                            boolean enabled = (boolean) item.getValue();
+//                            return enabled ? context.getString(R.string.enabled) : context.getString(R.string.disabled);
+//                        }
+//                    })
+//                    .build());
+//
+//            prefItems.add(PrefItem.newBuilder(context)
+//                    .setIconResource(R.drawable.ic_prefs_check_update)
+//                    .setTitleResource(R.string.check_for_updates)
+//                    .setPreferenceKey(ButterUpdater.LAST_UPDATE_CHECK)
+//                    .setDefaultValue(1)
+//                    .setOnClickListener(new PrefItem.OnClickListener() {
+//                        @Override
+//                        public void onClick(final PrefItem item) {
+//                            ButterUpdater.getInstance(context).checkUpdatesManually();
+//                        }
+//                    })
+//                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
+//                        @Override
+//                        public String get(PrefItem item) {
+//                            long timeStamp = Long.parseLong(PrefUtils.get(context, ButterUpdater.LAST_UPDATE_CHECK, "0"));
+//                            Calendar cal = Calendar.getInstance(Locale.getDefault());
+//                            cal.setTimeInMillis(timeStamp);
+//                            String time = SimpleDateFormat.getTimeInstance(SimpleDateFormat.MEDIUM, Locale.getDefault()).format(timeStamp);
+//                            String date = DateFormat.format("dd-MM-yyy", cal).toString();
+//                            return context.getString(R.string.last_check) + ": " + date + " " + time;
+//                        }
+//                    })
+//                    .build());
 
             prefItems.add(PrefItem.newBuilder(context).setTitleResource(R.string.about_app).build());
 
-            if (!Constants.DEBUG_ENABLED && !isTV) {
-                prefItems.add(PrefItem.newBuilder(context)
-                        .setIconResource(R.drawable.ic_prefs_report_bug)
-                        .setTitleResource(R.string.report_a_bug)
-                        .setPreferenceKey("")
-                        .setDefaultValue("")
-                        .setOnClickListener(new PrefItem.OnClickListener() {
-                            @Override
-                            public void onClick(final PrefItem item) {
-                                Intent i = new Intent(Intent.ACTION_VIEW);
-                                i.setData(Uri.parse("https://github.com/butterproject/butter-android/issues/new"));
-                                context.startActivity(i);
-                            }
-                        })
-                        .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
-                            @Override
-                            public String get(PrefItem item) {
-                                return context.getString(R.string.tap_to_open);
-                            }
-                        })
-                        .build());
-            }
+//            if (!Constants.DEBUG_ENABLED && !isTV) {
+//                prefItems.add(PrefItem.newBuilder(context)
+//                        .setIconResource(R.drawable.ic_prefs_report_bug)
+//                        .setTitleResource(R.string.report_a_bug)
+//                        .setPreferenceKey("")
+//                        .setDefaultValue("")
+//                        .setOnClickListener(new PrefItem.OnClickListener() {
+//                            @Override
+//                            public void onClick(final PrefItem item) {
+//                                Intent i = new Intent(Intent.ACTION_VIEW);
+//                                i.setData(Uri.parse("https://github.com/butterproject/butter-android/issues/new"));
+//                                context.startActivity(i);
+//                            }
+//                        })
+//                        .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
+//                            @Override
+//                            public String get(PrefItem item) {
+//                                return context.getString(R.string.tap_to_open);
+//                            }
+//                        })
+//                        .build());
+//            }
 
-            prefItems.add(PrefItem.newBuilder(context)
-                    .setIconResource(R.drawable.ic_prefs_changelog)
-                    .setTitleResource(R.string.changelog)
-                    .setPreferenceKey("")
-                    .setDefaultValue("")
-                    .setOnClickListener(new PrefItem.OnClickListener() {
-                        @Override
-                        public void onClick(final PrefItem item) {
-                            ChangeLogDialogFragment changeLogDialogFragment = new ChangeLogDialogFragment();
-                            changeLogDialogFragment.show(((FragmentActivity) context).getSupportFragmentManager(), "prefs_fragment");
-                        }
-                    })
-                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
-                        @Override
-                        public String get(PrefItem item) {
-                            return context.getString(R.string.tap_to_open);
-                        }
-                    })
-                    .build());
-
-            prefItems.add(PrefItem.newBuilder(context)
-                    .setIconResource(R.drawable.ic_prefs_open_source)
-                    .setTitleResource(R.string.open_source_licenses)
-                    .setPreferenceKey("")
-                    .setDefaultValue("")
-                    .setOnClickListener(new PrefItem.OnClickListener() {
-                        @Override
-                        public void onClick(final PrefItem item) {
-                            Intent i = new Intent(Intent.ACTION_VIEW);
-                            i.setData(Uri.parse(Constants.GIT_URL + "/blob/master/NOTICE.md"));
-                            context.startActivity(i);
-                        }
-                    })
-                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
-                        @Override
-                        public String get(PrefItem item) {
-                            return context.getString(R.string.tap_to_open);
-                        }
-                    })
-                    .build());
+//            prefItems.add(PrefItem.newBuilder(context)
+//                    .setIconResource(R.drawable.ic_prefs_changelog)
+//                    .setTitleResource(R.string.changelog)
+//                    .setPreferenceKey("")
+//                    .setDefaultValue("")
+//                    .setOnClickListener(new PrefItem.OnClickListener() {
+//                        @Override
+//                        public void onClick(final PrefItem item) {
+//                            ChangeLogDialogFragment changeLogDialogFragment = new ChangeLogDialogFragment();
+//                            changeLogDialogFragment.show(((FragmentActivity) context).getSupportFragmentManager(), "prefs_fragment");
+//                        }
+//                    })
+//                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
+//                        @Override
+//                        public String get(PrefItem item) {
+//                            return context.getString(R.string.tap_to_open);
+//                        }
+//                    })
+//                    .build());
+//
+//            prefItems.add(PrefItem.newBuilder(context)
+//                    .setIconResource(R.drawable.ic_prefs_open_source)
+//                    .setTitleResource(R.string.open_source_licenses)
+//                    .setPreferenceKey("")
+//                    .setDefaultValue("")
+//                    .setOnClickListener(new PrefItem.OnClickListener() {
+//                        @Override
+//                        public void onClick(final PrefItem item) {
+//                            Intent i = new Intent(Intent.ACTION_VIEW);
+//                            i.setData(Uri.parse(Constants.GIT_URL + "/blob/master/NOTICE.md"));
+//                            context.startActivity(i);
+//                        }
+//                    })
+//                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
+//                        @Override
+//                        public String get(PrefItem item) {
+//                            return context.getString(R.string.tap_to_open);
+//                        }
+//                    })
+//                    .build());
 
             prefItems.add(PrefItem.newBuilder(context)
                     .setIconResource(R.drawable.ic_prefs_version)

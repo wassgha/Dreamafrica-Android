@@ -32,7 +32,7 @@
         tools:replace="android:theme">
         <activity
             android:name=".activities.MainActivity"
-            android:label="@null"
+            android:label="@string/app_name"
             android:theme="@style/Theme.Butter.NavigationDrawer"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>

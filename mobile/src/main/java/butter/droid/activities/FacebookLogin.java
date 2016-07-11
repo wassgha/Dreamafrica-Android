@@ -42,7 +42,7 @@ public class FacebookLogin extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         try {
             PackageInfo info = getPackageManager().getPackageInfo(
-                    "butter.droid.dev",
+                    "air.com.yudu.ReaderAIR3663672",
                     PackageManager.GET_SIGNATURES);
             for (Signature signature : info.signatures) {
                 MessageDigest md = MessageDigest.getInstance("SHA");
