@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.utils;
+package dream.africa.utils;
 
 import android.content.res.Resources;
 import android.graphics.Color;
@@ -29,7 +29,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import butter.droid.R;
+import dream.africa.R;
 
 public class ActionBarBackground {
 

@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.fragments.dialog;
+package dream.africa.fragments.dialog;
 
 import android.app.Activity;
 import android.content.DialogInterface;
@@ -28,10 +28,10 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-import butter.droid.R;
-import butter.droid.base.providers.media.MediaProvider;
-import butter.droid.base.providers.media.models.Media;
-import butter.droid.base.utils.ThreadUtils;
+import dream.africa.R;
+import dream.africa.base.providers.media.MediaProvider;
+import dream.africa.base.providers.media.models.Media;
+import dream.africa.base.utils.ThreadUtils;
 
 public class LoadingDetailDialogFragment extends DialogFragment {
 

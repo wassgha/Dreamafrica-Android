@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.widget;
+package dream.africa.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -26,7 +26,7 @@ import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
 
-import butter.droid.R;
+import dream.africa.R;
 
 /*
  * Copyright 2014 Google Inc.

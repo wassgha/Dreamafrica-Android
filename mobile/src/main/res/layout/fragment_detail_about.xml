@@ -47,7 +47,7 @@
             android:textSize="@dimen/detail_title_text_size"
             app:typeface="roboto_medium" />
 
-        <LinearLayout
+        <!--<LinearLayout
             android:id="@+id/extras"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -66,7 +66,7 @@
                 android:max="10"
                 android:progress="5"/>
 
-            <butter.droid.widget.SquareImageView
+            <dream.africa.widget.SquareImageView
                 android:layout_width="12dp"
                 android:layout_height="12dp"
                 android:layout_marginLeft="6dp"
@@ -91,11 +91,11 @@
                 android:scaleType="fitCenter"
                 android:contentDescription="@string/magnet" />
 
-        </LinearLayout>
+        </LinearLayout>-->
 
         <com.devspark.robototextview.widget.RobotoTextView
             android:id="@+id/meta"
-            android:layout_below="@id/extras"
+            android:layout_below="@id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/detail_meta_margin_top"

@@ -31,7 +31,7 @@
  * limitations under the License.
  */
 
-package butter.droid.utils;
+package dream.africa.utils;
 
 import android.content.Context;
 import android.graphics.Rect;

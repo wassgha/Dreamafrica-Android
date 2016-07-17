@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.content.preferences;
+package dream.africa.base.content.preferences;
 
 public class Prefs {
     public static final String SUBTITLE_COLOR = "subtitle_color";

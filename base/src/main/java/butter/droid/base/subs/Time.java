@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.subs;
+package dream.africa.base.subs;
 
 public class Time {
 

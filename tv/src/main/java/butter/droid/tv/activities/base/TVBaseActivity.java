@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.activities.base;
+package dream.africa.tv.activities.base;
 
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -24,9 +24,9 @@ import android.os.Bundle;
 
 import com.github.sv244.torrentstream.Torrent;
 
-import butter.droid.base.updater.ButterUpdater;
-import butter.droid.base.utils.VersionUtils;
-import butter.droid.tv.activities.TVSearchActivity;
+import dream.africa.base.updater.ButterUpdater;
+import dream.africa.base.utils.VersionUtils;
+import dream.africa.tv.activities.TVSearchActivity;
 
 public abstract class TVBaseActivity extends TVTorrentBaseActivity {
 
@@ -36,7 +36,7 @@ public abstract class TVBaseActivity extends TVTorrentBaseActivity {
 
 		if(!VersionUtils.isUsingCorrectBuild()) {
 			new AlertDialog.Builder(this)
-					.setMessage(butter.droid.base.R.string.wrong_abi)
+					.setMessage(dream.africa.base.R.string.wrong_abi)
 					.setCancelable(false)
 					.show();
 

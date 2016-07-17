@@ -15,13 +15,13 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.torrent;
+package dream.africa.base.torrent;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import butter.droid.base.providers.media.models.Media;
-import butter.droid.base.providers.media.models.Show;
+import dream.africa.base.providers.media.models.Media;
+import dream.africa.base.providers.media.models.Show;
 
 public class StreamInfo implements Parcelable {
 

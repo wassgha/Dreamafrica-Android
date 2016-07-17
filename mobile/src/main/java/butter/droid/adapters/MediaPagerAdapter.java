@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.adapters;
+package dream.africa.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -26,12 +26,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import butter.droid.R;
-import butter.droid.base.ButterApplication;
-import butter.droid.base.providers.media.MediaProvider;
-import butter.droid.base.utils.LocaleUtils;
-import butter.droid.fragments.MediaGenreSelectionFragment;
-import butter.droid.fragments.MediaListFragment;
+import dream.africa.R;
+import dream.africa.base.ButterApplication;
+import dream.africa.base.providers.media.MediaProvider;
+import dream.africa.base.utils.LocaleUtils;
+import dream.africa.fragments.MediaGenreSelectionFragment;
+import dream.africa.fragments.MediaListFragment;
 
 public class MediaPagerAdapter extends FragmentPagerAdapter {
 

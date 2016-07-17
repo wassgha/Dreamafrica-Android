@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.fragments.dialog;
+package dream.africa.base.fragments.dialog;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -26,8 +26,8 @@ import android.support.v4.app.FragmentManager;
 
 import java.util.List;
 
-import butter.droid.base.ButterApplication;
-import butter.droid.base.R;
+import dream.africa.base.ButterApplication;
+import dream.africa.base.R;
 
 public class StringArraySelectorDialogFragment extends DialogFragment {
 

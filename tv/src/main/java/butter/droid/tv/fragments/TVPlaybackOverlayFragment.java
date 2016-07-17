@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
-package butter.droid.tv.fragments;
+package dream.africa.tv.fragments;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -57,27 +57,27 @@ import java.util.List;
 import java.util.Map;
 
 import de.greenrobot.event.EventBus;
-import butter.droid.base.activities.TorrentActivity;
-import butter.droid.base.content.preferences.Prefs;
-import butter.droid.base.providers.media.models.Episode;
-import butter.droid.base.providers.media.models.Media;
-import butter.droid.base.providers.media.models.Show;
-import butter.droid.base.providers.subs.SubsProvider;
-import butter.droid.base.torrent.StreamInfo;
-import butter.droid.base.utils.PrefUtils;
-import butter.droid.tv.R;
-import butter.droid.tv.activities.TVStreamLoadingActivity;
-import butter.droid.tv.activities.TVVideoPlayerActivity;
-import butter.droid.tv.events.ConfigureSubtitleEvent;
-import butter.droid.tv.events.PausePlaybackEvent;
-import butter.droid.tv.events.PlaybackProgressChangedEvent;
-import butter.droid.tv.events.ScaleVideoEvent;
-import butter.droid.tv.events.SeekBackwardEvent;
-import butter.droid.tv.events.SeekForwardEvent;
-import butter.droid.tv.events.StartPlaybackEvent;
-import butter.droid.tv.events.StreamProgressChangedEvent;
-import butter.droid.tv.events.ToggleSubtitleEvent;
-import butter.droid.tv.events.UpdatePlaybackStateEvent;
+import dream.africa.base.activities.TorrentActivity;
+import dream.africa.base.content.preferences.Prefs;
+import dream.africa.base.providers.media.models.Episode;
+import dream.africa.base.providers.media.models.Media;
+import dream.africa.base.providers.media.models.Show;
+import dream.africa.base.providers.subs.SubsProvider;
+import dream.africa.base.torrent.StreamInfo;
+import dream.africa.base.utils.PrefUtils;
+import dream.africa.tv.R;
+import dream.africa.tv.activities.TVStreamLoadingActivity;
+import dream.africa.tv.activities.TVVideoPlayerActivity;
+import dream.africa.tv.events.ConfigureSubtitleEvent;
+import dream.africa.tv.events.PausePlaybackEvent;
+import dream.africa.tv.events.PlaybackProgressChangedEvent;
+import dream.africa.tv.events.ScaleVideoEvent;
+import dream.africa.tv.events.SeekBackwardEvent;
+import dream.africa.tv.events.SeekForwardEvent;
+import dream.africa.tv.events.StartPlaybackEvent;
+import dream.africa.tv.events.StreamProgressChangedEvent;
+import dream.africa.tv.events.ToggleSubtitleEvent;
+import dream.africa.tv.events.UpdatePlaybackStateEvent;
 
 /*
  * Class for video playback with media control

@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.providers.subs;
+package dream.africa.base.providers.subs;
 
 import android.content.Context;
 
@@ -35,19 +35,19 @@ import java.util.Map;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-import butter.droid.base.ButterApplication;
-import butter.droid.base.content.preferences.Prefs;
-import butter.droid.base.providers.BaseProvider;
-import butter.droid.base.providers.media.models.Episode;
-import butter.droid.base.providers.media.models.Media;
-import butter.droid.base.providers.media.models.Movie;
-import butter.droid.base.subs.FatalParsingException;
-import butter.droid.base.subs.FormatASS;
-import butter.droid.base.subs.FormatSRT;
-import butter.droid.base.subs.TimedTextObject;
-import butter.droid.base.utils.FileUtils;
-import butter.droid.base.utils.PrefUtils;
-import butter.droid.base.utils.StorageUtils;
+import dream.africa.base.ButterApplication;
+import dream.africa.base.content.preferences.Prefs;
+import dream.africa.base.providers.BaseProvider;
+import dream.africa.base.providers.media.models.Episode;
+import dream.africa.base.providers.media.models.Media;
+import dream.africa.base.providers.media.models.Movie;
+import dream.africa.base.subs.FatalParsingException;
+import dream.africa.base.subs.FormatASS;
+import dream.africa.base.subs.FormatSRT;
+import dream.africa.base.subs.TimedTextObject;
+import dream.africa.base.utils.FileUtils;
+import dream.africa.base.utils.PrefUtils;
+import dream.africa.base.utils.StorageUtils;
 
 public abstract class SubsProvider extends BaseProvider {
     public static final String SUBS_CALL = "subs_http_call";

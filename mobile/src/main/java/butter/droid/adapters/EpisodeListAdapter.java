@@ -1,4 +1,4 @@
-package butter.droid.adapters;
+package dream.africa.adapters;
 
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -11,8 +11,8 @@ import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.Bind;
-import butter.droid.R;
-import butter.droid.base.providers.media.models.Episode;
+import dream.africa.R;
+import dream.africa.base.providers.media.models.Episode;
 
 public class EpisodeListAdapter extends BaseAdapter {
 

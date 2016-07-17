@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.adapters;
+package dream.africa.tv.adapters;
 
 import android.support.v17.leanback.widget.ArrayObjectAdapter;
 import android.support.v17.leanback.widget.Presenter;
@@ -23,7 +23,7 @@ import android.support.v17.leanback.widget.Presenter;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import butter.droid.base.providers.media.models.Media;
+import dream.africa.base.providers.media.models.Media;
 
 
 public class MediaObjectAdapter extends ArrayObjectAdapter {

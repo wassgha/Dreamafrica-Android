@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.fragments;
+package dream.africa.fragments;
 
 import android.annotation.TargetApi;
 import android.content.DialogInterface;
@@ -55,20 +55,20 @@ import butterknife.OnClick;
 import com.github.sv244.torrentstream.StreamStatus;
 import com.github.sv244.torrentstream.Torrent;
 import com.github.sv244.torrentstream.listeners.TorrentListener;
-import butter.droid.R;
-import butter.droid.activities.BeamPlayerActivity;
-import butter.droid.activities.VideoPlayerActivity;
-import butter.droid.base.beaming.BeamDeviceListener;
-import butter.droid.base.beaming.BeamManager;
-import butter.droid.base.beaming.BeamPlayerNotificationService;
-import butter.droid.base.torrent.StreamInfo;
-import butter.droid.base.utils.AnimUtils;
-import butter.droid.base.utils.FragmentUtil;
-import butter.droid.base.utils.PixelUtils;
-import butter.droid.base.utils.VersionUtils;
-import butter.droid.fragments.dialog.LoadingBeamingDialogFragment;
-import butter.droid.fragments.dialog.OptionDialogFragment;
-import butter.droid.widget.SeekBar;
+import dream.africa.R;
+import dream.africa.activities.BeamPlayerActivity;
+import dream.africa.activities.VideoPlayerActivity;
+import dream.africa.base.beaming.BeamDeviceListener;
+import dream.africa.base.beaming.BeamManager;
+import dream.africa.base.beaming.BeamPlayerNotificationService;
+import dream.africa.base.torrent.StreamInfo;
+import dream.africa.base.utils.AnimUtils;
+import dream.africa.base.utils.FragmentUtil;
+import dream.africa.base.utils.PixelUtils;
+import dream.africa.base.utils.VersionUtils;
+import dream.africa.fragments.dialog.LoadingBeamingDialogFragment;
+import dream.africa.fragments.dialog.OptionDialogFragment;
+import dream.africa.widget.SeekBar;
 import timber.log.Timber;
 
 public class BeamPlayerFragment extends Fragment implements TorrentListener {

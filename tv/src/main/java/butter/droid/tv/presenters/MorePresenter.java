@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.presenters;
+package dream.africa.tv.presenters;
 
 import android.content.Context;
 import android.support.annotation.DrawableRes;
@@ -23,9 +23,9 @@ import android.support.annotation.Nullable;
 import android.support.v17.leanback.widget.Presenter;
 import android.view.ViewGroup;
 
-import butter.droid.base.providers.media.MediaProvider;
-import butter.droid.base.utils.LocaleUtils;
-import butter.droid.base.utils.StringUtils;
+import dream.africa.base.providers.media.MediaProvider;
+import dream.africa.base.utils.LocaleUtils;
+import dream.africa.base.utils.StringUtils;
 
 public class MorePresenter extends Presenter {
 

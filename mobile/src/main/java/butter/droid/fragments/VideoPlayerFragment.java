@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.fragments;
+package dream.africa.fragments;
 
 import android.annotation.TargetApi;
 import android.app.AlertDialog;
@@ -60,19 +60,19 @@ import com.github.sv244.torrentstream.Torrent;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butter.droid.R;
-import butter.droid.activities.BeamPlayerActivity;
-import butter.droid.base.content.preferences.Prefs;
-import butter.droid.base.fragments.BaseVideoPlayerFragment;
-import butter.droid.base.subs.Caption;
-import butter.droid.base.utils.AnimUtils;
-import butter.droid.base.utils.FragmentUtil;
-import butter.droid.base.utils.LocaleUtils;
-import butter.droid.base.utils.PixelUtils;
-import butter.droid.base.utils.PrefUtils;
-import butter.droid.base.utils.StringUtils;
-import butter.droid.base.utils.VersionUtils;
-import butter.droid.widget.StrokedRobotoTextView;
+import dream.africa.R;
+import dream.africa.activities.BeamPlayerActivity;
+import dream.africa.base.content.preferences.Prefs;
+import dream.africa.base.fragments.BaseVideoPlayerFragment;
+import dream.africa.base.subs.Caption;
+import dream.africa.base.utils.AnimUtils;
+import dream.africa.base.utils.FragmentUtil;
+import dream.africa.base.utils.LocaleUtils;
+import dream.africa.base.utils.PixelUtils;
+import dream.africa.base.utils.PrefUtils;
+import dream.africa.base.utils.StringUtils;
+import dream.africa.base.utils.VersionUtils;
+import dream.africa.widget.StrokedRobotoTextView;
 
 public class VideoPlayerFragment extends BaseVideoPlayerFragment implements View.OnSystemUiVisibilityChangeListener {
 
@@ -89,7 +89,7 @@ public class VideoPlayerFragment extends BaseVideoPlayerFragment implements View
     @Bind(R.id.player_info)
     TextView mPlayerInfo;
     @Bind(R.id.control_bar)
-    butter.droid.widget.SeekBar mControlBar;
+    dream.africa.widget.SeekBar mControlBar;
     @Bind(R.id.play_button)
     ImageButton mPlayButton;
     @Bind(R.id.forward_button)

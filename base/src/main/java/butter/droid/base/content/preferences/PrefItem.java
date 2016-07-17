@@ -15,13 +15,13 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.content.preferences;
+package dream.africa.base.content.preferences;
 
 import android.content.Context;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.StringRes;
 
-import butter.droid.base.utils.PrefUtils;
+import dream.africa.base.utils.PrefUtils;
 
 public class PrefItem {
 

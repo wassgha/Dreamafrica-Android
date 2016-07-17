@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base;
+package dream.africa.base;
 
 import android.app.Application;
 import android.app.NotificationManager;
@@ -39,15 +39,15 @@ import com.squareup.picasso.Picasso;
 import java.io.File;
 import java.util.concurrent.TimeUnit;
 
-import butter.droid.base.beaming.BeamManager;
-import butter.droid.base.content.preferences.Prefs;
-import butter.droid.base.torrent.TorrentService;
-import butter.droid.base.updater.ButterUpdater;
-import butter.droid.base.utils.FileUtils;
-import butter.droid.base.utils.LocaleUtils;
-import butter.droid.base.utils.PrefUtils;
-import butter.droid.base.utils.StorageUtils;
-import butter.droid.base.utils.VersionUtils;
+import dream.africa.base.beaming.BeamManager;
+import dream.africa.base.content.preferences.Prefs;
+import dream.africa.base.torrent.TorrentService;
+import dream.africa.base.updater.ButterUpdater;
+import dream.africa.base.utils.FileUtils;
+import dream.africa.base.utils.LocaleUtils;
+import dream.africa.base.utils.PrefUtils;
+import dream.africa.base.utils.StorageUtils;
+import dream.africa.base.utils.VersionUtils;
 import timber.log.Timber;
 
 public class ButterApplication extends Application implements ButterUpdater.Listener {

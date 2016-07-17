@@ -19,7 +19,7 @@
  * The pct.droid.base.youtube package contains code that is based on https://code.google.com/p/android-youtube-player/
  */
 
-package butter.droid.base.youtube;
+package dream.africa.base.youtube;
 
 import com.squareup.okhttp.Call;
 import com.squareup.okhttp.OkHttpClient;
@@ -34,7 +34,7 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import butter.droid.base.ButterApplication;
+import dream.africa.base.ButterApplication;
 
 public class YouTubeData {
 

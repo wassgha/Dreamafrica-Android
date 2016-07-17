@@ -1,4 +1,4 @@
-package butter.droid.base.beaming;
+package dream.africa.base.beaming;
 
 import com.connectsdk.device.ConnectableDevice;
 import com.connectsdk.device.ConnectableDeviceListener;

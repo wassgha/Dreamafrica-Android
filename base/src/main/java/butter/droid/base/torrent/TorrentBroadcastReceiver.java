@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.torrent;
+package dream.africa.base.torrent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;

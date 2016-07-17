@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.fragments.dialog;
+package dream.africa.base.fragments.dialog;
 
 import android.os.Bundle;
 import android.os.Environment;
@@ -33,9 +33,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import butter.droid.base.R;
-import butter.droid.base.adapters.FileArrayAdapter;
-import butter.droid.base.adapters.models.Option;
+import dream.africa.base.R;
+import dream.africa.base.adapters.FileArrayAdapter;
+import dream.africa.base.adapters.models.Option;
 
 public class FileSelectorDialogFragment extends DialogFragment {
 

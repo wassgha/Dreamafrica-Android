@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.beaming;
+package dream.africa.base.beaming;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -43,8 +43,8 @@ import java.util.Map;
 
 import butterknife.ButterKnife;
 import butterknife.Bind;
-import butter.droid.base.R;
-import butter.droid.base.utils.ThreadUtils;
+import dream.africa.base.R;
+import dream.africa.base.utils.ThreadUtils;
 
 public class BeamDeviceAdapter extends BaseAdapter {
 

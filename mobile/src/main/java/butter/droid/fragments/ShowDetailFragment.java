@@ -1,4 +1,4 @@
-package butter.droid.fragments;
+package dream.africa.fragments;
 
 import android.annotation.TargetApi;
 import android.content.DialogInterface;
@@ -28,17 +28,17 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butter.droid.R;
-import butter.droid.adapters.ShowDetailPagerAdapter;
-import butter.droid.base.fragments.dialog.StringArraySelectorDialogFragment;
-import butter.droid.base.providers.media.models.Episode;
-import butter.droid.base.providers.media.models.Show;
-import butter.droid.base.utils.PixelUtils;
-import butter.droid.base.utils.VersionUtils;
-import butter.droid.fragments.dialog.SynopsisDialogFragment;
-import butter.droid.fragments.base.BaseDetailFragment;
-import butter.droid.widget.ObservableParallaxScrollView;
-import butter.droid.widget.WrappingViewPager;
+import dream.africa.R;
+import dream.africa.adapters.ShowDetailPagerAdapter;
+import dream.africa.base.fragments.dialog.StringArraySelectorDialogFragment;
+import dream.africa.base.providers.media.models.Episode;
+import dream.africa.base.providers.media.models.Show;
+import dream.africa.base.utils.PixelUtils;
+import dream.africa.base.utils.VersionUtils;
+import dream.africa.fragments.dialog.SynopsisDialogFragment;
+import dream.africa.fragments.base.BaseDetailFragment;
+import dream.africa.widget.ObservableParallaxScrollView;
+import dream.africa.widget.WrappingViewPager;
 
 public class ShowDetailFragment extends BaseDetailFragment {
 

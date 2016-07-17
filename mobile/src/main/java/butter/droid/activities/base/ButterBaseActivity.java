@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.activities.base;
+package dream.africa.activities.base;
 
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -26,15 +26,15 @@ import android.support.v4.app.TaskStackBuilder;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import butter.droid.R;
-import butter.droid.base.ButterApplication;
-import butter.droid.base.beaming.BeamManager;
-import butter.droid.base.content.preferences.Prefs;
-import butter.droid.base.updater.ButterUpdater;
-import butter.droid.base.utils.LocaleUtils;
-import butter.droid.base.utils.PrefUtils;
-import butter.droid.base.utils.VersionUtils;
-import butter.droid.fragments.dialog.BeamDeviceSelectorDialogFragment;
+import dream.africa.R;
+import dream.africa.base.ButterApplication;
+import dream.africa.base.beaming.BeamManager;
+import dream.africa.base.content.preferences.Prefs;
+import dream.africa.base.updater.ButterUpdater;
+import dream.africa.base.utils.LocaleUtils;
+import dream.africa.base.utils.PrefUtils;
+import dream.africa.base.utils.VersionUtils;
+import dream.africa.fragments.dialog.BeamDeviceSelectorDialogFragment;
 
 public class ButterBaseActivity extends TorrentBaseActivity implements BeamManager.BeamListener {
 
@@ -47,7 +47,7 @@ public class ButterBaseActivity extends TorrentBaseActivity implements BeamManag
 
         if(!VersionUtils.isUsingCorrectBuild()) {
             new AlertDialog.Builder(this)
-                    .setMessage(butter.droid.base.R.string.wrong_abi)
+                    .setMessage(dream.africa.base.R.string.wrong_abi)
                     .setCancelable(false)
                     .show();
 

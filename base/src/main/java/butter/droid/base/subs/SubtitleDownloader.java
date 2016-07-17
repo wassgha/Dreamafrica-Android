@@ -1,4 +1,4 @@
-package butter.droid.base.subs;
+package dream.africa.base.subs;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -14,10 +14,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.ref.WeakReference;
 
-import butter.droid.base.providers.media.models.Media;
-import butter.droid.base.providers.subs.SubsProvider;
-import butter.droid.base.torrent.StreamInfo;
-import butter.droid.base.utils.FileUtils;
+import dream.africa.base.providers.media.models.Media;
+import dream.africa.base.providers.subs.SubsProvider;
+import dream.africa.base.torrent.StreamInfo;
+import dream.africa.base.utils.FileUtils;
 
 public class SubtitleDownloader {
 

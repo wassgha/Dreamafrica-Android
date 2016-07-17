@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.activities.base;
+package dream.africa.activities.base;
 
 import android.content.ComponentName;
 import android.content.ServiceConnection;
@@ -29,12 +29,12 @@ import com.github.sv244.torrentstream.StreamStatus;
 import com.github.sv244.torrentstream.Torrent;
 import com.github.sv244.torrentstream.listeners.TorrentListener;
 
-import butter.droid.base.ButterApplication;
-import butter.droid.base.activities.TorrentActivity;
-import butter.droid.base.content.preferences.Prefs;
-import butter.droid.base.torrent.TorrentService;
-import butter.droid.base.utils.LocaleUtils;
-import butter.droid.base.utils.PrefUtils;
+import dream.africa.base.ButterApplication;
+import dream.africa.base.activities.TorrentActivity;
+import dream.africa.base.content.preferences.Prefs;
+import dream.africa.base.torrent.TorrentService;
+import dream.africa.base.utils.LocaleUtils;
+import dream.africa.base.utils.PrefUtils;
 
 public abstract class TorrentBaseActivity extends AppCompatActivity implements TorrentListener, TorrentActivity {
 

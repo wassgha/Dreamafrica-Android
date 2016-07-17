@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.fragments;
+package dream.africa.fragments;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -43,18 +43,18 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import hugo.weaving.DebugLog;
-import butter.droid.R;
-import butter.droid.activities.BeamPlayerActivity;
-import butter.droid.activities.VideoPlayerActivity;
-import butter.droid.base.beaming.BeamManager;
-import butter.droid.base.fragments.BaseStreamLoadingFragment;
-import butter.droid.base.fragments.dialog.StringArraySelectorDialogFragment;
-import butter.droid.base.content.preferences.DefaultPlayer;
-import butter.droid.base.torrent.StreamInfo;
-import butter.droid.base.utils.FragmentUtil;
-import butter.droid.base.utils.PixelUtils;
-import butter.droid.base.utils.ThreadUtils;
-import butter.droid.base.utils.VersionUtils;
+import dream.africa.R;
+import dream.africa.activities.BeamPlayerActivity;
+import dream.africa.activities.VideoPlayerActivity;
+import dream.africa.base.beaming.BeamManager;
+import dream.africa.base.fragments.BaseStreamLoadingFragment;
+import dream.africa.base.fragments.dialog.StringArraySelectorDialogFragment;
+import dream.africa.base.content.preferences.DefaultPlayer;
+import dream.africa.base.torrent.StreamInfo;
+import dream.africa.base.utils.FragmentUtil;
+import dream.africa.base.utils.PixelUtils;
+import dream.africa.base.utils.ThreadUtils;
+import dream.africa.base.utils.VersionUtils;
 
 public class StreamLoadingFragment extends BaseStreamLoadingFragment {
 

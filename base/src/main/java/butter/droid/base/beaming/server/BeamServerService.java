@@ -15,14 +15,14 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.beaming.server;
+package dream.africa.base.beaming.server;
 
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 
-import butter.droid.base.Constants;
-import butter.droid.base.utils.NetworkUtils;
+import dream.africa.base.Constants;
+import dream.africa.base.utils.NetworkUtils;
 import timber.log.Timber;
 
 public class BeamServerService extends Service {

@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.fragments;
+package dream.africa.base.fragments;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -54,26 +54,26 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Locale;
 
-import butter.droid.base.ButterApplication;
-import butter.droid.base.R;
-import butter.droid.base.beaming.BeamDeviceListener;
-import butter.droid.base.beaming.BeamManager;
-import butter.droid.base.content.preferences.Prefs;
-import butter.droid.base.fragments.dialog.FileSelectorDialogFragment;
-import butter.droid.base.fragments.dialog.NumberPickerDialogFragment;
-import butter.droid.base.fragments.dialog.StringArraySelectorDialogFragment;
-import butter.droid.base.providers.media.models.Media;
-import butter.droid.base.providers.subs.SubsProvider;
-import butter.droid.base.subs.Caption;
-import butter.droid.base.subs.SubtitleDownloader;
-import butter.droid.base.subs.TimedTextObject;
-import butter.droid.base.torrent.StreamInfo;
-import butter.droid.base.torrent.TorrentService;
-import butter.droid.base.utils.FragmentUtil;
-import butter.droid.base.utils.LocaleUtils;
-import butter.droid.base.utils.PrefUtils;
-import butter.droid.base.vlc.VLCInstance;
-import butter.droid.base.vlc.VLCOptions;
+import dream.africa.base.ButterApplication;
+import dream.africa.base.R;
+import dream.africa.base.beaming.BeamDeviceListener;
+import dream.africa.base.beaming.BeamManager;
+import dream.africa.base.content.preferences.Prefs;
+import dream.africa.base.fragments.dialog.FileSelectorDialogFragment;
+import dream.africa.base.fragments.dialog.NumberPickerDialogFragment;
+import dream.africa.base.fragments.dialog.StringArraySelectorDialogFragment;
+import dream.africa.base.providers.media.models.Media;
+import dream.africa.base.providers.subs.SubsProvider;
+import dream.africa.base.subs.Caption;
+import dream.africa.base.subs.SubtitleDownloader;
+import dream.africa.base.subs.TimedTextObject;
+import dream.africa.base.torrent.StreamInfo;
+import dream.africa.base.torrent.TorrentService;
+import dream.africa.base.utils.FragmentUtil;
+import dream.africa.base.utils.LocaleUtils;
+import dream.africa.base.utils.PrefUtils;
+import dream.africa.base.vlc.VLCInstance;
+import dream.africa.base.vlc.VLCOptions;
 import timber.log.Timber;
 
 public abstract class BaseVideoPlayerFragment

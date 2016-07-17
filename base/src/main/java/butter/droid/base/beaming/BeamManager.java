@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.beaming;
+package dream.africa.base.beaming;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -61,12 +61,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import butter.droid.base.ButterApplication;
-import butter.droid.base.R;
-import butter.droid.base.beaming.server.BeamServer;
-import butter.droid.base.beaming.server.BeamServerService;
-import butter.droid.base.providers.subs.SubsProvider;
-import butter.droid.base.torrent.StreamInfo;
+import dream.africa.base.ButterApplication;
+import dream.africa.base.R;
+import dream.africa.base.beaming.server.BeamServer;
+import dream.africa.base.beaming.server.BeamServerService;
+import dream.africa.base.providers.subs.SubsProvider;
+import dream.africa.base.torrent.StreamInfo;
 import timber.log.Timber;
 
 /**

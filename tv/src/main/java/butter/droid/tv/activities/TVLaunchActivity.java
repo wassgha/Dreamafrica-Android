@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.activities;
+package dream.africa.tv.activities;
 
 import android.Manifest;
 import android.app.Activity;
@@ -30,10 +30,10 @@ import android.support.v4.content.ContextCompat;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 
-import butter.droid.base.content.preferences.Prefs;
-import butter.droid.base.torrent.StreamInfo;
-import butter.droid.base.utils.PrefUtils;
-import butter.droid.tv.service.RecommendationService;
+import dream.africa.base.content.preferences.Prefs;
+import dream.africa.base.torrent.StreamInfo;
+import dream.africa.base.utils.PrefUtils;
+import dream.africa.tv.service.RecommendationService;
 
 public class TVLaunchActivity extends Activity {
 

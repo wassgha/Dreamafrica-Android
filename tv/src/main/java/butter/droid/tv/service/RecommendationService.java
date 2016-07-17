@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.service;
+package dream.africa.tv.service;
 
 import android.app.IntentService;
 import android.app.PendingIntent;
@@ -28,17 +28,17 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import butter.droid.base.providers.media.MediaProvider;
-import butter.droid.base.providers.media.VodoProvider;
-import butter.droid.base.providers.media.models.Episode;
-import butter.droid.base.providers.media.models.Media;
-import butter.droid.base.providers.media.models.Movie;
-import butter.droid.base.providers.media.models.Show;
-import butter.droid.base.utils.VersionUtils;
-import butter.droid.tv.R;
-import butter.droid.tv.activities.TVMediaDetailActivity;
-import butter.droid.tv.service.recommendation.RecommendationBuilder;
-import butter.droid.tv.service.recommendation.RecommendationContentProvider;
+import dream.africa.base.providers.media.MediaProvider;
+import dream.africa.base.providers.media.VodoProvider;
+import dream.africa.base.providers.media.models.Episode;
+import dream.africa.base.providers.media.models.Media;
+import dream.africa.base.providers.media.models.Movie;
+import dream.africa.base.providers.media.models.Show;
+import dream.africa.base.utils.VersionUtils;
+import dream.africa.tv.R;
+import dream.africa.tv.activities.TVMediaDetailActivity;
+import dream.africa.tv.service.recommendation.RecommendationBuilder;
+import dream.africa.tv.service.recommendation.RecommendationContentProvider;
 import timber.log.Timber;
 
 public class RecommendationService extends IntentService {

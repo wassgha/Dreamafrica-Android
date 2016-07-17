@@ -15,13 +15,13 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.subs;
+package dream.africa.base.subs;
 
 import java.io.IOException;
 
 /**
  * This class specifies the interface for any format supported by the converter, these formats must
- * create a {@link butter.droid.base.subs.TimedTextObject} from an {@link java.io.InputStream} (so it can process files form standard In or uploads)
+ * create a {@link dream.africa.base.subs.TimedTextObject} from an {@link java.io.InputStream} (so it can process files form standard In or uploads)
  * and return a String array for text formats, or byte array for binary formats.
  * <br><br>
  * Copyright (c) 2012 J. David Requejo <br>

@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.fragments;
+package dream.africa.fragments;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -42,18 +42,18 @@ import java.util.ArrayList;
 import butterknife.ButterKnife;
 import butterknife.Bind;
 import hugo.weaving.DebugLog;
-import butter.droid.R;
-import butter.droid.activities.MediaDetailActivity;
-import butter.droid.adapters.MediaGridAdapter;
-import butter.droid.base.ButterApplication;
-import butter.droid.base.content.preferences.Prefs;
-import butter.droid.base.providers.media.MediaProvider;
-import butter.droid.base.providers.media.models.Media;
-import butter.droid.base.utils.LocaleUtils;
-import butter.droid.base.utils.NetworkUtils;
-import butter.droid.base.utils.PrefUtils;
-import butter.droid.base.utils.ThreadUtils;
-import butter.droid.fragments.dialog.LoadingDetailDialogFragment;
+import dream.africa.R;
+import dream.africa.activities.MediaDetailActivity;
+import dream.africa.adapters.MediaGridAdapter;
+import dream.africa.base.ButterApplication;
+import dream.africa.base.content.preferences.Prefs;
+import dream.africa.base.providers.media.MediaProvider;
+import dream.africa.base.providers.media.models.Media;
+import dream.africa.base.utils.LocaleUtils;
+import dream.africa.base.utils.NetworkUtils;
+import dream.africa.base.utils.PrefUtils;
+import dream.africa.base.utils.ThreadUtils;
+import dream.africa.fragments.dialog.LoadingDetailDialogFragment;
 import timber.log.Timber;
 
 /**

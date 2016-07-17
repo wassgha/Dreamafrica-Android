@@ -1,4 +1,4 @@
-package butter.droid.base.beaming;
+package dream.africa.base.beaming;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -18,8 +18,8 @@ import com.connectsdk.service.command.ServiceCommandError;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
-import butter.droid.base.ButterApplication;
-import butter.droid.base.R;
+import dream.africa.base.ButterApplication;
+import dream.africa.base.R;
 
 public class BeamPlayerNotificationService extends Service {
 

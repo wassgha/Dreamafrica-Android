@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.activities;
+package dream.africa.activities;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -32,13 +32,13 @@ import android.view.MenuItem;
 
 import java.net.URLDecoder;
 
-import butter.droid.R;
-import butter.droid.activities.base.ButterBaseActivity;
-import butter.droid.base.providers.media.models.Media;
-import butter.droid.base.torrent.StreamInfo;
-import butter.droid.base.torrent.TorrentService;
-import butter.droid.base.youtube.YouTubeData;
-import butter.droid.fragments.VideoPlayerFragment;
+import dream.africa.R;
+import dream.africa.activities.base.ButterBaseActivity;
+import dream.africa.base.providers.media.models.Media;
+import dream.africa.base.torrent.StreamInfo;
+import dream.africa.base.torrent.TorrentService;
+import dream.africa.base.youtube.YouTubeData;
+import dream.africa.fragments.VideoPlayerFragment;
 
 public class TrailerPlayerActivity extends ButterBaseActivity implements VideoPlayerFragment.Callback {
 

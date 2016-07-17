@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.fragments;
+package dream.africa.tv.fragments;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -45,25 +45,25 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import butter.droid.base.providers.media.VodoProvider;
+import dream.africa.base.providers.media.VodoProvider;
 import hugo.weaving.DebugLog;
-import butter.droid.base.providers.media.MediaProvider;
-import butter.droid.base.providers.media.models.Media;
-import butter.droid.base.providers.media.models.Movie;
-import butter.droid.base.providers.subs.SubsProvider;
-import butter.droid.base.providers.subs.YSubsProvider;
-import butter.droid.base.torrent.StreamInfo;
-import butter.droid.base.utils.ThreadUtils;
-import butter.droid.tv.BuildConfig;
-import butter.droid.tv.R;
-import butter.droid.tv.activities.TVMediaDetailActivity;
-import butter.droid.tv.activities.TVMediaGridActivity;
-import butter.droid.tv.activities.TVPreferencesActivity;
-import butter.droid.tv.activities.TVSearchActivity;
-import butter.droid.tv.activities.TVVideoPlayerActivity;
-import butter.droid.tv.presenters.MediaCardPresenter;
-import butter.droid.tv.presenters.MorePresenter;
-import butter.droid.tv.utils.BackgroundUpdater;
+import dream.africa.base.providers.media.MediaProvider;
+import dream.africa.base.providers.media.models.Media;
+import dream.africa.base.providers.media.models.Movie;
+import dream.africa.base.providers.subs.SubsProvider;
+import dream.africa.base.providers.subs.YSubsProvider;
+import dream.africa.base.torrent.StreamInfo;
+import dream.africa.base.utils.ThreadUtils;
+import dream.africa.tv.BuildConfig;
+import dream.africa.tv.R;
+import dream.africa.tv.activities.TVMediaDetailActivity;
+import dream.africa.tv.activities.TVMediaGridActivity;
+import dream.africa.tv.activities.TVPreferencesActivity;
+import dream.africa.tv.activities.TVSearchActivity;
+import dream.africa.tv.activities.TVVideoPlayerActivity;
+import dream.africa.tv.presenters.MediaCardPresenter;
+import dream.africa.tv.presenters.MorePresenter;
+import dream.africa.tv.utils.BackgroundUpdater;
 
 /*
  * Main class to show BrowseFragment with header and rows of videos

@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.fragments;
+package dream.africa.tv.fragments;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -34,14 +34,14 @@ import android.text.TextUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-import butter.droid.base.providers.media.VodoProvider;
+import dream.africa.base.providers.media.VodoProvider;
 import hugo.weaving.DebugLog;
-import butter.droid.base.providers.media.MediaProvider;
-import butter.droid.base.providers.media.models.Media;
-import butter.droid.tv.R;
-import butter.droid.tv.activities.TVMediaDetailActivity;
-import butter.droid.tv.presenters.MediaCardPresenter;
-import butter.droid.tv.utils.BackgroundUpdater;
+import dream.africa.base.providers.media.MediaProvider;
+import dream.africa.base.providers.media.models.Media;
+import dream.africa.tv.R;
+import dream.africa.tv.activities.TVMediaDetailActivity;
+import dream.africa.tv.presenters.MediaCardPresenter;
+import dream.africa.tv.utils.BackgroundUpdater;
 
 public class TVSearchFragment extends android.support.v17.leanback.app.SearchFragment
 		implements android.support.v17.leanback.app.SearchFragment.SearchResultProvider {

@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.utils;
+package dream.africa.base.utils;
 
 import android.content.Context;
 import android.content.Intent;

@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.fragments.dialog;
+package dream.africa.fragments.dialog;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -25,8 +25,8 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 
-import butter.droid.R;
-import butter.droid.base.ButterApplication;
+import dream.africa.R;
+import dream.africa.base.ButterApplication;
 
 public class MessageDialogFragment extends DialogFragment {
 

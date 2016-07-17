@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.fragments;
+package dream.africa.tv.fragments;
 
 import android.app.Activity;
 import android.content.Context;
@@ -35,19 +35,19 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-import butter.droid.base.providers.media.VodoProvider;
+import dream.africa.base.providers.media.VodoProvider;
 import hugo.weaving.DebugLog;
-import butter.droid.base.providers.media.MediaProvider;
-import butter.droid.base.providers.media.models.Media;
-import butter.droid.base.providers.media.models.Movie;
-import butter.droid.base.providers.media.models.Show;
-import butter.droid.base.utils.StringUtils;
-import butter.droid.base.utils.ThreadUtils;
-import butter.droid.tv.R;
-import butter.droid.tv.activities.TVMediaDetailActivity;
-import butter.droid.tv.activities.TVMediaGridActivity;
-import butter.droid.tv.presenters.MediaCardPresenter;
-import butter.droid.tv.utils.BackgroundUpdater;
+import dream.africa.base.providers.media.MediaProvider;
+import dream.africa.base.providers.media.models.Media;
+import dream.africa.base.providers.media.models.Movie;
+import dream.africa.base.providers.media.models.Show;
+import dream.africa.base.utils.StringUtils;
+import dream.africa.base.utils.ThreadUtils;
+import dream.africa.tv.R;
+import dream.africa.tv.activities.TVMediaDetailActivity;
+import dream.africa.tv.activities.TVMediaGridActivity;
+import dream.africa.tv.presenters.MediaCardPresenter;
+import dream.africa.tv.utils.BackgroundUpdater;
 import timber.log.Timber;
 
 

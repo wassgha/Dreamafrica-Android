@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.activities;
+package dream.africa.activities;
 
 import android.app.Activity;
 import android.content.DialogInterface;
@@ -39,18 +39,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
-import butter.droid.R;
-import butter.droid.activities.base.ButterBaseActivity;
-import butter.droid.adapters.PreferencesListAdapter;
-import butter.droid.base.fragments.dialog.NumberPickerDialogFragment;
-import butter.droid.base.fragments.dialog.StringArraySelectorDialogFragment;
-import butter.droid.base.content.preferences.PrefItem;
-import butter.droid.base.content.preferences.PreferencesHandler;
-import butter.droid.base.utils.PrefUtils;
-import butter.droid.base.utils.ResourceUtils;
-import butter.droid.fragments.dialog.ColorPickerDialogFragment;
-import butter.droid.fragments.dialog.SeekBarDialogFragment;
-import butter.droid.utils.ToolbarUtils;
+import dream.africa.R;
+import dream.africa.activities.base.ButterBaseActivity;
+import dream.africa.adapters.PreferencesListAdapter;
+import dream.africa.base.fragments.dialog.NumberPickerDialogFragment;
+import dream.africa.base.fragments.dialog.StringArraySelectorDialogFragment;
+import dream.africa.base.content.preferences.PrefItem;
+import dream.africa.base.content.preferences.PreferencesHandler;
+import dream.africa.base.utils.PrefUtils;
+import dream.africa.base.utils.ResourceUtils;
+import dream.africa.fragments.dialog.ColorPickerDialogFragment;
+import dream.africa.fragments.dialog.SeekBarDialogFragment;
+import dream.africa.utils.ToolbarUtils;
 
 public class PreferencesActivity extends ButterBaseActivity
         implements SharedPreferences.OnSharedPreferenceChangeListener, PreferencesHandler {

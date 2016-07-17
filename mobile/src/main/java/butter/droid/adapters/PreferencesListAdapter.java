@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.adapters;
+package dream.africa.adapters;
 
 import android.graphics.PorterDuff;
 import android.support.v7.widget.RecyclerView;
@@ -30,9 +30,9 @@ import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.Bind;
-import butter.droid.R;
-import butter.droid.base.ButterApplication;
-import butter.droid.base.content.preferences.PrefItem;
+import dream.africa.R;
+import dream.africa.base.ButterApplication;
+import dream.africa.base.content.preferences.PrefItem;
 
 public class PreferencesListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 

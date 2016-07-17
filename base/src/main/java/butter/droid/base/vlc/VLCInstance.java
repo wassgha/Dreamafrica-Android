@@ -18,16 +18,16 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
  *****************************************************************************/
 
-package butter.droid.base.vlc;
+package dream.africa.base.vlc;
 
 import android.content.Context;
 
 import org.videolan.libvlc.LibVLC;
 import org.videolan.libvlc.util.VLCUtil;
 
-import butter.droid.base.Constants;
-import butter.droid.base.content.preferences.Prefs;
-import butter.droid.base.utils.PrefUtils;
+import dream.africa.base.Constants;
+import dream.africa.base.content.preferences.Prefs;
+import dream.africa.base.utils.PrefUtils;
 import timber.log.Timber;
 
 public class VLCInstance {

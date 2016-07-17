@@ -1,4 +1,4 @@
-package butter.droid.fragments;
+package dream.africa.fragments;
 
 import android.annotation.TargetApi;
 import android.os.Build;
@@ -18,11 +18,11 @@ import android.widget.TextView;
 import butterknife.ButterKnife;
 import butterknife.Bind;
 import butterknife.OnClick;
-import butter.droid.R;
-import butter.droid.base.providers.media.models.Show;
-import butter.droid.base.utils.VersionUtils;
-import butter.droid.fragments.dialog.SynopsisDialogFragment;
-import butter.droid.fragments.base.BaseDetailFragment;
+import dream.africa.R;
+import dream.africa.base.providers.media.models.Show;
+import dream.africa.base.utils.VersionUtils;
+import dream.africa.fragments.dialog.SynopsisDialogFragment;
+import dream.africa.fragments.base.BaseDetailFragment;
 
 public class ShowDetailAboutFragment extends BaseDetailFragment {
 

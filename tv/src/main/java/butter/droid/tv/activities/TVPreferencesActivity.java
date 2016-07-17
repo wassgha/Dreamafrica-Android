@@ -15,15 +15,15 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.activities;
+package dream.africa.tv.activities;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v17.leanback.app.GuidedStepFragment;
 
-import butter.droid.tv.activities.base.TVBaseActivity;
-import butter.droid.tv.fragments.TVPreferencesFragment;
+import dream.africa.tv.activities.base.TVBaseActivity;
+import dream.africa.tv.fragments.TVPreferencesFragment;
 
 public class TVPreferencesActivity extends TVBaseActivity {
 

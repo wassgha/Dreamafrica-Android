@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.fragments;
+package dream.africa.tv.fragments;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -55,25 +55,25 @@ import java.lang.ref.WeakReference;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import de.greenrobot.event.EventBus;
-import butter.droid.base.content.preferences.Prefs;
-import butter.droid.base.fragments.BaseVideoPlayerFragment;
-import butter.droid.base.providers.media.models.Media;
-import butter.droid.base.subs.Caption;
-import butter.droid.base.torrent.StreamInfo;
-import butter.droid.base.utils.PrefUtils;
-import butter.droid.base.widget.StrokedTextView;
-import butter.droid.tv.R;
-import butter.droid.tv.activities.TVMediaDetailActivity;
-import butter.droid.tv.events.ConfigureSubtitleEvent;
-import butter.droid.tv.events.PausePlaybackEvent;
-import butter.droid.tv.events.PlaybackProgressChangedEvent;
-import butter.droid.tv.events.ScaleVideoEvent;
-import butter.droid.tv.events.SeekBackwardEvent;
-import butter.droid.tv.events.SeekForwardEvent;
-import butter.droid.tv.events.StartPlaybackEvent;
-import butter.droid.tv.events.StreamProgressChangedEvent;
-import butter.droid.tv.events.ToggleSubtitleEvent;
-import butter.droid.tv.events.UpdatePlaybackStateEvent;
+import dream.africa.base.content.preferences.Prefs;
+import dream.africa.base.fragments.BaseVideoPlayerFragment;
+import dream.africa.base.providers.media.models.Media;
+import dream.africa.base.subs.Caption;
+import dream.africa.base.torrent.StreamInfo;
+import dream.africa.base.utils.PrefUtils;
+import dream.africa.base.widget.StrokedTextView;
+import dream.africa.tv.R;
+import dream.africa.tv.activities.TVMediaDetailActivity;
+import dream.africa.tv.events.ConfigureSubtitleEvent;
+import dream.africa.tv.events.PausePlaybackEvent;
+import dream.africa.tv.events.PlaybackProgressChangedEvent;
+import dream.africa.tv.events.ScaleVideoEvent;
+import dream.africa.tv.events.SeekBackwardEvent;
+import dream.africa.tv.events.SeekForwardEvent;
+import dream.africa.tv.events.StartPlaybackEvent;
+import dream.africa.tv.events.StreamProgressChangedEvent;
+import dream.africa.tv.events.ToggleSubtitleEvent;
+import dream.africa.tv.events.UpdatePlaybackStateEvent;
 
 public class TVVideoPlayerFragment extends BaseVideoPlayerFragment {
     @Bind(R.id.video_surface)

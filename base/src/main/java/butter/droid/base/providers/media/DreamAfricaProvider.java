@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.providers.media;
+package dream.africa.base.providers.media;
 
 import android.accounts.NetworkErrorException;
 import android.content.Context;
@@ -36,13 +36,13 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
-import butter.droid.base.ButterApplication;
-import butter.droid.base.R;
-import butter.droid.base.providers.media.models.Genre;
-import butter.droid.base.providers.media.models.Media;
-import butter.droid.base.providers.media.models.Movie;
-import butter.droid.base.utils.LocaleUtils;
-import butter.droid.base.utils.StringUtils;
+import dream.africa.base.ButterApplication;
+import dream.africa.base.R;
+import dream.africa.base.providers.media.models.Genre;
+import dream.africa.base.providers.media.models.Media;
+import dream.africa.base.providers.media.models.Movie;
+import dream.africa.base.utils.LocaleUtils;
+import dream.africa.base.utils.StringUtils;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

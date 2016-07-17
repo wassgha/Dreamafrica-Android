@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.torrent;
+package dream.africa.base.torrent;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -43,11 +43,11 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import butter.droid.base.ButterApplication;
-import butter.droid.base.R;
-import butter.droid.base.activities.TorrentActivity;
-import butter.droid.base.content.preferences.Prefs;
-import butter.droid.base.utils.PrefUtils;
+import dream.africa.base.ButterApplication;
+import dream.africa.base.R;
+import dream.africa.base.activities.TorrentActivity;
+import dream.africa.base.content.preferences.Prefs;
+import dream.africa.base.utils.PrefUtils;
 import timber.log.Timber;
 
 public class TorrentService extends Service implements TorrentListener {

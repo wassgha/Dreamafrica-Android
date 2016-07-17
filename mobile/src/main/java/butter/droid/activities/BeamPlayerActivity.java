@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.activities;
+package dream.africa.activities;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -26,15 +26,15 @@ import android.support.annotation.NonNull;
 import android.view.MenuItem;
 import android.view.View;
 
-import butter.droid.R;
-import butter.droid.activities.base.ButterBaseActivity;
-import butter.droid.base.beaming.BeamManager;
-import butter.droid.base.beaming.server.BeamServerService;
-import butter.droid.base.torrent.StreamInfo;
-import butter.droid.base.torrent.TorrentService;
-import butter.droid.fragments.dialog.OptionDialogFragment;
-import butter.droid.fragments.BeamPlayerFragment;
-import butter.droid.fragments.VideoPlayerFragment;
+import dream.africa.R;
+import dream.africa.activities.base.ButterBaseActivity;
+import dream.africa.base.beaming.BeamManager;
+import dream.africa.base.beaming.server.BeamServerService;
+import dream.africa.base.torrent.StreamInfo;
+import dream.africa.base.torrent.TorrentService;
+import dream.africa.fragments.dialog.OptionDialogFragment;
+import dream.africa.fragments.BeamPlayerFragment;
+import dream.africa.fragments.VideoPlayerFragment;
 
 public class BeamPlayerActivity extends ButterBaseActivity implements VideoPlayerFragment.Callback {
 

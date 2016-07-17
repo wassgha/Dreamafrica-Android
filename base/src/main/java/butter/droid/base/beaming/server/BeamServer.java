@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.beaming.server;
+package dream.africa.base.beaming.server;
 
 import android.content.Context;
 import android.net.wifi.WifiManager;
@@ -33,11 +33,11 @@ import java.io.File;
 import java.util.Date;
 import java.util.HashMap;
 
-import butter.droid.base.ButterApplication;
-import butter.droid.base.subs.FormatSRT;
-import butter.droid.base.subs.FormatVTT;
-import butter.droid.base.subs.TimedTextObject;
-import butter.droid.base.utils.FileUtils;
+import dream.africa.base.ButterApplication;
+import dream.africa.base.subs.FormatSRT;
+import dream.africa.base.subs.FormatVTT;
+import dream.africa.base.subs.TimedTextObject;
+import dream.africa.base.utils.FileUtils;
 import timber.log.Timber;
 
 public class BeamServer {

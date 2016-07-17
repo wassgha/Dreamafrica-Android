@@ -15,12 +15,12 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.utils;
+package dream.africa.utils;
 
 import android.content.Context;
 import android.support.v7.widget.Toolbar;
 
-import butter.droid.R;
+import dream.africa.R;
 
 public class ToolbarUtils {
     /**

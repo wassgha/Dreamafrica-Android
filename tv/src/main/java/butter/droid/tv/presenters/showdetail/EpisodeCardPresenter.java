@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.presenters.showdetail;
+package dream.africa.tv.presenters.showdetail;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -32,8 +32,8 @@ import android.view.ViewGroup;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
-import butter.droid.base.providers.media.models.Episode;
-import butter.droid.tv.R;
+import dream.africa.base.providers.media.models.Episode;
+import dream.africa.tv.R;
 
 public class EpisodeCardPresenter extends Presenter {
 

@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.updater;
+package dream.africa.base.updater;
 
 import java.util.Map;
 

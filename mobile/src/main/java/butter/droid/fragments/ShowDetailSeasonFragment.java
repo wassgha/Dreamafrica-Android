@@ -1,4 +1,4 @@
-package butter.droid.fragments;
+package dream.africa.fragments;
 
 import android.annotation.TargetApi;
 import android.os.Build;
@@ -13,14 +13,14 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import butter.droid.R;
-import butter.droid.adapters.EpisodeListAdapter;
-import butter.droid.base.providers.media.models.Episode;
-import butter.droid.base.providers.media.models.Show;
-import butter.droid.base.utils.VersionUtils;
-import butter.droid.fragments.dialog.EpisodeDialogFragment;
-import butter.droid.fragments.base.BaseDetailFragment;
-import butter.droid.widget.LinearList;
+import dream.africa.R;
+import dream.africa.adapters.EpisodeListAdapter;
+import dream.africa.base.providers.media.models.Episode;
+import dream.africa.base.providers.media.models.Show;
+import dream.africa.base.utils.VersionUtils;
+import dream.africa.fragments.dialog.EpisodeDialogFragment;
+import dream.africa.fragments.base.BaseDetailFragment;
+import dream.africa.widget.LinearList;
 
 public class ShowDetailSeasonFragment extends BaseDetailFragment {
 

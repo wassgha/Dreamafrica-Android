@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.presenters;
+package dream.africa.tv.presenters;
 
 import android.content.Context;
 import android.support.v17.leanback.widget.BaseCardView;
@@ -31,7 +31,7 @@ import com.squareup.picasso.Target;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import butter.droid.tv.R;
+import dream.africa.tv.R;
 
 public class MoreCardView extends BaseCardView implements View.OnFocusChangeListener {
 

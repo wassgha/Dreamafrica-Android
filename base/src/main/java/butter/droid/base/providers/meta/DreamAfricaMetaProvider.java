@@ -15,11 +15,11 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.providers.meta;
+package dream.africa.base.providers.meta;
 
 import org.joda.time.DateTime;
 
-import butter.droid.base.providers.BaseProvider;
+import dream.africa.base.providers.BaseProvider;
 
 public abstract class DreamAfricaMetaProvider extends BaseProvider {
     public static final String META_CALL = "meta_http_call";

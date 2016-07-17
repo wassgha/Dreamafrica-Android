@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.utils;
+package dream.africa.base.utils;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
@@ -23,7 +23,7 @@ import android.net.NetworkInfo;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 
-import butter.droid.base.ButterApplication;
+import dream.africa.base.ButterApplication;
 
 public class NetworkUtils {
 

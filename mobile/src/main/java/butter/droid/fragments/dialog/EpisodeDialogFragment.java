@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.fragments.dialog;
+package dream.africa.fragments.dialog;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -48,27 +48,27 @@ import java.util.Map;
 import butterknife.ButterKnife;
 import butterknife.Bind;
 import butterknife.OnClick;
-import butter.droid.R;
-import butter.droid.activities.MediaDetailActivity;
-import butter.droid.base.content.preferences.DefaultQuality;
-import butter.droid.base.content.preferences.Prefs;
-import butter.droid.base.providers.media.models.Episode;
-import butter.droid.base.providers.media.models.Media;
-import butter.droid.base.providers.media.models.Show;
-import butter.droid.base.providers.meta.MetaProvider;
-import butter.droid.base.providers.subs.SubsProvider;
-import butter.droid.base.torrent.Magnet;
-import butter.droid.base.torrent.StreamInfo;
-import butter.droid.base.utils.FragmentUtil;
-import butter.droid.base.utils.LocaleUtils;
-import butter.droid.base.utils.PixelUtils;
-import butter.droid.base.utils.PrefUtils;
-import butter.droid.base.utils.SortUtils;
-import butter.droid.base.utils.StringUtils;
-import butter.droid.base.utils.ThreadUtils;
-import butter.droid.base.utils.VersionUtils;
-import butter.droid.widget.BottomSheetScrollView;
-import butter.droid.widget.OptionSelector;
+import dream.africa.R;
+import dream.africa.activities.MediaDetailActivity;
+import dream.africa.base.content.preferences.DefaultQuality;
+import dream.africa.base.content.preferences.Prefs;
+import dream.africa.base.providers.media.models.Episode;
+import dream.africa.base.providers.media.models.Media;
+import dream.africa.base.providers.media.models.Show;
+import dream.africa.base.providers.meta.MetaProvider;
+import dream.africa.base.providers.subs.SubsProvider;
+import dream.africa.base.torrent.Magnet;
+import dream.africa.base.torrent.StreamInfo;
+import dream.africa.base.utils.FragmentUtil;
+import dream.africa.base.utils.LocaleUtils;
+import dream.africa.base.utils.PixelUtils;
+import dream.africa.base.utils.PrefUtils;
+import dream.africa.base.utils.SortUtils;
+import dream.africa.base.utils.StringUtils;
+import dream.africa.base.utils.ThreadUtils;
+import dream.africa.base.utils.VersionUtils;
+import dream.africa.widget.BottomSheetScrollView;
+import dream.africa.widget.OptionSelector;
 
 public class EpisodeDialogFragment extends DialogFragment {
 

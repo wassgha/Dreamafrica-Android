@@ -1,4 +1,4 @@
-package butter.droid.activities;
+package dream.africa.activities;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -22,26 +22,26 @@ import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import butterknife.Bind;
-import butter.droid.R;
-import butter.droid.activities.base.ButterBaseActivity;
-import butter.droid.base.beaming.BeamPlayerNotificationService;
-import butter.droid.base.beaming.server.BeamServerService;
-import butter.droid.base.content.preferences.Prefs;
-import butter.droid.base.providers.media.models.Media;
-import butter.droid.base.providers.media.models.Movie;
-import butter.droid.base.providers.media.models.Show;
-import butter.droid.base.torrent.StreamInfo;
-import butter.droid.base.utils.AnimUtils;
-import butter.droid.base.utils.NetworkUtils;
-import butter.droid.base.utils.PixelUtils;
-import butter.droid.base.utils.PrefUtils;
-import butter.droid.base.utils.VersionUtils;
-import butter.droid.fragments.dialog.MessageDialogFragment;
-import butter.droid.fragments.MovieDetailFragment;
-import butter.droid.fragments.ShowDetailFragment;
-import butter.droid.fragments.base.BaseDetailFragment;
-import butter.droid.utils.ActionBarBackground;
-import butter.droid.widget.ObservableParallaxScrollView;
+import dream.africa.R;
+import dream.africa.activities.base.ButterBaseActivity;
+import dream.africa.base.beaming.BeamPlayerNotificationService;
+import dream.africa.base.beaming.server.BeamServerService;
+import dream.africa.base.content.preferences.Prefs;
+import dream.africa.base.providers.media.models.Media;
+import dream.africa.base.providers.media.models.Movie;
+import dream.africa.base.providers.media.models.Show;
+import dream.africa.base.torrent.StreamInfo;
+import dream.africa.base.utils.AnimUtils;
+import dream.africa.base.utils.NetworkUtils;
+import dream.africa.base.utils.PixelUtils;
+import dream.africa.base.utils.PrefUtils;
+import dream.africa.base.utils.VersionUtils;
+import dream.africa.fragments.dialog.MessageDialogFragment;
+import dream.africa.fragments.MovieDetailFragment;
+import dream.africa.fragments.ShowDetailFragment;
+import dream.africa.fragments.base.BaseDetailFragment;
+import dream.africa.utils.ActionBarBackground;
+import dream.africa.widget.ObservableParallaxScrollView;
 import timber.log.Timber;
 
 public class MediaDetailActivity extends ButterBaseActivity implements BaseDetailFragment.FragmentListener {

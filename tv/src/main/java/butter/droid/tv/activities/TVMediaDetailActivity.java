@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.activities;
+package dream.africa.tv.activities;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -23,14 +23,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
-import butter.droid.base.providers.media.models.Media;
-import butter.droid.base.providers.media.models.Movie;
-import butter.droid.base.utils.VersionUtils;
-import butter.droid.tv.R;
-import butter.droid.tv.activities.base.TVBaseActivity;
-import butter.droid.tv.fragments.TVMovieDetailsFragment;
-import butter.droid.tv.fragments.TVShowDetailsFragment;
-import butter.droid.tv.utils.BackgroundUpdater;
+import dream.africa.base.providers.media.models.Media;
+import dream.africa.base.providers.media.models.Movie;
+import dream.africa.base.utils.VersionUtils;
+import dream.africa.tv.R;
+import dream.africa.tv.activities.base.TVBaseActivity;
+import dream.africa.tv.fragments.TVMovieDetailsFragment;
+import dream.africa.tv.fragments.TVShowDetailsFragment;
+import dream.africa.tv.utils.BackgroundUpdater;
 
 public class TVMediaDetailActivity extends TVBaseActivity implements TVMovieDetailsFragment.Callback {
 

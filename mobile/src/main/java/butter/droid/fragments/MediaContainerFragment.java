@@ -1,4 +1,4 @@
-package butter.droid.fragments;
+package dream.africa.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,13 +10,13 @@ import android.view.ViewGroup;
 
 import butterknife.ButterKnife;
 import butterknife.Bind;
-import butter.droid.R;
-import butter.droid.activities.MainActivity;
-import butter.droid.adapters.MediaPagerAdapter;
-import butter.droid.base.providers.media.MediaProvider;
+import dream.africa.R;
+import dream.africa.activities.MainActivity;
+import dream.africa.adapters.MediaPagerAdapter;
+import dream.africa.base.providers.media.MediaProvider;
 
 /**
- * Fragment that contains a viewpager tabs for {@link butter.droid.fragments.MediaListFragment}
+ * Fragment that contains a viewpager tabs for {@link dream.africa.fragments.MediaListFragment}
  */
 public class MediaContainerFragment extends Fragment {
 

@@ -1,4 +1,4 @@
-package butter.droid.base.utils;
+package dream.africa.base.utils;
 
 import android.content.Context;
 import android.content.pm.PackageInfo;

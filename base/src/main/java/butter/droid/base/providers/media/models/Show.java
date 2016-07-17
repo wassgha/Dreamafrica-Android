@@ -15,15 +15,15 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.providers.media.models;
+package dream.africa.base.providers.media.models;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.util.LinkedList;
 
-import butter.droid.base.providers.media.MediaProvider;
-import butter.droid.base.providers.subs.SubsProvider;
+import dream.africa.base.providers.media.MediaProvider;
+import dream.africa.base.providers.subs.SubsProvider;
 
 public class Show extends Media implements Parcelable {
     public enum Status {CONTINUING, ENDED, CANCELED, NOT_AIRED_YET, UNKNOWN}

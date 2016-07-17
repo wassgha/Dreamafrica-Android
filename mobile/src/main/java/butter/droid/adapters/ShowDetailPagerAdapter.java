@@ -1,4 +1,4 @@
-package butter.droid.adapters;
+package dream.africa.adapters;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
@@ -8,9 +8,9 @@ import android.support.v4.app.FragmentPagerAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import butter.droid.R;
-import butter.droid.fragments.ShowDetailAboutFragment;
-import butter.droid.fragments.ShowDetailSeasonFragment;
+import dream.africa.R;
+import dream.africa.fragments.ShowDetailAboutFragment;
+import dream.africa.fragments.ShowDetailSeasonFragment;
 
 public class ShowDetailPagerAdapter extends FragmentPagerAdapter {
 

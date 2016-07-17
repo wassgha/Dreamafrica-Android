@@ -1,4 +1,4 @@
-package butter.droid.widget;
+package dream.africa.widget;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
 
-import butter.droid.base.utils.VersionUtils;
+import dream.africa.base.utils.VersionUtils;
 
 public class WrappingViewPager extends ViewPager {
 

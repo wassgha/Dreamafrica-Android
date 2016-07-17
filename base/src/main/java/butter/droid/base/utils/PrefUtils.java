@@ -15,12 +15,12 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.utils;
+package dream.africa.base.utils;
 
 import android.content.Context;
 
-import butter.droid.base.Constants;
-import butter.droid.base.content.ObscuredSharedPreferences;
+import dream.africa.base.Constants;
+import dream.africa.base.content.ObscuredSharedPreferences;
 
 public class PrefUtils {
 

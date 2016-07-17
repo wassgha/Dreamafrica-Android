@@ -52,22 +52,7 @@
             android:layout_height="1dp"
             android:background="@color/div_white" />
 
-        <butter.droid.widget.OptionSelector
-            android:id="@+id/subtitles"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            app:optionIcon="@drawable/ic_av_subs"
-            app:optionText="@string/subtitles" />
-
-        <View
-            android:id="@+id/option_div_1"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginLeft="48dp"
-            android:layout_marginStart="48dp"
-            android:background="@color/div_white" />
-
-        <butter.droid.widget.OptionSelector
+        <dream.africa.widget.OptionSelector
             android:id="@+id/quality"
             android:layout_width="match_parent"
             android:layout_height="56dp"

@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.content.preferences;
+package dream.africa.base.content.preferences;
 
 import android.content.Context;
 import android.content.Intent;
@@ -28,14 +28,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import butter.droid.base.ButterApplication;
-import butter.droid.base.beaming.server.BeamServer;
-import butter.droid.base.beaming.server.BeamServerService;
-import butter.droid.base.providers.media.models.Episode;
-import butter.droid.base.providers.media.models.Media;
-import butter.droid.base.providers.subs.SubsProvider;
-import butter.droid.base.utils.LocaleUtils;
-import butter.droid.base.utils.PrefUtils;
+import dream.africa.base.ButterApplication;
+import dream.africa.base.beaming.server.BeamServer;
+import dream.africa.base.beaming.server.BeamServerService;
+import dream.africa.base.providers.media.models.Episode;
+import dream.africa.base.providers.media.models.Media;
+import dream.africa.base.providers.subs.SubsProvider;
+import dream.africa.base.utils.LocaleUtils;
+import dream.africa.base.utils.PrefUtils;
 
 public class DefaultPlayer {
 

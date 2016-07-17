@@ -1,4 +1,4 @@
-package butter.droid.fragments.dialog;
+package dream.africa.fragments.dialog;
 
 import android.annotation.TargetApi;
 import android.app.AlertDialog;
@@ -13,7 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import butter.droid.R;
+import dream.africa.R;
 
 public class SeekBarDialogFragment extends DialogFragment {
 

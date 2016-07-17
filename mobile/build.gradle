@@ -12,6 +12,15 @@ advancedVersioning {
         versionMajor 0
         versionMinor 2
         versionPatch 8
+        versionBuild versionCode
+    }
+    codeOptions {
+        versionCodeType org.moallemi.gradle.internal.VersionCodeType.AUTO_INCREMENT_ONE_STEP
+        dependsOnTasks 'debug', 'release', 'assemble'
+    }
+    outputOptions {
+        renameOutput true
+        nameFormat '$flavorName-$buildType-$versionName'
     }
 }
 
@@ -21,7 +30,7 @@ android {
     def buildNumber = (System.getenv("BUILD_NUMBER") ?: advancedVersioning.versionCode) as int
 
     defaultConfig {
-        applicationId "butter.droid"
+        applicationId "dream.africa"
         minSdkVersion rootProject.ext.minSdk
         targetSdkVersion rootProject.ext.targetSdk
         versionCode buildNumber

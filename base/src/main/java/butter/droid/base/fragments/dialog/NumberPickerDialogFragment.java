@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.fragments.dialog;
+package dream.africa.base.fragments.dialog;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -28,7 +28,7 @@ import android.widget.NumberPicker;
 import java.util.ArrayList;
 import java.util.List;
 
-import butter.droid.base.R;
+import dream.africa.base.R;
 
 
 public class NumberPickerDialogFragment extends DialogFragment {

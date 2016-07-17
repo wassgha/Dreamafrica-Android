@@ -1,4 +1,4 @@
-package butter.droid.widget;
+package dream.africa.widget;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -14,8 +14,8 @@ import android.widget.TextView;
 
 import butterknife.ButterKnife;
 import butterknife.Bind;
-import butter.droid.R;
-import butter.droid.base.fragments.dialog.StringArraySelectorDialogFragment;
+import dream.africa.R;
+import dream.africa.base.fragments.dialog.StringArraySelectorDialogFragment;
 
 public class OptionSelector extends LinearLayout {
 

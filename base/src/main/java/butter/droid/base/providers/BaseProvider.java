@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.providers;
+package dream.africa.base.providers;
 
 import android.os.AsyncTask;
 
@@ -29,10 +29,10 @@ import java.net.URLEncoder;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
-import butter.droid.base.ButterApplication;
-import butter.droid.base.providers.media.MediaProvider;
-import butter.droid.base.providers.meta.MetaProvider;
-import butter.droid.base.providers.subs.SubsProvider;
+import dream.africa.base.ButterApplication;
+import dream.africa.base.providers.media.MediaProvider;
+import dream.africa.base.providers.meta.MetaProvider;
+import dream.africa.base.providers.subs.SubsProvider;
 
 /**
  * BaseProvider.java

@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.presenters;
+package dream.africa.tv.presenters;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -36,9 +36,9 @@ import com.squareup.picasso.Target;
 import java.util.ArrayList;
 import java.util.List;
 
-import butter.droid.base.providers.media.models.Media;
-import butter.droid.base.utils.AnimUtils;
-import butter.droid.tv.R;
+import dream.africa.base.providers.media.models.Media;
+import dream.africa.base.utils.AnimUtils;
+import dream.africa.tv.R;
 
 /*
  * A CardPresenter is used to generate Views and bind Objects to them on demand. 

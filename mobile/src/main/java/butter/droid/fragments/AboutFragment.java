@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.fragments;
+package dream.africa.fragments;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -30,9 +30,9 @@ import android.widget.TextView;
 import butterknife.ButterKnife;
 import butterknife.Bind;
 import butterknife.OnClick;
-import butter.droid.R;
-import butter.droid.base.Constants;
-import butter.droid.base.utils.IntentUtils;
+import dream.africa.R;
+import dream.africa.base.Constants;
+import dream.africa.base.utils.IntentUtils;
 
 public class AboutFragment extends Fragment {
 

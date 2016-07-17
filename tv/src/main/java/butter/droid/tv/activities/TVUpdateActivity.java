@@ -15,14 +15,14 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.activities;
+package dream.africa.tv.activities;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
-import butter.droid.tv.R;
-import butter.droid.tv.activities.base.TVBaseActivity;
+import dream.africa.tv.R;
+import dream.africa.tv.activities.base.TVBaseActivity;
 
 public class TVUpdateActivity extends TVBaseActivity {
 

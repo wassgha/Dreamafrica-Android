@@ -37,7 +37,7 @@
                 android:orientation="vertical"
                 android:gravity="center_vertical"
                 android:background="@color/detail_header_title_bg">
-                <butter.droid.widget.AutoResizeRobotoTextView
+                <dream.africa.widget.AutoResizeRobotoTextView
                     android:id="@+id/title"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
@@ -48,45 +48,6 @@
                     tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras leo dolor, condimentum."
                     app:typeface="roboto_medium"
                     />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/detail_rating_margin_top"
-                    android:gravity="center_vertical">
-                    <RatingBar
-                        android:id="@+id/rating"
-                        android:layout_width="80dp"
-                        android:layout_height="16dp"
-                        android:clickable="false"
-                        android:focusable="false"
-                        android:isIndicator="true"
-                        style="@style/Theme.Butter.RatingBar"
-                        android:max="10"
-                        android:progress="5"/>
-                    <butter.droid.widget.SquareImageView
-                        android:layout_width="12dp"
-                        android:layout_height="12dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginStart="8dp"
-                        android:id="@+id/health"
-                        android:src="@drawable/ic_health_unknown"
-                        android:scaleType="centerInside"
-                        android:visibility="gone"
-                        tools:visibility="visible" />
-                    <ImageButton
-                        android:layout_width="15dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginStart="8dp"
-                        android:id="@+id/magnet"
-                        android:src="@drawable/ic_action_magnet"
-                        android:background="@drawable/selectable_background"
-                        android:visibility="visible"
-                        tools:visibility="visible"
-                        android:scaleType="fitCenter"
-                        android:contentDescription="@string/magnet" />
-                </LinearLayout>
 
                 <com.devspark.robototextview.widget.RobotoTextView
                     android:id="@+id/meta"
@@ -169,32 +130,13 @@
                 android:layout_below="@id/info_buttons"
                 android:background="@color/div_white" />
 
-            <butter.droid.widget.OptionSelector
-                android:id="@+id/subtitles"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_below="@id/main_div"
-                app:optionIcon="@drawable/ic_av_subs"
-                app:optionText="@string/subtitles"
-                />
-
-            <View
-                android:id="@+id/option_div_1"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="@dimen/optionselector_text_margin_start"
-                android:layout_marginStart="@dimen/optionselector_text_margin_start"
-                android:layout_below="@id/subtitles"
-                android:background="@color/div_white" />
-
-            <butter.droid.widget.OptionSelector
+            <dream.africa.widget.OptionSelector
                 android:id="@+id/quality"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:layout_below="@id/option_div_1"
                 app:optionIcon="@drawable/ic_action_quality"
                 app:optionText="@string/quality"
-                />
+                android:layout_below="@id/main_div" />
         </RelativeLayout>
         
     </LinearLayout>

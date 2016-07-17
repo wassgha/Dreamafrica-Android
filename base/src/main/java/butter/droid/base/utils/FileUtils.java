@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.utils;
+package dream.africa.base.utils;
 
 import org.mozilla.universalchardet.Constants;
 import org.mozilla.universalchardet.UniversalDetector;
@@ -40,7 +40,7 @@ import java.nio.charset.Charset;
 import java.nio.charset.CharsetDecoder;
 import java.util.HashMap;
 
-import butter.droid.base.content.UnicodeBOMInputStream;
+import dream.africa.base.content.UnicodeBOMInputStream;
 
 public class FileUtils {
 

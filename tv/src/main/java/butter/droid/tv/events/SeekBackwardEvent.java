@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.events;
+package dream.africa.tv.events;
 
 public class SeekBackwardEvent {
     public static final int MINIMUM_SEEK_SPEED = 2000;

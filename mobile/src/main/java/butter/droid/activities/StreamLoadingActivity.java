@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.activities;
+package dream.africa.activities;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -28,10 +28,10 @@ import android.support.v4.util.Pair;
 import android.view.View;
 import android.view.WindowManager;
 
-import butter.droid.R;
-import butter.droid.activities.base.ButterBaseActivity;
-import butter.droid.base.torrent.StreamInfo;
-import butter.droid.fragments.StreamLoadingFragment;
+import dream.africa.R;
+import dream.africa.activities.base.ButterBaseActivity;
+import dream.africa.base.torrent.StreamInfo;
+import dream.africa.fragments.StreamLoadingFragment;
 
 public class StreamLoadingActivity extends ButterBaseActivity implements StreamLoadingFragment.FragmentListener {
 

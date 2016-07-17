@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.service.recommendation;
+package dream.africa.tv.service.recommendation;
 
 import android.annotation.TargetApi;
 import android.app.Notification;
@@ -32,8 +32,8 @@ import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 
-import butter.droid.base.utils.VersionUtils;
-import butter.droid.tv.R;
+import dream.africa.base.utils.VersionUtils;
+import dream.africa.tv.R;
 
 /*
  * This class builds recommendations as notifications with videos as inputs.

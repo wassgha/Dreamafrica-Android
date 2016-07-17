@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.fragments;
+package dream.africa.tv.fragments;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -27,9 +27,9 @@ import android.support.v17.leanback.widget.GuidedAction;
 
 import java.util.List;
 
-import butter.droid.base.updater.ButterUpdater;
-import butter.droid.base.utils.PrefUtils;
-import butter.droid.tv.R;
+import dream.africa.base.updater.ButterUpdater;
+import dream.africa.base.utils.PrefUtils;
+import dream.africa.tv.R;
 
 public class TVUpdateFragment extends GuidedStepFragment {
 

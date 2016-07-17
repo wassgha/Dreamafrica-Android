@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.adapters;
+package dream.africa.adapters;
 
 import android.content.Context;
 import android.graphics.PorterDuff;
@@ -34,8 +34,8 @@ import java.util.List;
 import butterknife.ButterKnife;
 import butterknife.Bind;
 import de.hdodenhof.circleimageview.CircleImageView;
-import butter.droid.R;
-import butter.droid.fragments.NavigationDrawerFragment;
+import dream.africa.R;
+import dream.africa.fragments.NavigationDrawerFragment;
 
 public class NavigationAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 

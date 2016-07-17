@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.fragments;
+package dream.africa.tv.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -26,8 +26,8 @@ import android.view.View;
 
 import java.util.List;
 
-import butter.droid.base.utils.LocaleUtils;
-import butter.droid.tv.R;
+import dream.africa.base.utils.LocaleUtils;
+import dream.africa.tv.R;
 
 public class TVPreferencesListFragment extends GuidedStepFragment {
 

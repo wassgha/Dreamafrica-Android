@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.adapters;
+package dream.africa.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;

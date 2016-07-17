@@ -15,15 +15,15 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.torrent;
+package dream.africa.base.torrent;
 
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 
-import butter.droid.base.R;
-import butter.droid.base.utils.VersionUtils;
+import dream.africa.base.R;
+import dream.africa.base.utils.VersionUtils;
 
 public enum TorrentHealth {
     EXCELLENT, GOOD, MEDIUM, BAD, UNKNOWN;

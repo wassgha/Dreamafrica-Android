@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.activities;
+package dream.africa.activities;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -51,29 +51,29 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.HashMap;
 
-import butter.droid.base.providers.media.DreamAfricaProvider;
+import dream.africa.base.providers.media.DreamAfricaProvider;
 import butterknife.Bind;
 import android.support.annotation.Nullable;
-import butter.droid.BuildConfig;
-import butter.droid.R;
-import butter.droid.activities.base.ButterBaseActivity;
-import butter.droid.base.Constants;
-import butter.droid.base.beaming.BeamManager;
-import butter.droid.base.beaming.BeamPlayerNotificationService;
-import butter.droid.base.beaming.server.BeamServerService;
-import butter.droid.base.content.preferences.Prefs;
-import butter.droid.base.providers.media.models.Movie;
-import butter.droid.base.providers.subs.SubsProvider;
-import butter.droid.base.providers.subs.YSubsProvider;
-import butter.droid.base.torrent.StreamInfo;
-import butter.droid.base.utils.PrefUtils;
-import butter.droid.base.utils.SignUtils;
-import butter.droid.base.youtube.YouTubeData;
-import butter.droid.fragments.dialog.MessageDialogFragment;
-import butter.droid.fragments.MediaContainerFragment;
-import butter.droid.fragments.NavigationDrawerFragment;
-import butter.droid.utils.ToolbarUtils;
-import butter.droid.widget.ScrimInsetsFrameLayout;
+import dream.africa.BuildConfig;
+import dream.africa.R;
+import dream.africa.activities.base.ButterBaseActivity;
+import dream.africa.base.Constants;
+import dream.africa.base.beaming.BeamManager;
+import dream.africa.base.beaming.BeamPlayerNotificationService;
+import dream.africa.base.beaming.server.BeamServerService;
+import dream.africa.base.content.preferences.Prefs;
+import dream.africa.base.providers.media.models.Movie;
+import dream.africa.base.providers.subs.SubsProvider;
+import dream.africa.base.providers.subs.YSubsProvider;
+import dream.africa.base.torrent.StreamInfo;
+import dream.africa.base.utils.PrefUtils;
+import dream.africa.base.utils.SignUtils;
+import dream.africa.base.youtube.YouTubeData;
+import dream.africa.fragments.dialog.MessageDialogFragment;
+import dream.africa.fragments.MediaContainerFragment;
+import dream.africa.fragments.NavigationDrawerFragment;
+import dream.africa.utils.ToolbarUtils;
+import dream.africa.widget.ScrimInsetsFrameLayout;
 import timber.log.Timber;
 
 /**

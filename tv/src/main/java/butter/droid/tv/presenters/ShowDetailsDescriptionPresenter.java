@@ -15,11 +15,11 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.presenters;
+package dream.africa.tv.presenters;
 
 import android.support.v17.leanback.widget.AbstractDetailsDescriptionPresenter;
 
-import butter.droid.base.providers.media.models.Show;
+import dream.africa.base.providers.media.models.Show;
 
 public class ShowDetailsDescriptionPresenter extends AbstractDetailsDescriptionPresenter {
 	@Override

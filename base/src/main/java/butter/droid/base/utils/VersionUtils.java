@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.utils;
+package dream.africa.base.utils;
 
 import android.app.UiModeManager;
 import android.content.Context;
@@ -24,8 +24,8 @@ import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.os.Build;
 
-import butter.droid.base.BuildConfig;
-import butter.droid.base.ButterApplication;
+import dream.africa.base.BuildConfig;
+import dream.africa.base.ButterApplication;
 
 public class VersionUtils {
 

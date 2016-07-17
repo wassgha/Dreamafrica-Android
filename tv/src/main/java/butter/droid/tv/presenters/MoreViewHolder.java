@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.presenters;
+package dream.africa.tv.presenters;
 
 import android.support.v17.leanback.widget.Presenter;
 import android.view.View;
@@ -24,7 +24,7 @@ import android.widget.TextView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import butter.droid.tv.R;
+import dream.africa.tv.R;
 
 public class MoreViewHolder extends Presenter.ViewHolder implements View.OnFocusChangeListener {
 

@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.fragments;
+package dream.africa.tv.fragments;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -29,12 +29,12 @@ import android.widget.Toast;
 import java.util.Arrays;
 import java.util.List;
 
-import butter.droid.base.content.preferences.PrefItem;
-import butter.droid.base.content.preferences.PreferencesHandler;
-import butter.droid.base.updater.ButterUpdater;
-import butter.droid.base.utils.LocaleUtils;
-import butter.droid.tv.R;
-import butter.droid.tv.activities.TVUpdateActivity;
+import dream.africa.base.content.preferences.PrefItem;
+import dream.africa.base.content.preferences.PreferencesHandler;
+import dream.africa.base.updater.ButterUpdater;
+import dream.africa.base.utils.LocaleUtils;
+import dream.africa.tv.R;
+import dream.africa.tv.activities.TVUpdateActivity;
 
 public class TVPreferencesFragment extends GuidedStepFragment implements PreferencesHandler {
 

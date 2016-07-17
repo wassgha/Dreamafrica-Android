@@ -25,7 +25,7 @@
  * Date:    02 - November - 2005    
  * ____________________________________________________________________________
  */
-package butter.droid.base.content;
+package dream.africa.base.content;
 
 import java.io.IOException;
 import java.io.InputStream;

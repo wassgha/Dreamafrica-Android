@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.fragments;
+package dream.africa.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -33,11 +33,11 @@ import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.Bind;
-import butter.droid.R;
-import butter.droid.adapters.GenreAdapter;
-import butter.droid.adapters.decorators.DividerItemDecoration;
-import butter.droid.base.providers.media.MediaProvider;
-import butter.droid.base.providers.media.models.Genre;
+import dream.africa.R;
+import dream.africa.adapters.GenreAdapter;
+import dream.africa.adapters.decorators.DividerItemDecoration;
+import dream.africa.base.providers.media.MediaProvider;
+import dream.africa.base.providers.media.models.Genre;
 
 public class MediaGenreSelectionFragment extends Fragment {
 

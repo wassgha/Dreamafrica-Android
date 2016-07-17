@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.youtube;
+package dream.africa.base.youtube;
 
 import java.util.HashMap;
 import java.util.Map;

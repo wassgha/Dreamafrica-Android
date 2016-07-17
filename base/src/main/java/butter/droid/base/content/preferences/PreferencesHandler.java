@@ -1,4 +1,4 @@
-package butter.droid.base.content.preferences;
+package dream.africa.base.content.preferences;
 
 import android.content.Context;
 import android.content.Intent;
@@ -18,15 +18,15 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import butter.droid.base.BuildConfig;
-import butter.droid.base.Constants;
-import butter.droid.base.R;
-import butter.droid.base.fragments.dialog.ChangeLogDialogFragment;
-import butter.droid.base.updater.ButterUpdater;
-import butter.droid.base.utils.LocaleUtils;
-import butter.droid.base.utils.PrefUtils;
-import butter.droid.base.utils.StorageUtils;
-import butter.droid.base.vlc.VLCOptions;
+import dream.africa.base.BuildConfig;
+import dream.africa.base.Constants;
+import dream.africa.base.R;
+import dream.africa.base.fragments.dialog.ChangeLogDialogFragment;
+import dream.africa.base.updater.ButterUpdater;
+import dream.africa.base.utils.LocaleUtils;
+import dream.africa.base.utils.PrefUtils;
+import dream.africa.base.utils.StorageUtils;
+import dream.africa.base.vlc.VLCOptions;
 
 public interface PreferencesHandler {
 
@@ -384,93 +384,93 @@ public interface PreferencesHandler {
 //                    })
 //                    .build());
 
-            prefItems.add(PrefItem.newBuilder(context).setTitleResource(R.string.torrents).build());
-
-            prefItems.add(PrefItem.newBuilder(context)
-                    .setIconResource(R.drawable.ic_prefs_connections)
-                    .setTitleResource(R.string.max_connections)
-                    .setPreferenceKey(Prefs.LIBTORRENT_CONNECTION_LIMIT)
-                    .hasNext(true)
-                    .setDefaultValue(200)
-                    .setOnClickListener(new PrefItem.OnClickListener() {
-                        @Override
-                        public void onClick(final PrefItem item) {
-                            handler.openListSelection(item.getTitle(), items, SelectionMode.NUMBER, (Integer) item.getValue(), 0, 200, new OnSelectionListener() {
-                                @Override
-                                public void onSelection(int position, Object value) {
-                                    item.saveValue(value);
-                                }
-                            });
-                        }
-                    })
-                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
-                        @Override
-                        public String get(PrefItem item) {
-                            int limit = (Integer) item.getValue();
-                            return limit + " connections";
-                        }
-                    })
-                    .build());
-
-            prefItems.add(PrefItem.newBuilder(context)
-                    .setIconResource(R.drawable.ic_prefs_download_limit)
-                    .setTitleResource(R.string.download_speed)
-                    .setPreferenceKey(Prefs.LIBTORRENT_DOWNLOAD_LIMIT)
-                    .hasNext(true)
-                    .setDefaultValue(0)
-                    .setOnClickListener(new PrefItem.OnClickListener() {
-                        @Override
-                        public void onClick(final PrefItem item) {
-                            handler.openListSelection(item.getTitle(), items, SelectionMode.NUMBER, (Integer) item.getValue(), 0, 3000, new OnSelectionListener() {
-                                @Override
-                                public void onSelection(int position, Object value) {
-                                    item.saveValue(value);
-                                }
-                            });
-                        }
-                    })
-                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
-                        @Override
-                        public String get(PrefItem item) {
-                            int limit = (Integer) item.getValue();
-                            if (limit == 0) {
-                                return context.getString(R.string.unlimited);
-                            } else {
-                                return (limit / 1000) + " kB/s";
-                            }
-                        }
-                    })
-                    .build());
-
-            prefItems.add(PrefItem.newBuilder(context)
-                    .setIconResource(R.drawable.ic_prefs_upload_limit)
-                    .setTitleResource(R.string.upload_speed)
-                    .setPreferenceKey(Prefs.LIBTORRENT_UPLOAD_LIMIT)
-                    .hasNext(true)
-                    .setDefaultValue(0)
-                    .setOnClickListener(new PrefItem.OnClickListener() {
-                        @Override
-                        public void onClick(final PrefItem item) {
-                            handler.openListSelection(item.getTitle(), items, SelectionMode.NUMBER, (Integer) item.getValue(), 0, 3000, new OnSelectionListener() {
-                                @Override
-                                public void onSelection(int position, Object value) {
-                                    item.saveValue(value);
-                                }
-                            });
-                        }
-                    })
-                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
-                        @Override
-                        public String get(PrefItem item) {
-                            int limit = (Integer) item.getValue();
-                            if (limit == 0) {
-                                return context.getString(R.string.unlimited);
-                            } else {
-                                return (limit / 1000) + " kB/s";
-                            }
-                        }
-                    })
-                    .build());
+//            prefItems.add(PrefItem.newBuilder(context).setTitleResource(R.string.torrents).build());
+//
+//            prefItems.add(PrefItem.newBuilder(context)
+//                    .setIconResource(R.drawable.ic_prefs_connections)
+//                    .setTitleResource(R.string.max_connections)
+//                    .setPreferenceKey(Prefs.LIBTORRENT_CONNECTION_LIMIT)
+//                    .hasNext(true)
+//                    .setDefaultValue(200)
+//                    .setOnClickListener(new PrefItem.OnClickListener() {
+//                        @Override
+//                        public void onClick(final PrefItem item) {
+//                            handler.openListSelection(item.getTitle(), items, SelectionMode.NUMBER, (Integer) item.getValue(), 0, 200, new OnSelectionListener() {
+//                                @Override
+//                                public void onSelection(int position, Object value) {
+//                                    item.saveValue(value);
+//                                }
+//                            });
+//                        }
+//                    })
+//                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
+//                        @Override
+//                        public String get(PrefItem item) {
+//                            int limit = (Integer) item.getValue();
+//                            return limit + " connections";
+//                        }
+//                    })
+//                    .build());
+//
+//            prefItems.add(PrefItem.newBuilder(context)
+//                    .setIconResource(R.drawable.ic_prefs_download_limit)
+//                    .setTitleResource(R.string.download_speed)
+//                    .setPreferenceKey(Prefs.LIBTORRENT_DOWNLOAD_LIMIT)
+//                    .hasNext(true)
+//                    .setDefaultValue(0)
+//                    .setOnClickListener(new PrefItem.OnClickListener() {
+//                        @Override
+//                        public void onClick(final PrefItem item) {
+//                            handler.openListSelection(item.getTitle(), items, SelectionMode.NUMBER, (Integer) item.getValue(), 0, 3000, new OnSelectionListener() {
+//                                @Override
+//                                public void onSelection(int position, Object value) {
+//                                    item.saveValue(value);
+//                                }
+//                            });
+//                        }
+//                    })
+//                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
+//                        @Override
+//                        public String get(PrefItem item) {
+//                            int limit = (Integer) item.getValue();
+//                            if (limit == 0) {
+//                                return context.getString(R.string.unlimited);
+//                            } else {
+//                                return (limit / 1000) + " kB/s";
+//                            }
+//                        }
+//                    })
+//                    .build());
+//
+//            prefItems.add(PrefItem.newBuilder(context)
+//                    .setIconResource(R.drawable.ic_prefs_upload_limit)
+//                    .setTitleResource(R.string.upload_speed)
+//                    .setPreferenceKey(Prefs.LIBTORRENT_UPLOAD_LIMIT)
+//                    .hasNext(true)
+//                    .setDefaultValue(0)
+//                    .setOnClickListener(new PrefItem.OnClickListener() {
+//                        @Override
+//                        public void onClick(final PrefItem item) {
+//                            handler.openListSelection(item.getTitle(), items, SelectionMode.NUMBER, (Integer) item.getValue(), 0, 3000, new OnSelectionListener() {
+//                                @Override
+//                                public void onSelection(int position, Object value) {
+//                                    item.saveValue(value);
+//                                }
+//                            });
+//                        }
+//                    })
+//                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
+//                        @Override
+//                        public String get(PrefItem item) {
+//                            int limit = (Integer) item.getValue();
+//                            if (limit == 0) {
+//                                return context.getString(R.string.unlimited);
+//                            } else {
+//                                return (limit / 1000) + " kB/s";
+//                            }
+//                        }
+//                    })
+//                    .build());
 
 //            if(!isTV)
 //                prefItems.add(PrefItem.newBuilder(context)
@@ -603,25 +603,25 @@ public interface PreferencesHandler {
                     })
                     .build());
 
-            prefItems.add(PrefItem.newBuilder(context)
-                    .setIconResource(R.drawable.ic_nav_vpn)
-                    .setTitleResource(R.string.show_vpn)
-                    .setPreferenceKey(Prefs.SHOW_VPN)
-                    .setDefaultValue(true)
-                    .setOnClickListener(new PrefItem.OnClickListener() {
-                        @Override
-                        public void onClick(final PrefItem item) {
-                            item.saveValue(!(boolean) item.getValue());
-                        }
-                    })
-                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
-                        @Override
-                        public String get(PrefItem item) {
-                            boolean enabled = (boolean) item.getValue();
-                            return enabled ? context.getString(R.string.enabled) : context.getString(R.string.disabled);
-                        }
-                    })
-                    .build());
+//            prefItems.add(PrefItem.newBuilder(context)
+//                    .setIconResource(R.drawable.ic_nav_vpn)
+//                    .setTitleResource(R.string.show_vpn)
+//                    .setPreferenceKey(Prefs.SHOW_VPN)
+//                    .setDefaultValue(true)
+//                    .setOnClickListener(new PrefItem.OnClickListener() {
+//                        @Override
+//                        public void onClick(final PrefItem item) {
+//                            item.saveValue(!(boolean) item.getValue());
+//                        }
+//                    })
+//                    .setSubtitleGenerator(new PrefItem.SubtitleGenerator() {
+//                        @Override
+//                        public String get(PrefItem item) {
+//                            boolean enabled = (boolean) item.getValue();
+//                            return enabled ? context.getString(R.string.enabled) : context.getString(R.string.disabled);
+//                        }
+//                    })
+//                    .build());
 
 //            prefItems.add(PrefItem.newBuilder(context).setTitleResource(R.string.updates).build());
 //

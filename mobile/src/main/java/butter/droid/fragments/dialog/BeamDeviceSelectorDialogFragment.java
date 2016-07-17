@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.fragments.dialog;
+package dream.africa.fragments.dialog;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -27,9 +27,9 @@ import android.os.Bundle;
 
 import com.connectsdk.device.ConnectableDevice;
 
-import butter.droid.R;
-import butter.droid.base.beaming.BeamDeviceAdapter;
-import butter.droid.base.beaming.BeamManager;
+import dream.africa.R;
+import dream.africa.base.beaming.BeamDeviceAdapter;
+import dream.africa.base.beaming.BeamManager;
 
 public class BeamDeviceSelectorDialogFragment extends DialogFragment {
 

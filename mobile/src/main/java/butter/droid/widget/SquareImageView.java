@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.widget;
+package dream.africa.widget;
 
 import android.annotation.TargetApi;
 import android.content.Context;

@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.providers.subs;
+package dream.africa.base.providers.subs;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -27,8 +27,8 @@ import de.timroes.axmlrpc.XMLRPCCallback;
 import de.timroes.axmlrpc.XMLRPCClient;
 import de.timroes.axmlrpc.XMLRPCException;
 import de.timroes.axmlrpc.XMLRPCServerException;
-import butter.droid.base.providers.media.models.Episode;
-import butter.droid.base.providers.media.models.Movie;
+import dream.africa.base.providers.media.models.Episode;
+import dream.africa.base.providers.media.models.Movie;
 
 public class OpenSubsProvider extends SubsProvider {
 

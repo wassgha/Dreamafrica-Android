@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.updater;
+package dream.africa.base.updater;
 
 import android.annotation.TargetApi;
 import android.content.BroadcastReceiver;
@@ -49,13 +49,13 @@ import java.util.zip.Checksum;
 
 import okio.BufferedSink;
 import okio.Okio;
-import butter.droid.base.BuildConfig;
-import butter.droid.base.Constants;
-import butter.droid.base.ButterApplication;
-import butter.droid.base.content.preferences.Prefs;
-import butter.droid.base.utils.NetworkUtils;
-import butter.droid.base.utils.PrefUtils;
-import butter.droid.base.utils.VersionUtils;
+import dream.africa.base.BuildConfig;
+import dream.africa.base.Constants;
+import dream.africa.base.ButterApplication;
+import dream.africa.base.content.preferences.Prefs;
+import dream.africa.base.utils.NetworkUtils;
+import dream.africa.base.utils.PrefUtils;
+import dream.africa.base.utils.VersionUtils;
 
 public class ButterUpdater extends Observable {
 

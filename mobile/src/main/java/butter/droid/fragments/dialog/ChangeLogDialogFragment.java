@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.fragments.dialog;
+package dream.africa.fragments.dialog;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -25,7 +25,7 @@ import android.support.v4.app.DialogFragment;
 import android.view.View;
 
 import it.gmariotti.changelibs.library.view.ChangeLogRecyclerView;
-import butter.droid.R;
+import dream.africa.R;
 
 public class ChangeLogDialogFragment extends DialogFragment {
 

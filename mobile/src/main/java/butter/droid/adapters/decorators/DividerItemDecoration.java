@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.adapters.decorators;
+package dream.africa.adapters.decorators;
 
 import android.content.Context;
 import android.content.res.TypedArray;

@@ -32,7 +32,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.fragments;
+package dream.africa.tv.fragments;
 
 import android.annotation.TargetApi;
 import android.os.Build;
@@ -50,14 +50,14 @@ import java.text.DecimalFormat;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import butter.droid.base.fragments.BaseStreamLoadingFragment;
-import butter.droid.base.providers.media.models.Show;
-import butter.droid.base.torrent.StreamInfo;
-import butter.droid.base.utils.ThreadUtils;
-import butter.droid.tv.R;
-import butter.droid.tv.activities.TVStreamLoadingActivity;
-import butter.droid.tv.activities.TVVideoPlayerActivity;
-import butter.droid.tv.utils.BackgroundUpdater;
+import dream.africa.base.fragments.BaseStreamLoadingFragment;
+import dream.africa.base.providers.media.models.Show;
+import dream.africa.base.torrent.StreamInfo;
+import dream.africa.base.utils.ThreadUtils;
+import dream.africa.tv.R;
+import dream.africa.tv.activities.TVStreamLoadingActivity;
+import dream.africa.tv.activities.TVVideoPlayerActivity;
+import dream.africa.tv.utils.BackgroundUpdater;
 
 public class TVStreamLoadingFragment extends BaseStreamLoadingFragment {
 

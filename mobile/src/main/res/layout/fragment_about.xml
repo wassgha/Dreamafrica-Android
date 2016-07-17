@@ -18,15 +18,15 @@
 <ScrollView xmlns:tools="http://schemas.android.com/tools"
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_height="match_parent"
-	tools:context="butter.droid.activities.AboutActivity"
-	tools:showIn="butter.droid.activities.AboutActivity"
+	tools:context="dream.africa.activities.AboutActivity"
+	tools:showIn="dream.africa.activities.AboutActivity"
 	android:fitsSystemWindows="false"
 	android:layout_width="match_parent">
 
 	<RelativeLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		tools:context="butter.droid.fragments.AboutFragment">
+		tools:context="dream.africa.fragments.AboutFragment">
 
 		<ImageView
 			android:id="@+id/logo_imageview"

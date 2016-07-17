@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.providers.media.models;
+package dream.africa.base.providers.media.models;
 
 
 public class Genre {

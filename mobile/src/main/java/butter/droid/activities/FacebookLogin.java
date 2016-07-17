@@ -1,4 +1,4 @@
-package butter.droid.activities;
+package dream.africa.activities;
 
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -25,8 +25,8 @@ import android.content.Intent;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-import butter.droid.R;
-import butter.droid.base.utils.PrefUtils;
+import dream.africa.R;
+import dream.africa.base.utils.PrefUtils;
 
 public class FacebookLogin extends AppCompatActivity {
 
@@ -65,8 +65,8 @@ public class FacebookLogin extends AppCompatActivity {
             public void onSuccess(LoginResult loginResult) {
                 startActivity(new Intent(FacebookLogin.this, MainActivity.class));
                 PrefUtils.save(FacebookLogin.this, LOGGED_IN, true);
-                PrefUtils.save(FacebookLogin.this, FB_ID, (String) loginResult.getAccessToken().getUserId());
-                PrefUtils.save(FacebookLogin.this, FB_TOKEN, (String) loginResult.getAccessToken().getToken());
+//              PrefUtils.save(FacebookLogin.this, FB_ID, (String) loginResult.getAccessToken().getUserId());
+//              PrefUtils.save(FacebookLogin.this, FB_TOKEN, (String) loginResult.getAccessToken().getToken());
             }
 
             @Override

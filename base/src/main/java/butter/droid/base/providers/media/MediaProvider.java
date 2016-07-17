@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.providers.media;
+package dream.africa.base.providers.media;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -27,9 +27,9 @@ import com.squareup.okhttp.Call;
 import java.util.ArrayList;
 import java.util.List;
 
-import butter.droid.base.providers.BaseProvider;
-import butter.droid.base.providers.media.models.Genre;
-import butter.droid.base.providers.media.models.Media;
+import dream.africa.base.providers.BaseProvider;
+import dream.africa.base.providers.media.models.Genre;
+import dream.africa.base.providers.media.models.Media;
 
 /**
  * MediaProvider.java

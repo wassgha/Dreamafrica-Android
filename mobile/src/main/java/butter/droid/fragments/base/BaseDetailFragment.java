@@ -1,11 +1,11 @@
-package butter.droid.fragments.base;
+package dream.africa.fragments.base;
 
 import android.app.Activity;
 import android.support.v4.app.Fragment;
 import android.view.View;
 
-import butter.droid.activities.MediaDetailActivity;
-import butter.droid.base.torrent.StreamInfo;
+import dream.africa.activities.MediaDetailActivity;
+import dream.africa.base.torrent.StreamInfo;
 
 public abstract class BaseDetailFragment extends Fragment {
 

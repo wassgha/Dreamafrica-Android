@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.fragments.dialog;
+package dream.africa.fragments.dialog;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -27,7 +27,7 @@ import android.widget.TextView;
 
 import butterknife.ButterKnife;
 import butterknife.Bind;
-import butter.droid.R;
+import dream.africa.R;
 
 public class SynopsisDialogFragment extends DialogFragment {
 

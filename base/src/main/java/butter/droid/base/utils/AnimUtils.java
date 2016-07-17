@@ -15,13 +15,13 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.utils;
+package dream.africa.base.utils;
 
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
-import butter.droid.base.ButterApplication;
+import dream.africa.base.ButterApplication;
 
 public class AnimUtils {
 

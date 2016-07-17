@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.providers.media.models;
+package dream.africa.base.providers.media.models;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -23,8 +23,8 @@ import android.os.Parcelable;
 import java.util.HashMap;
 import java.util.Map;
 
-import butter.droid.base.providers.media.MediaProvider;
-import butter.droid.base.providers.subs.SubsProvider;
+import dream.africa.base.providers.media.MediaProvider;
+import dream.africa.base.providers.subs.SubsProvider;
 
 public class Movie extends Media implements Parcelable {
     public String type = "movie";

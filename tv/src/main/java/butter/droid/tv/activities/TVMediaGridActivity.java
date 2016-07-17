@@ -15,17 +15,17 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.activities;
+package dream.africa.tv.activities;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import butter.droid.base.providers.media.MediaProvider;
-import butter.droid.tv.R;
-import butter.droid.tv.activities.base.TVBaseActivity;
-import butter.droid.tv.fragments.TVMediaGridFragment;
+import dream.africa.base.providers.media.MediaProvider;
+import dream.africa.tv.R;
+import dream.africa.tv.activities.base.TVBaseActivity;
+import dream.africa.tv.fragments.TVMediaGridFragment;
 
 public class TVMediaGridActivity extends TVBaseActivity implements TVMediaGridFragment.Callback {
 

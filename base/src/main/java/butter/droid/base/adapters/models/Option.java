@@ -15,9 +15,9 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.adapters.models;
+package dream.africa.base.adapters.models;
 
-import butter.droid.base.utils.LocaleUtils;
+import dream.africa.base.utils.LocaleUtils;
 
 public class Option implements Comparable<Option> {
     private String name;

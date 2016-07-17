@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.utils;
+package dream.africa.tv.utils;
 
 import android.app.Activity;
 import android.content.Context;
@@ -29,8 +29,8 @@ import com.squareup.picasso.Target;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import butter.droid.base.utils.PixelUtils;
-import butter.droid.base.utils.ThreadUtils;
+import dream.africa.base.utils.PixelUtils;
+import dream.africa.base.utils.ThreadUtils;
 
 public class BackgroundUpdater {
 

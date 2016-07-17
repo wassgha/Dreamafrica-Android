@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.activities;
+package dream.africa.tv.activities;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -26,11 +26,11 @@ import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.util.Pair;
 import android.view.View;
 
-import butter.droid.base.fragments.BaseStreamLoadingFragment;
-import butter.droid.base.providers.media.models.Show;
-import butter.droid.base.torrent.StreamInfo;
-import butter.droid.tv.R;
-import butter.droid.tv.activities.base.TVBaseActivity;
+import dream.africa.base.fragments.BaseStreamLoadingFragment;
+import dream.africa.base.providers.media.models.Show;
+import dream.africa.base.torrent.StreamInfo;
+import dream.africa.tv.R;
+import dream.africa.tv.activities.base.TVBaseActivity;
 
 public class TVStreamLoadingActivity extends TVBaseActivity implements BaseStreamLoadingFragment.FragmentListener {
 

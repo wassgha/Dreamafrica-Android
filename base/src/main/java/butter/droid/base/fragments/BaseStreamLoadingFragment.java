@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.fragments;
+package dream.africa.base.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -29,21 +29,21 @@ import com.github.sv244.torrentstream.listeners.TorrentListener;
 import java.util.Map;
 
 import hugo.weaving.DebugLog;
-import butter.droid.base.R;
-import butter.droid.base.activities.TorrentActivity;
-import butter.droid.base.beaming.server.BeamServer;
-import butter.droid.base.beaming.server.BeamServerService;
-import butter.droid.base.content.preferences.Prefs;
-import butter.droid.base.providers.media.models.Episode;
-import butter.droid.base.providers.media.models.Media;
-import butter.droid.base.providers.media.models.Movie;
-import butter.droid.base.providers.subs.SubsProvider;
-import butter.droid.base.subs.SubtitleDownloader;
-import butter.droid.base.subs.TimedTextObject;
-import butter.droid.base.torrent.StreamInfo;
-import butter.droid.base.torrent.TorrentService;
-import butter.droid.base.utils.PrefUtils;
-import butter.droid.base.utils.ThreadUtils;
+import dream.africa.base.R;
+import dream.africa.base.activities.TorrentActivity;
+import dream.africa.base.beaming.server.BeamServer;
+import dream.africa.base.beaming.server.BeamServerService;
+import dream.africa.base.content.preferences.Prefs;
+import dream.africa.base.providers.media.models.Episode;
+import dream.africa.base.providers.media.models.Media;
+import dream.africa.base.providers.media.models.Movie;
+import dream.africa.base.providers.subs.SubsProvider;
+import dream.africa.base.subs.SubtitleDownloader;
+import dream.africa.base.subs.TimedTextObject;
+import dream.africa.base.torrent.StreamInfo;
+import dream.africa.base.torrent.TorrentService;
+import dream.africa.base.utils.PrefUtils;
+import dream.africa.base.utils.ThreadUtils;
 
 
 /**

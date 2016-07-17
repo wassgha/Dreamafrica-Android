@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.torrent;
+package dream.africa.base.torrent;
 
 import android.app.Activity;
 import android.content.Context;
@@ -28,7 +28,7 @@ import android.os.Parcelable;
 import java.util.ArrayList;
 import java.util.List;
 
-import butter.droid.base.R;
+import dream.africa.base.R;
 
 public class Magnet {
 

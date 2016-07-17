@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.adapters;
+package dream.africa.base.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -28,7 +28,7 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import butter.droid.base.adapters.models.Option;
+import dream.africa.base.adapters.models.Option;
 
 public class FileArrayAdapter extends ArrayAdapter<Option> {
 

@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.adapters;
+package dream.africa.adapters;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -42,11 +42,11 @@ import java.util.ArrayList;
 import butterknife.ButterKnife;
 import butterknife.Bind;
 import hugo.weaving.DebugLog;
-import butter.droid.R;
-import butter.droid.base.providers.media.models.Media;
-import butter.droid.base.utils.AnimUtils;
-import butter.droid.base.utils.LocaleUtils;
-import butter.droid.base.utils.PixelUtils;
+import dream.africa.R;
+import dream.africa.base.providers.media.models.Media;
+import dream.africa.base.utils.AnimUtils;
+import dream.africa.base.utils.LocaleUtils;
+import dream.africa.base.utils.PixelUtils;
 
 
 public class MediaGridAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {

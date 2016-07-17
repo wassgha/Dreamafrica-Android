@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.fragments;
+package dream.africa.fragments;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -39,16 +39,16 @@ import com.facebook.login.LoginManager;
 import java.util.ArrayList;
 import java.util.List;
 
-import butter.droid.R;
-import butter.droid.activities.FacebookLogin;
-import butter.droid.activities.MainActivity;
-import butter.droid.activities.PreferencesActivity;
-import butter.droid.adapters.NavigationAdapter;
-import butter.droid.adapters.decorators.OneShotDividerDecorator;
-import butter.droid.base.content.preferences.Prefs;
-import butter.droid.base.providers.media.MediaProvider;
-import butter.droid.base.providers.media.DreamAfricaProvider;
-import butter.droid.base.utils.PrefUtils;
+import dream.africa.R;
+import dream.africa.activities.FacebookLogin;
+import dream.africa.activities.MainActivity;
+import dream.africa.activities.PreferencesActivity;
+import dream.africa.adapters.NavigationAdapter;
+import dream.africa.adapters.decorators.OneShotDividerDecorator;
+import dream.africa.base.content.preferences.Prefs;
+import dream.africa.base.providers.media.MediaProvider;
+import dream.africa.base.providers.media.DreamAfricaProvider;
+import dream.africa.base.utils.PrefUtils;
 
 public class NavigationDrawerFragment extends Fragment implements NavigationAdapter.Callback {
 

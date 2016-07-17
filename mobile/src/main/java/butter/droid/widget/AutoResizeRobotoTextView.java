@@ -1,4 +1,4 @@
-package butter.droid.widget;
+package dream.africa.widget;
 
 import android.annotation.TargetApi;
 import android.content.Context;

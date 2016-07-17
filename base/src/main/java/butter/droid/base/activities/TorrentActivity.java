@@ -1,6 +1,6 @@
-package butter.droid.base.activities;
+package dream.africa.base.activities;
 
-import butter.droid.base.torrent.TorrentService;
+import dream.africa.base.torrent.TorrentService;
 
 public interface TorrentActivity {
 

@@ -17,7 +17,7 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="butter.droid.tv" >
+    package="dream.africa.tv" >
 
     <!-- Features -->
     <uses-feature
@@ -171,11 +171,11 @@
             android:name=".activities.TVUpdateActivity"
             android:theme="@style/Theme.Butter.TV.GuidedStep" />
 
-        <service android:name="butter.droid.base.torrent.TorrentService" />
-        <service android:name="butter.droid.tv.service.RecommendationService" android:enabled="true" />
+        <service android:name="dream.africa.base.torrent.TorrentService" />
+        <service android:name="dream.africa.tv.service.RecommendationService" android:enabled="true" />
 
         <receiver
-            android:name="butter.droid.tv.receivers.BootReceiver"
+            android:name="dream.africa.tv.receivers.BootReceiver"
             android:enabled="true"
             android:exported="false" >
             <intent-filter>
@@ -183,8 +183,8 @@
             </intent-filter>
         </receiver>
 
-        <provider android:authorities="butter.droid.tv.RecommendationContentProvider"
-            android:name="butter.droid.tv.service.recommendation.RecommendationContentProvider" android:exported="true" />
+        <provider android:authorities="dream.africa.tv.RecommendationContentProvider"
+            android:name="dream.africa.tv.service.recommendation.RecommendationContentProvider" android:exported="true" />
 
         <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
     </application>

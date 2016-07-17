@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.fragments;
+package dream.africa.tv.fragments;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -28,21 +28,21 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-import butter.droid.base.content.preferences.Prefs;
-import butter.droid.base.providers.media.MediaProvider;
-import butter.droid.base.providers.media.VodoProvider;
-import butter.droid.base.providers.media.models.Media;
-import butter.droid.base.providers.media.models.Movie;
-import butter.droid.base.providers.subs.SubsProvider;
-import butter.droid.base.torrent.StreamInfo;
-import butter.droid.base.utils.NetworkUtils;
-import butter.droid.base.utils.PrefUtils;
-import butter.droid.base.youtube.YouTubeData;
-import butter.droid.tv.R;
-import butter.droid.tv.activities.TVStreamLoadingActivity;
-import butter.droid.tv.activities.TVTrailerPlayerActivity;
-import butter.droid.tv.activities.TVVideoPlayerActivity;
-import butter.droid.tv.presenters.MovieDetailsDescriptionPresenter;
+import dream.africa.base.content.preferences.Prefs;
+import dream.africa.base.providers.media.MediaProvider;
+import dream.africa.base.providers.media.VodoProvider;
+import dream.africa.base.providers.media.models.Media;
+import dream.africa.base.providers.media.models.Movie;
+import dream.africa.base.providers.subs.SubsProvider;
+import dream.africa.base.torrent.StreamInfo;
+import dream.africa.base.utils.NetworkUtils;
+import dream.africa.base.utils.PrefUtils;
+import dream.africa.base.youtube.YouTubeData;
+import dream.africa.tv.R;
+import dream.africa.tv.activities.TVStreamLoadingActivity;
+import dream.africa.tv.activities.TVTrailerPlayerActivity;
+import dream.africa.tv.activities.TVVideoPlayerActivity;
+import dream.africa.tv.presenters.MovieDetailsDescriptionPresenter;
 
 public class TVMovieDetailsFragment extends TVBaseDetailsFragment implements MediaProvider.Callback, OnActionClickedListener {
 

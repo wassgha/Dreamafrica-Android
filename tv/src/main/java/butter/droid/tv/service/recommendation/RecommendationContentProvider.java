@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.service.recommendation;
+package dream.africa.tv.service.recommendation;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
@@ -35,7 +35,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLDecoder;
 
-import butter.droid.base.ButterApplication;
+import dream.africa.base.ButterApplication;
 
 public class RecommendationContentProvider extends ContentProvider {
 

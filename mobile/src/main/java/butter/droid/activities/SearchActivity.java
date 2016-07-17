@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.activities;
+package dream.africa.activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -25,11 +25,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import butterknife.Bind;
-import butter.droid.R;
-import butter.droid.activities.base.ButterBaseActivity;
-import butter.droid.base.providers.media.MediaProvider;
-import butter.droid.fragments.MediaListFragment;
-import butter.droid.utils.ToolbarUtils;
+import dream.africa.R;
+import dream.africa.activities.base.ButterBaseActivity;
+import dream.africa.base.providers.media.MediaProvider;
+import dream.africa.fragments.MediaListFragment;
+import dream.africa.utils.ToolbarUtils;
 
 
 /**

@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.fragments;
+package dream.africa.tv.fragments;
 
 import android.annotation.TargetApi;
 import android.graphics.Bitmap;
@@ -39,11 +39,11 @@ import com.squareup.picasso.Target;
 
 import java.util.ArrayList;
 
-import butter.droid.base.providers.media.MediaProvider;
-import butter.droid.base.providers.media.models.Media;
-import butter.droid.base.utils.ThreadUtils;
-import butter.droid.base.utils.VersionUtils;
-import butter.droid.tv.activities.TVMediaDetailActivity;
+import dream.africa.base.providers.media.MediaProvider;
+import dream.africa.base.providers.media.models.Media;
+import dream.africa.base.utils.ThreadUtils;
+import dream.africa.base.utils.VersionUtils;
+import dream.africa.tv.activities.TVMediaDetailActivity;
 
 public abstract class TVBaseDetailsFragment extends DetailsFragment
 		implements MediaProvider.Callback,

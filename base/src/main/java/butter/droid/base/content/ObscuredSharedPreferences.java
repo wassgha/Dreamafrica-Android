@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.content;
+package dream.africa.base.content;
 
 import android.annotation.TargetApi;
 import android.content.Context;

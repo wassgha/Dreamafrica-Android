@@ -15,10 +15,10 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv;
+package dream.africa.tv;
 
-import butter.droid.base.ButterApplication;
-import butter.droid.base.utils.VersionUtils;
+import dream.africa.base.ButterApplication;
+import dream.africa.base.utils.VersionUtils;
 
 public class TVButterApplication extends ButterApplication {
 

@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.base.providers.subs;
+package dream.africa.base.providers.subs;
 
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
@@ -25,8 +25,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import butter.droid.base.providers.media.models.Episode;
-import butter.droid.base.providers.media.models.Movie;
+import dream.africa.base.providers.media.models.Episode;
+import dream.africa.base.providers.media.models.Movie;
 
 public class YSubsProvider extends SubsProvider {
 

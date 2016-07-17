@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.receivers;
+package dream.africa.tv.receivers;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -24,7 +24,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
-import butter.droid.tv.service.RecommendationService;
+import dream.africa.tv.service.RecommendationService;
 
 /*
  * This class extends BroadCastReceiver and publishes recommendations on bootup 

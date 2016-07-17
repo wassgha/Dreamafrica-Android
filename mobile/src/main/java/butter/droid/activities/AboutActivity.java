@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.activities;
+package dream.africa.activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -23,10 +23,10 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
 import butterknife.Bind;
-import butter.droid.R;
-import butter.droid.activities.base.ButterBaseActivity;
-import butter.droid.fragments.AboutFragment;
-import butter.droid.utils.ToolbarUtils;
+import dream.africa.R;
+import dream.africa.activities.base.ButterBaseActivity;
+import dream.africa.fragments.AboutFragment;
+import dream.africa.utils.ToolbarUtils;
 
 public class AboutActivity extends ButterBaseActivity implements AboutFragment.OnFragmentInteractionListener {
 

@@ -15,7 +15,7 @@
  * along with Butter. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package butter.droid.tv.fragments;
+package dream.africa.tv.fragments;
 
 import android.app.AlertDialog;
 import android.app.Fragment;
@@ -38,18 +38,18 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-import butter.droid.base.content.preferences.Prefs;
-import butter.droid.base.providers.media.MediaProvider;
-import butter.droid.base.providers.media.models.Episode;
-import butter.droid.base.providers.media.models.Media;
-import butter.droid.base.providers.media.models.Show;
-import butter.droid.base.providers.subs.SubsProvider;
-import butter.droid.base.torrent.StreamInfo;
-import butter.droid.base.utils.PrefUtils;
-import butter.droid.tv.R;
-import butter.droid.tv.activities.TVStreamLoadingActivity;
-import butter.droid.tv.presenters.ShowDetailsDescriptionPresenter;
-import butter.droid.tv.presenters.showdetail.EpisodeCardPresenter;
+import dream.africa.base.content.preferences.Prefs;
+import dream.africa.base.providers.media.MediaProvider;
+import dream.africa.base.providers.media.models.Episode;
+import dream.africa.base.providers.media.models.Media;
+import dream.africa.base.providers.media.models.Show;
+import dream.africa.base.providers.subs.SubsProvider;
+import dream.africa.base.torrent.StreamInfo;
+import dream.africa.base.utils.PrefUtils;
+import dream.africa.tv.R;
+import dream.africa.tv.activities.TVStreamLoadingActivity;
+import dream.africa.tv.presenters.ShowDetailsDescriptionPresenter;
+import dream.africa.tv.presenters.showdetail.EpisodeCardPresenter;
 
 public class TVShowDetailsFragment extends TVBaseDetailsFragment
         implements MediaProvider.Callback,
