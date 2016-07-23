@@ -11,4 +11,11 @@
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+
+    <string name="title_activity_payment">PaymentActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="pay_later_limited_stories_trial">Free sample stories</string>
+    <string name="finish_payment">Finish Payment</string>
+    <string name="pay">Payments</string>
 </resources>

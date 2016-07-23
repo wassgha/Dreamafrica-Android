@@ -1,0 +1,47 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="butter.droid.activities.PaymentActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+    <WebView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/activity_payment_webview"
+        android:layout_gravity="bottom|left|right|top" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_gravity="bottom"
+        android:background="@color/background_floating_material_dark">
+
+        <Button
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pay_later_limited_stories_trial"
+            android:id="@+id/button"
+            android:layout_gravity="bottom|left"
+            android:onClick="trialClick" />
+
+        <Button
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/finish_payment"
+            android:id="@+id/button2"
+            android:layout_gravity="right|bottom"
+            android:onClick="paidClick" />
+    </LinearLayout>
+
+</FrameLayout>

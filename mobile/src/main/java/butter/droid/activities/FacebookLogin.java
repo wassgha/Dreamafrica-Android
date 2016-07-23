@@ -9,6 +9,8 @@ import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
@@ -22,8 +24,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.content.Intent;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.Arrays;
 
 import dream.africa.R;
 import dream.africa.base.utils.PrefUtils;
@@ -33,6 +39,7 @@ public class FacebookLogin extends AppCompatActivity {
     public static String LOGGED_IN = "logged_in";
     public static String FB_ID = "facebook_id";
     public static String FB_TOKEN = "facebook_token";
+    public static String FB_EMAIL = "facebook_email";
 
     CallbackManager callbackManager;
     private TextView info;
@@ -60,13 +67,32 @@ public class FacebookLogin extends AppCompatActivity {
         callbackManager = CallbackManager.Factory.create();
         setContentView(R.layout.activity_facebook_login);
         loginButton = (LoginButton)findViewById(R.id.login_button);
+        loginButton.setReadPermissions(Arrays.asList("public_profile", "email"));
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
                 startActivity(new Intent(FacebookLogin.this, MainActivity.class));
+                GraphRequest request = GraphRequest.newMeRequest(
+                        loginResult.getAccessToken(),
+                        new GraphRequest.GraphJSONObjectCallback() {
+                            @Override
+                            public void onCompleted(JSONObject object, GraphResponse response) {
+                                try {
+                                    PrefUtils.save(FacebookLogin.this, FB_EMAIL, (String) object.getString("email"));
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+
+                            }
+                        });
+                Bundle parameters = new Bundle();
+                parameters.putString("fields", "email");
+                request.setParameters(parameters);
+                request.executeAsync();
+
                 PrefUtils.save(FacebookLogin.this, LOGGED_IN, true);
-//              PrefUtils.save(FacebookLogin.this, FB_ID, (String) loginResult.getAccessToken().getUserId());
-//              PrefUtils.save(FacebookLogin.this, FB_TOKEN, (String) loginResult.getAccessToken().getToken());
+                PrefUtils.save(FacebookLogin.this, FB_ID, (String) loginResult.getAccessToken().getUserId());
+                PrefUtils.save(FacebookLogin.this, FB_TOKEN, (String) loginResult.getAccessToken().getToken());
             }
 
             @Override

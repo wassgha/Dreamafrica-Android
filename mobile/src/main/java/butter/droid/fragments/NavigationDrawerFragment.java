@@ -39,6 +39,7 @@ import com.facebook.login.LoginManager;
 import java.util.ArrayList;
 import java.util.List;
 
+import dream.africa.activities.PaymentActivity;
 import dream.africa.R;
 import dream.africa.activities.FacebookLogin;
 import dream.africa.activities.MainActivity;
@@ -144,6 +145,7 @@ public class NavigationDrawerFragment extends Fragment implements NavigationAdap
         List<NavDrawerItem> navItems = new ArrayList<>();
         navItems.add(new NavDrawerItem(true));
         navItems.add(new NavDrawerItem(getString(R.string.title_movies), R.drawable.ic_nav_story, new DreamAfricaProvider()));
+        navItems.add(new NavDrawerItem(getString(R.string.pay), R.drawable.ic_nav_pay, mPayClickListener));
         navItems.add(new NavDrawerItem(getString(R.string.logout), R.drawable.ic_nav_logout, mLogoutClickListener));
         navItems.add(new NavDrawerItem(getString(R.string.preferences), R.drawable.ic_nav_settings, mOnSettingsClickListener));
 
@@ -168,6 +170,15 @@ public class NavigationDrawerFragment extends Fragment implements NavigationAdap
             PrefUtils.remove(getActivity(), FacebookLogin.FB_ID);
             PrefUtils.remove(getActivity(), FacebookLogin.FB_TOKEN);
             LoginManager.getInstance().logOut();
+            startActivity(new Intent(getActivity(), MainActivity.class));
+            mDrawerLayout.closeDrawer(mNavigationDrawerContainer);
+        }
+    };
+
+    private NavDrawerItem.OnClickListener mPayClickListener = new NavDrawerItem.OnClickListener() {
+        @Override
+        public void onClick(View v, NavigationAdapter.ItemRowHolder rowHolder, int position) {
+            PrefUtils.remove(getActivity(), PaymentActivity.BYPASS_PAYMENT);
             startActivity(new Intent(getActivity(), MainActivity.class));
             mDrawerLayout.closeDrawer(mNavigationDrawerContainer);
         }

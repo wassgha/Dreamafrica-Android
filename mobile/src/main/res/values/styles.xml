@@ -17,52 +17,53 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-	<style name="Theme.HiddenActivity" parent="Theme.AppCompat.NoActionBar">
-		<item name="android:windowIsTranslucent">true</item>
-		<item name="android:windowBackground">@android:color/transparent</item>
-		<item name="android:windowContentOverlay">@null</item>
-		<item name="android:windowNoTitle">true</item>
-		<item name="android:windowIsFloating">true</item>
-		<item name="android:backgroundDimEnabled">false</item>
-		<item name="android:windowAnimationStyle">@null</item>
-		<item name="android:activityOpenEnterAnimation">@null</item>
-		<item name="android:activityCloseEnterAnimation">@null</item>
-	</style>
+    <style name="Theme.HiddenActivity" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:activityOpenEnterAnimation">@null</item>
+        <item name="android:activityCloseEnterAnimation">@null</item>
+    </style>
 
-	<!-- These customisations apply to all platforms -->
-	<style name="Theme.Base" parent="Theme.AppCompat.NoActionBar">
-		<item name="colorPrimary">@color/primary</item>
-		<item name="colorPrimaryDark">@color/primary_dark</item>
-		<item name="colorAccent">@color/accent</item>
-		<item name="android:listDivider">@drawable/list_divider</item>
-		<!--<item name="windowActionBarOverlay">true</item>-->
-		<item name="android:windowBackground">@color/bg</item>
+    <!-- These customisations apply to all platforms -->
+    <style name="Theme.Base" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:listDivider">@drawable/list_divider</item>
+        <!--<item name="windowActionBarOverlay">true</item>-->
+        <item name="android:windowBackground">@color/bg</item>
         <item name="android:ratingBarStyle">@style/Theme.Butter.RatingBar</item>
 
         <item name="toolbarStyle">@style/Custom.Widget.Toolbar</item>
-        <item name="toolbarNavigationButtonStyle">@style/Custom.Widget.Toolbar.Button.Navigation</item>
+        <item name="toolbarNavigationButtonStyle">@style/Custom.Widget.Toolbar.Button.Navigation
+        </item>
         <item name="actionOverflowButtonStyle">@style/Custom.Widget.ActionButton.Overflow</item>
-	</style>
+    </style>
 
-	<style name="Theme.Butter" parent="Theme.Base">
-		<item name="android:seekBarStyle">@style/Theme.Butter.SeekBar</item>
-		<item name="android:progressBarStyleHorizontal">@style/Theme.Butter.ProgressBar</item>
-	</style>
+    <style name="Theme.Butter" parent="Theme.Base">
+        <item name="android:seekBarStyle">@style/Theme.Butter.SeekBar</item>
+        <item name="android:progressBarStyleHorizontal">@style/Theme.Butter.ProgressBar</item>
+    </style>
 
-	<style name="Theme.Butter.Search" parent="Theme.Butter">
-		<item name="android:windowAnimationStyle">@style/ActivityFadeAnimation</item>
-	</style>
+    <style name="Theme.Butter.Search" parent="Theme.Butter">
+        <item name="android:windowAnimationStyle">@style/ActivityFadeAnimation</item>
+    </style>
 
-    <style name="Theme.Butter.Detail" parent="Theme.Butter.TransparentStatusBar"/>
+    <style name="Theme.Butter.Detail" parent="Theme.Butter.TransparentStatusBar" />
 
-    <style name="Theme.Butter.RemoteControl" parent="Theme.Butter.TransparentStatusBar"/>
+    <style name="Theme.Butter.RemoteControl" parent="Theme.Butter.TransparentStatusBar" />
 
-	<style name="ActivityFadeAnimation" parent="@android:style/Animation.Activity">
-		<item name="android:activityOpenEnterAnimation">@android:anim/fade_in</item>
-		<item name="android:activityOpenExitAnimation">@android:anim/fade_out</item>
-		<item name="android:activityCloseEnterAnimation">@android:anim/fade_in</item>
-		<item name="android:activityCloseExitAnimation">@android:anim/fade_out</item>
-	</style>
+    <style name="ActivityFadeAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:activityOpenExitAnimation">@android:anim/fade_out</item>
+        <item name="android:activityCloseEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@android:anim/fade_out</item>
+    </style>
 
     <style name="Theme.Dialog.Transparent" parent="@android:style/Theme.Translucent.NoTitleBar">
         <item name="android:windowIsFloating">true</item>
@@ -89,22 +90,22 @@
     </style>
 
     <style name="Theme.Butter.Toolbar.SearchView" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
-		<item name="colorControlNormal">@android:color/white</item>
-		<item name="colorAccent">@android:color/white</item>
-	</style>
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="colorAccent">@android:color/white</item>
+    </style>
 
-	<style name="Theme.Butter.NavigationDrawer" parent="Theme.Butter"></style>
+    <style name="Theme.Butter.NavigationDrawer" parent="Theme.Butter"></style>
 
-	<style name="Theme.Butter.TransparentStatusBar" parent="Theme.Butter"></style>
+    <style name="Theme.Butter.TransparentStatusBar" parent="Theme.Butter"></style>
 
-	<style name="Theme.Butter.ProgressBar" parent="android:Widget.ProgressBar.Horizontal">
-		<item name="android:progressDrawable">@drawable/progress_horizontal_holo_light</item>
-		<item name="android:indeterminateDrawable">
-			@drawable/progress_indeterminate_horizontal_holo_light
-		</item>
-		<item name="android:minHeight">16dip</item>
-		<item name="android:maxHeight">16dip</item>
-	</style>
+    <style name="Theme.Butter.ProgressBar" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_holo_light</item>
+        <item name="android:indeterminateDrawable">
+            @drawable/progress_indeterminate_horizontal_holo_light
+        </item>
+        <item name="android:minHeight">16dip</item>
+        <item name="android:maxHeight">16dip</item>
+    </style>
 
     <style name="Theme.Butter.SeekBar" parent="android:Widget.SeekBar">
         <item name="android:progressDrawable">@drawable/scrubber_progress_horizontal</item>
@@ -170,6 +171,18 @@
 
     <style name="Theme.Butter.TabLayout" parent="Widget.Design.TabLayout">
         <item name="tabIndicatorColor">@android:color/white</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="Theme.Butter">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
     </style>
 
 </resources>

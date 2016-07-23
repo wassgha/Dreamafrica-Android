@@ -18,6 +18,7 @@
 package dream.africa.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
@@ -44,6 +45,7 @@ import butterknife.Bind;
 import hugo.weaving.DebugLog;
 import dream.africa.R;
 import dream.africa.activities.MediaDetailActivity;
+import dream.africa.activities.PaymentActivity;
 import dream.africa.adapters.MediaGridAdapter;
 import dream.africa.base.ButterApplication;
 import dream.africa.base.content.preferences.Prefs;
@@ -500,7 +502,11 @@ public class MediaListFragment extends Fragment implements LoadingDetailDialogFr
      */
     @Override
     public void onDetailLoadSuccess(final Media item) {
-        MediaDetailActivity.startActivity(mContext, item);
+        if(item.title.equals("Advertisement")) {
+            startActivity(new Intent(this.getContext(), PaymentActivity.class));
+        } else {
+            MediaDetailActivity.startActivity(mContext, item);
+        }
     }
 
     /**

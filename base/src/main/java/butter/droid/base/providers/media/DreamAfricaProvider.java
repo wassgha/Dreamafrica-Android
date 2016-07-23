@@ -43,6 +43,7 @@ import dream.africa.base.providers.media.models.Media;
 import dream.africa.base.providers.media.models.Movie;
 import dream.africa.base.utils.LocaleUtils;
 import dream.africa.base.utils.StringUtils;
+import dream.africa.base.utils.PrefUtils;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -86,6 +87,8 @@ public class DreamAfricaProvider extends MediaProvider {
             currentList = (ArrayList<Media>) existingList.clone();
         }
         ArrayList<NameValuePair> params = new ArrayList<>();
+        params.add(new NameValuePair("uid", PrefUtils.get(ButterApplication.getAppContext(), "facebook_id", "")));
+        params.add(new NameValuePair("email", PrefUtils.get(ButterApplication.getAppContext(), "facebook_email", "")));
         params.add(new NameValuePair("count", "15"));
         if (filters.page != null) {
             params.add(new NameValuePair("page", Integer.toString(filters.page)));

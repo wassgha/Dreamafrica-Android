@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ This file is part of Butter.
   ~
   ~ Butter is free software: you can redistribute it and/or modify
@@ -18,19 +17,19 @@
 
 <resources>
 
-	<color name="bg">#1F2224</color>
+    <color name="bg">#1F2224</color>
     <color name="bg_dark">#141617</color>
     <color name="overlay">#33000000</color>
 
     <color name="selectable_focused">#22FFFFFF</color>
     <color name="selectable_pressed">#55FFFFFF</color>
 
-	<color name="primary">#FF3F51B5</color>
-	<color name="primary_dark">#FF303F9F</color>
-	<color name="accent">#FF5C6BC0</color>
+    <color name="primary">#FF3F51B5</color>
+    <color name="primary_dark">#FF303F9F</color>
+    <color name="accent">#FF5C6BC0</color>
 
-	<color name="trans_white">#99FFFFFF</color>
-	<color name="div_white">#22FFFFFF</color>
+    <color name="trans_white">#99FFFFFF</color>
+    <color name="div_white">#22FFFFFF</color>
 
     <color name="text_color">#FFFFFF</color>
     <color name="secondary_text_color">#AAFFFFFF</color>
@@ -44,9 +43,11 @@
     <color name="nav_drawer_selected_bg">#1D1D21</color>
     <color name="nav_drawer_focused_bg">#414144</color>
     <color name="nav_drawer_pressed_bg">#313134</color>
-	<color name="nav_drawer_deselected">#CFFF</color>
+    <color name="nav_drawer_deselected">#CFFF</color>
 
     <!-- Detail view colors -->
     <color name="detail_header_title_bg">#383D42</color>
+
+    <color name="black_overlay">#66000000</color>
 
 </resources>

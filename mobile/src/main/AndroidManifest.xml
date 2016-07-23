@@ -464,7 +464,12 @@
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
 
-        <activity android:name=".activities.FacebookLogin"></activity>
+        <activity android:name=".activities.FacebookLogin" />
+        <activity
+            android:name=".activities.PaymentActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_payment"
+            android:theme="@style/FullscreenTheme"></activity>
     </application>
 
 </manifest>
