@@ -16,6 +16,6 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="pay_later_limited_stories_trial">Free sample stories</string>
-    <string name="finish_payment">Finish Payment</string>
+    <string name="finish_payment">Click here to confirm payment</string>
     <string name="pay">Payments</string>
 </resources>

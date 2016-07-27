@@ -26,20 +26,11 @@
         android:background="@color/background_floating_material_dark">
 
         <Button
-            android:layout_weight="0.5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/pay_later_limited_stories_trial"
-            android:id="@+id/button"
-            android:layout_gravity="bottom|left"
-            android:onClick="trialClick" />
-
-        <Button
-            android:layout_weight="0.5"
+            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/finish_payment"
-            android:id="@+id/button2"
+            android:id="@+id/button"
             android:layout_gravity="right|bottom"
             android:onClick="paidClick" />
     </LinearLayout>

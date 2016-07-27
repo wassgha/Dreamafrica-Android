@@ -179,7 +179,7 @@ public class NavigationDrawerFragment extends Fragment implements NavigationAdap
         @Override
         public void onClick(View v, NavigationAdapter.ItemRowHolder rowHolder, int position) {
             PrefUtils.remove(getActivity(), PaymentActivity.BYPASS_PAYMENT);
-            startActivity(new Intent(getActivity(), MainActivity.class));
+            startActivity(new Intent(getActivity(), PaymentActivity.class));
             mDrawerLayout.closeDrawer(mNavigationDrawerContainer);
         }
     };

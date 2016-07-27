@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.webkit.CookieManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -71,6 +72,8 @@ public class PaymentActivity extends AppCompatActivity {
             startActivity(new Intent(this, FacebookLogin.class));
         }
 
+        CookieManager.getInstance().setAcceptCookie(true);
+
         setContentView(R.layout.activity_payment);
 
         mVisible = true;
@@ -78,6 +81,7 @@ public class PaymentActivity extends AppCompatActivity {
 
 
         mWebView =  (WebView) findViewById(R.id.activity_payment_webview);
+        CookieManager.getInstance().setAcceptThirdPartyCookies(mWebView, true);
         WebSettings webSettings = mWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         mWebView.setWebViewClient(new WebViewClient());

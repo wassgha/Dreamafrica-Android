@@ -110,9 +110,9 @@ public class MainActivity extends ButterBaseActivity implements NavigationDrawer
             startActivity(new Intent(this, FacebookLogin.class));
         }
 
-        if (PrefUtils.contains(this, FacebookLogin.LOGGED_IN) && !PrefUtils.contains(this, PaymentActivity.BYPASS_PAYMENT)) {
-            startActivity(new Intent(this, PaymentActivity.class));
-        }
+//        if (PrefUtils.contains(this, FacebookLogin.LOGGED_IN) && !PrefUtils.contains(this, PaymentActivity.BYPASS_PAYMENT)) {
+//            startActivity(new Intent(this, PaymentActivity.class));
+//        }
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, PERMISSIONS_REQUEST);
