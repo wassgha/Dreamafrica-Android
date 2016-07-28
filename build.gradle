@@ -5,6 +5,7 @@ buildscript {
         //temporary to solve hugo error
         mavenCentral()
         jcenter()
+        maven { url 'https://jitpack.io' }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:1.5.0'
@@ -12,6 +13,7 @@ buildscript {
         classpath 'com.github.dcendents:android-maven-plugin:1.2'
         classpath 'com.github.ben-manes:gradle-versions-plugin:0.11.3'
         classpath 'org.moallemi.gradle.advanced-build-version:gradle-plugin:1.5.1'
+        classpath 'com.android.tools.build:gradle:0.12.0'
         classpath 'com.jakewharton.sdkmanager:gradle-plugin:0.12.0'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -19,11 +21,13 @@ buildscript {
 }
 
 ext {
-    appCompatVersion = "23.1.1"
-    buildToolsVersion = "23.0.1"
-    targetSdk = 23
-    compileSdk = 23
+    appCompatVersion = "24.0.0"
+    buildToolsVersion = "24.0.0"
+    targetSdk = 24
+    compileSdk = 24
     minSdk = 15
+    butterknifeVersion = "8.1.0"
+    okHttpVersion = "2.7.5"
 }
 
 allprojects {
@@ -32,6 +36,7 @@ allprojects {
         mavenCentral()
         maven { url 'https://maven.fabric.io/public' }
         maven { url 'http://guardian.github.com/maven/repo-releases' }
+        maven { url 'https://jitpack.io' }
     }
 
     //let project evaluate its script first

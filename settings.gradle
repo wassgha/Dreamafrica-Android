@@ -1,1 +1,1 @@
-include ':mobile', ':vlc', ':base', ':connectsdk'
+include ':mobile', ':vlc', ':base', ':library'

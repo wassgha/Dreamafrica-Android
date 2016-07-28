@@ -34,7 +34,6 @@ import com.connectsdk.discovery.CapabilityFilter;
 import com.connectsdk.discovery.DiscoveryManager;
 import com.connectsdk.discovery.DiscoveryManagerListener;
 import com.connectsdk.discovery.provider.CastDiscoveryProvider;
-import com.connectsdk.discovery.provider.FireTVDiscoveryProvider;
 import com.connectsdk.discovery.provider.SSDPDiscoveryProvider;
 import com.connectsdk.discovery.provider.ZeroconfDiscoveryProvider;
 import com.connectsdk.service.AirPlayService;
@@ -42,7 +41,6 @@ import com.connectsdk.service.CastService;
 import com.connectsdk.service.DIALService;
 import com.connectsdk.service.DLNAService;
 import com.connectsdk.service.DeviceService;
-import com.connectsdk.service.FireTVService;
 import com.connectsdk.service.NetcastTVService;
 import com.connectsdk.service.RokuService;
 import com.connectsdk.service.WebOSTVService;
@@ -144,7 +142,6 @@ public class BeamManager implements ConnectableDeviceListener, DiscoveryManagerL
         mDiscoveryManager.registerDeviceService(NetcastTVService.class, SSDPDiscoveryProvider.class);
         mDiscoveryManager.registerDeviceService(WebOSTVService.class, SSDPDiscoveryProvider.class);
         mDiscoveryManager.registerDeviceService(AirPlayService.class, ZeroconfDiscoveryProvider.class);
-        mDiscoveryManager.registerDeviceService(FireTVService.class, FireTVDiscoveryProvider.class);
         mDiscoveryManager.unregisterDeviceService(DIALService.class, SSDPDiscoveryProvider.class);
 
         mDiscoveryManager.setPairingLevel(DiscoveryManager.PairingLevel.ON);
@@ -239,11 +236,6 @@ public class BeamManager implements ConnectableDeviceListener, DiscoveryManagerL
         if(info.getSubtitleLanguage() != null && !info.getSubtitleLanguage().isEmpty() && !info.getSubtitleLanguage().equals("no-subs")) {
             File srtFile = new File(SubsProvider.getStorageLocation(mContext), mStreamInfo.getMedia().videoId + "-" + mStreamInfo.getSubtitleLanguage() + ".srt");
             BeamServer.setCurrentSubs(srtFile);
-            if(mCurrentDevice.hasCapability(MediaPlayer.Subtitles_Vtt)) {
-                subsLocation = BeamServer.getSubsURL(BeamServer.VTT);
-            } else if (mCurrentDevice.hasCapability(MediaPlayer.Subtitles_Srt)) {
-                subsLocation = BeamServer.getSubsURL(BeamServer.SRT);
-            }
         } else {
             BeamServer.removeSubs();
         }
@@ -269,7 +261,7 @@ public class BeamManager implements ConnectableDeviceListener, DiscoveryManagerL
 
         //String url, String mimeType, String title, String description, String iconSrc, boolean shouldLoop, LaunchListener listener
         if (mCurrentDevice != null) {
-            MediaInfo mediaInfo = new MediaInfo(location, subsLocation, "video/mp4", title, "");
+            MediaInfo mediaInfo = new MediaInfo(location, null, "video/mp4", title, null);
             mediaInfo.addImages(new ImageInfo(imageUrl));
             mCurrentDevice.getCapability(MediaPlayer.class).playMedia(mediaInfo, false, new MediaPlayer.LaunchListener() {
                 @Override

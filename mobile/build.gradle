@@ -1,6 +1,6 @@
 apply plugin: 'android-sdk-manager'
-apply plugin: 'org.moallemi.advanced-build-version'
 apply plugin: 'com.android.application'
+apply plugin: 'org.moallemi.advanced-build-version'
 apply plugin: 'hugo'//for method logging (only in debug builds)
 apply plugin: 'com.github.ben-manes.versions'// to check for dependency updates
 
@@ -113,4 +113,7 @@ dependencies {
     compile 'com.github.johnkil.android-robototextview:robototextview:2.4.3'
     compile 'com.sothree.slidinguppanel:library:3.2.0'
     compile 'com.android.support:support-v4:23.4.0'
+    compile project(':base')
+    compile project(':library')
 }
+

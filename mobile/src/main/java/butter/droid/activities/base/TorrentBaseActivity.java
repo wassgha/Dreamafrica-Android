@@ -25,9 +25,9 @@ import android.os.IBinder;
 import android.support.v7.app.AppCompatActivity;
 
 import butterknife.ButterKnife;
-import com.github.sv244.torrentstream.StreamStatus;
-import com.github.sv244.torrentstream.Torrent;
-import com.github.sv244.torrentstream.listeners.TorrentListener;
+import com.github.se_bastiaan.torrentstream.StreamStatus;
+import com.github.se_bastiaan.torrentstream.Torrent;
+import com.github.se_bastiaan.torrentstream.listeners.TorrentListener;
 
 import dream.africa.base.ButterApplication;
 import dream.africa.base.activities.TorrentActivity;

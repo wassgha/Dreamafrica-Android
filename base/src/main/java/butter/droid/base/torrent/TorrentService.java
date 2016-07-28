@@ -30,11 +30,11 @@ import android.os.PowerManager;
 import android.support.annotation.NonNull;
 import android.support.v4.app.NotificationCompat;
 
-import com.github.sv244.torrentstream.StreamStatus;
-import com.github.sv244.torrentstream.Torrent;
-import com.github.sv244.torrentstream.TorrentOptions;
-import com.github.sv244.torrentstream.TorrentStream;
-import com.github.sv244.torrentstream.listeners.TorrentListener;
+import com.github.se_bastiaan.torrentstream.StreamStatus;
+import com.github.se_bastiaan.torrentstream.Torrent;
+import com.github.se_bastiaan.torrentstream.TorrentOptions;
+import com.github.se_bastiaan.torrentstream.TorrentStream;
+import com.github.se_bastiaan.torrentstream.listeners.TorrentListener;
 import com.sjl.foreground.Foreground;
 
 import java.text.DecimalFormat;
@@ -83,13 +83,13 @@ public class TorrentService extends Service implements TorrentListener {
         sThis = this;
         Foreground.get().addListener(mForegroundListener);
 
-        TorrentOptions options = new TorrentOptions();
-        options.setRemoveFilesAfterStop(true);
-        options.setMaxConnections(PrefUtils.get(this, Prefs.LIBTORRENT_CONNECTION_LIMIT, 200));
-        options.setMaxDownloadSpeed(PrefUtils.get(this, Prefs.LIBTORRENT_DOWNLOAD_LIMIT, 0));
-        options.setMaxUploadSpeed(PrefUtils.get(this, Prefs.LIBTORRENT_UPLOAD_LIMIT, 0));
-        options.setSaveLocation(PrefUtils.get(this, Prefs.STORAGE_LOCATION, ButterApplication.getStreamDir()));
-        mTorrentStream = TorrentStream.init(options);
+        TorrentOptions.Builder options = new TorrentOptions.Builder();
+        options.removeFilesAfterStop(true);
+        options.maxConnections(PrefUtils.get(this, Prefs.LIBTORRENT_CONNECTION_LIMIT, 200));
+        options.maxDownloadSpeed(PrefUtils.get(this, Prefs.LIBTORRENT_DOWNLOAD_LIMIT, 0));
+        options.maxUploadSpeed(PrefUtils.get(this, Prefs.LIBTORRENT_UPLOAD_LIMIT, 0));
+        options.saveLocation(PrefUtils.get(this, Prefs.STORAGE_LOCATION, ButterApplication.getStreamDir()));
+        mTorrentStream = TorrentStream.init(options.build());
     }
 
     @Override
@@ -147,7 +147,7 @@ public class TorrentService extends Service implements TorrentListener {
         Intent stopIntent = new Intent();
         stopIntent.setAction(TorrentBroadcastReceiver.STOP);
         PendingIntent pendingStopIntent = PendingIntent.getBroadcast(this, TorrentBroadcastReceiver.REQUEST_CODE, stopIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-        NotificationCompat.Action stopAction = new NotificationCompat.Action.Builder(R.drawable.abc_ic_clear_mtrl_alpha, getString(R.string.stop), pendingStopIntent).build();
+        NotificationCompat.Action stopAction = new NotificationCompat.Action.Builder(R.drawable.abc_ic_ab_back_material, getString(R.string.stop), pendingStopIntent).build();
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
                 .setSmallIcon(R.drawable.ic_notif_logo)
@@ -210,13 +210,13 @@ public class TorrentService extends Service implements TorrentListener {
         mWakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, WAKE_LOCK);
         mWakeLock.acquire();
 
-        TorrentOptions options = mTorrentStream.getOptions();
-        options.setRemoveFilesAfterStop(true);
-        options.setMaxConnections(PrefUtils.get(this, Prefs.LIBTORRENT_CONNECTION_LIMIT, 200));
-        options.setMaxDownloadSpeed(PrefUtils.get(this, Prefs.LIBTORRENT_DOWNLOAD_LIMIT, 0));
-        options.setMaxUploadSpeed(PrefUtils.get(this, Prefs.LIBTORRENT_UPLOAD_LIMIT, 0));
-        options.setSaveLocation(PrefUtils.get(this, Prefs.STORAGE_LOCATION, ButterApplication.getStreamDir()));
-        mTorrentStream.setOptions(options);
+        TorrentOptions.Builder options = new TorrentOptions.Builder();
+        options.removeFilesAfterStop(true);
+        options.maxConnections(PrefUtils.get(this, Prefs.LIBTORRENT_CONNECTION_LIMIT, 200));
+        options.maxDownloadSpeed(PrefUtils.get(this, Prefs.LIBTORRENT_DOWNLOAD_LIMIT, 0));
+        options.maxUploadSpeed(PrefUtils.get(this, Prefs.LIBTORRENT_UPLOAD_LIMIT, 0));
+        options.saveLocation(PrefUtils.get(this, Prefs.STORAGE_LOCATION, ButterApplication.getStreamDir()));
+        mTorrentStream = TorrentStream.init(options.build());
 
         mIsReady = false;
         mTorrentStream.addListener(this);
